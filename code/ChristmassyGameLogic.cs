@@ -22,15 +22,15 @@ public sealed class ChristmassyGameLogic : Component
 	/// </summary>
 	[Property]
 	[Category( "Gameplay" )]
-	[Range( 1f, 100f, 1f )]
-	public float RotationSpeed { get; set; } = 5f;
+	[Range( 0f, 360f, 1f )]
+	public float RotationSpeed { get; set; } = 15f;
 
 
 	protected override void OnUpdate()
 	{
 		if ( !Map.IsValid() ) return;
 
-		Map.WorldRotation *= Rotation.FromPitch( RotationSpeed * Time.Delta );
+		Map.WorldRotation *= Rotation.FromPitch( -RotationSpeed * Time.Delta );
 	}
 
 	private List<GameObject> _cottages = new List<GameObject>();
@@ -59,7 +59,7 @@ public sealed class ChristmassyGameLogic : Component
 			var randomCottage = SceneUtility.GetPrefabScene( Game.Random.FromList( allCottages ) )
 				.Clone();
 
-			randomCottage.WorldRotation = Map.WorldRotation + Rotation.FromPitch( angleSlice * i );
+			randomCottage.WorldRotation = Rotation.FromPitch( angleSlice * i );
 			randomCottage.WorldPosition = Map.WorldPosition + randomCottage.WorldRotation.Up * MapRadius;
 			randomCottage.SetParent( Map );
 
@@ -75,6 +75,19 @@ public sealed class ChristmassyGameLogic : Component
 				cottage.Destroy();
 
 			_cottages.Clear();
+		}
+	}
+
+	protected override void DrawGizmos()
+	{
+		using ( Gizmo.Scope( "MapGizmo", new global::Transform( -WorldPosition, WorldRotation.Inverse ) ) )
+		{
+			var draw = Gizmo.Draw;
+
+			if ( !Map.IsValid() ) return;
+
+			draw.Color = Color.Blue.WithAlpha( 0.3f );
+			draw.SolidCylinder( Map.WorldPosition + Map.WorldRotation.Right * 2500f, Map.WorldPosition + Map.WorldRotation.Left * 2500f, MapRadius, 64 );
 		}
 	}
 }
