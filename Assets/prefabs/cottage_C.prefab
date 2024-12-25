@@ -6,15 +6,824 @@
     "Enabled": true,
     "Children": [
       {
-        "__guid": "8af6b500-a851-41c3-a984-1b419644ce22",
+        "__guid": "6e42172c-dc1b-4b54-b6b8-13544ce545af",
         "Flags": 0,
-        "Name": "holiday-cabin-door-rotate",
-        "Position": "100,0,0",
+        "Name": "holiday-cabin-wall",
+        "Position": "-6.25,150,200",
+        "Rotation": "0,0,0.7071068,0.7071068",
+        "Scale": "1,1.2,1",
         "Enabled": true,
         "Components": [
           {
             "__type": "Sandbox.Prop",
-            "__guid": "02a33ad2-750d-4a24-b655-991b424d35c9",
+            "__guid": "b8dc5e9e-9080-40fc-9e56-34af6847458f",
+            "BodyGroups": 18446744073709551615,
+            "Health": 0,
+            "IsStatic": true,
+            "Model": "models/holiday-kit/holiday-cabin-wall.vmdl",
+            "StartAsleep": false,
+            "Tint": "1,1,1,1"
+          }
+        ]
+      },
+      {
+        "__guid": "9995cdaa-ee19-4df7-845f-e676858dcb4b",
+        "Flags": 0,
+        "Name": "holiday-cabin-corner (1)",
+        "Position": "6.25,131.25,200",
+        "Rotation": "0,0,-1,0",
+        "Scale": "1.3,1.3,1",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.Prop",
+            "__guid": "b83c4500-e63a-41a2-9a99-a5e61dd938d0",
+            "BodyGroups": 18446744073709551615,
+            "Health": 0,
+            "IsStatic": true,
+            "Model": "models/holiday-kit/holiday-cabin-corner.vmdl",
+            "StartAsleep": false,
+            "Tint": "1,1,1,1"
+          }
+        ]
+      },
+      {
+        "__guid": "32edeb44-d23c-473e-8a42-2c3d4131acb8",
+        "Flags": 0,
+        "Name": "holiday-cabin-wall-roof-center (1)",
+        "Position": "0,150,300",
+        "Rotation": "0,0,0.9999999,0",
+        "Scale": "1,1,0.5",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.Prop",
+            "__guid": "5ed4fad0-63d9-4e96-b54e-2d3278fd1086",
+            "BodyGroups": 18446744073709551615,
+            "Health": 0,
+            "IsStatic": true,
+            "Model": "models/holiday-kit/holiday-cabin-wall-roof-center.vmdl",
+            "StartAsleep": false,
+            "Tint": "1,1,1,1"
+          }
+        ]
+      },
+      {
+        "__guid": "de8dea43-58d6-48c8-a81f-1d30565be50c",
+        "Flags": 0,
+        "Name": "holiday-cabin-roof-snow-dormer",
+        "Position": "0,0,150",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.Prop",
+            "__guid": "bb01b45e-adde-497c-87fe-cf928eab269b",
+            "BodyGroups": 18446744073709551615,
+            "Health": 0,
+            "IsStatic": true,
+            "Model": "models/holiday-kit/holiday-cabin-roof-dormer.vmdl",
+            "StartAsleep": false,
+            "Tint": "1,1,1,1"
+          }
+        ]
+      },
+      {
+        "__guid": "67c04cae-c066-443d-9388-eb57a2dc7f3a",
+        "Flags": 0,
+        "Name": "holiday-cabin-wall-roof",
+        "Position": "100,150,100",
+        "Rotation": "0,0,-0.7071068,0.7071068",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.Prop",
+            "__guid": "ad384948-31bb-455d-b344-d9faf884fd48",
+            "BodyGroups": 18446744073709551615,
+            "Health": 0,
+            "IsStatic": true,
+            "Model": "models/holiday-kit/holiday-cabin-wall-roof.vmdl",
+            "StartAsleep": false,
+            "Tint": "1,1,1,1"
+          }
+        ]
+      },
+      {
+        "__guid": "2f730204-a366-42a5-884c-4f25cb9b3cea",
+        "Flags": 0,
+        "Name": "holiday-cabin-window-c",
+        "Position": "0,150,200",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.Prop",
+            "__guid": "4214e1e5-9643-448e-9113-31b3292550f8",
+            "BodyGroups": 18446744073709551615,
+            "Health": 0,
+            "IsStatic": true,
+            "Model": "models/holiday-kit/holiday-cabin-window-c.vmdl",
+            "StartAsleep": false,
+            "Tint": "1,1,1,1"
+          }
+        ]
+      },
+      {
+        "__guid": "eeea4fa0-d75f-4576-a6a1-23e27557dc7b",
+        "Flags": 0,
+        "Name": "holiday-cabin-wall-roof (1)",
+        "Position": "100,250,100",
+        "Rotation": "0,0,-0.7071068,0.7071068",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.Prop",
+            "__guid": "66690abc-fa0c-4bca-83df-a6547f0e07f8",
+            "BodyGroups": 18446744073709551615,
+            "Health": 0,
+            "IsStatic": true,
+            "Model": "models/holiday-kit/holiday-cabin-wall-roof.vmdl",
+            "StartAsleep": false,
+            "Tint": "1,1,1,1"
+          }
+        ]
+      },
+      {
+        "__guid": "15e07a46-a483-4c35-8878-1c49a1919b9f",
+        "Flags": 0,
+        "Name": "holiday-cabin-window-c (1)",
+        "Position": "-6.25,150,100",
+        "Rotation": "0,0,0.7071068,0.7071068",
+        "Scale": "1,1.2,1",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.Prop",
+            "__guid": "ceff3c4f-3d6c-44fd-8112-0f74ab026e18",
+            "BodyGroups": 18446744073709551615,
+            "Health": 0,
+            "IsStatic": true,
+            "Model": "models/holiday-kit/holiday-cabin-window-c.vmdl",
+            "StartAsleep": false,
+            "Tint": "1,1,1,1"
+          }
+        ]
+      },
+      {
+        "__guid": "393d43e3-0ab0-4abb-ba4e-e6f8f28b994a",
+        "Flags": 0,
+        "Name": "holiday-cabin-wall (9)",
+        "Position": "0,50,200",
+        "Rotation": "0,0,0.7071068,0.7071068",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.Prop",
+            "__guid": "bb1c749b-fe72-42fc-9794-8f134f7fce6e",
+            "BodyGroups": 18446744073709551615,
+            "Health": 0,
+            "IsStatic": true,
+            "Model": "models/holiday-kit/holiday-cabin-wall.vmdl",
+            "StartAsleep": false,
+            "Tint": "1,1,1,1"
+          }
+        ]
+      },
+      {
+        "__guid": "382b7bec-f483-422e-a3e4-e50059cfb5dc",
+        "Flags": 0,
+        "Name": "holiday-cabin-roof-snow-corner",
+        "Position": "-100,143.75,100",
+        "Rotation": "0,0,0.7071068,0.7071068",
+        "Scale": "1.2,1.1,1",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.Prop",
+            "__guid": "41cafd9b-e350-4547-98ce-cf5d40f356fc",
+            "BodyGroups": 18446744073709551615,
+            "Health": 0,
+            "IsStatic": true,
+            "Model": "models/holiday-kit/holiday-cabin-roof-corner.vmdl",
+            "StartAsleep": false,
+            "Tint": "1,1,1,1"
+          }
+        ]
+      },
+      {
+        "__guid": "78b9e594-2b6d-48bc-bdb8-4d1aba546fda",
+        "Flags": 0,
+        "Name": "holiday-cabin-wall (1)",
+        "Position": "0,150,200",
+        "Rotation": "0,0,1,-0.00000004371139",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.Prop",
+            "__guid": "7cb34b7f-c642-4aaf-b246-0cb3f68de93b",
+            "BodyGroups": 18446744073709551615,
+            "Health": 0,
+            "IsStatic": true,
+            "Model": "models/holiday-kit/holiday-cabin-wall.vmdl",
+            "StartAsleep": false,
+            "Tint": "1,1,1,1"
+          }
+        ]
+      },
+      {
+        "__guid": "d0fbfd19-4678-4901-be33-d798bb87dab2",
+        "Flags": 0,
+        "Name": "holiday-cabin-wall (10)",
+        "Position": "0,150,100",
+        "Rotation": "0,0,1,-0.00000004371139",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.Prop",
+            "__guid": "d0d64f9d-cdc0-4b99-b4d3-75fc0c58fda4",
+            "BodyGroups": 18446744073709551615,
+            "Health": 0,
+            "IsStatic": true,
+            "Model": "models/holiday-kit/holiday-cabin-wall.vmdl",
+            "StartAsleep": false,
+            "Tint": "1,1,1,1"
+          }
+        ]
+      },
+      {
+        "__guid": "64731f8f-f8e3-4a5d-a37f-b412e644de9f",
+        "Flags": 0,
+        "Name": "holiday-cabin-corner",
+        "Position": "18.75,168.75,200",
+        "Rotation": "0,0,-0.7071068,0.7071068",
+        "Scale": "1.3,1.3,1",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.Prop",
+            "__guid": "bffe49d1-5e62-4fe5-8795-c1a3cc06b3f7",
+            "BodyGroups": 18446744073709551615,
+            "Health": 0,
+            "IsStatic": true,
+            "Model": "models/holiday-kit/holiday-cabin-corner.vmdl",
+            "StartAsleep": false,
+            "Tint": "1,1,1,1"
+          }
+        ]
+      },
+      {
+        "__guid": "e800f91e-5dde-4a38-960f-703502410423",
+        "Flags": 0,
+        "Name": "holiday-cabin-corner (2)",
+        "Position": "6.25,131.25,100",
+        "Rotation": "0,0,-1,0",
+        "Scale": "1.3,1.3,1",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.Prop",
+            "__guid": "d7dd831d-e52b-4c2a-89d0-8a756951deb0",
+            "BodyGroups": 18446744073709551615,
+            "Health": 0,
+            "IsStatic": true,
+            "Model": "models/holiday-kit/holiday-cabin-corner.vmdl",
+            "StartAsleep": false,
+            "Tint": "1,1,1,1"
+          }
+        ]
+      },
+      {
+        "__guid": "74fdcfe5-745d-4b46-8c52-c36b3bbd8a34",
+        "Flags": 0,
+        "Name": "holiday-cabin-corner (3)",
+        "Position": "131.25,131.25,100",
+        "Rotation": "0,0,-1,0",
+        "Scale": "1.3,1.3,1",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.Prop",
+            "__guid": "9b496fce-bf8b-44f2-a355-ba808eb97e7a",
+            "BodyGroups": 18446744073709551615,
+            "Health": 0,
+            "IsStatic": true,
+            "Model": "models/holiday-kit/holiday-cabin-corner.vmdl",
+            "StartAsleep": false,
+            "Tint": "1,1,1,1"
+          }
+        ]
+      },
+      {
+        "__guid": "d50c47cb-1f0c-4b7c-b3a7-93df1a7bfac3",
+        "Flags": 0,
+        "Name": "holiday-cabin-corner (4)",
+        "Position": "131.25,131.25,200",
+        "Rotation": "0,0,-1,0",
+        "Scale": "1.3,1.3,1",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.Prop",
+            "__guid": "b139a0b4-e335-4656-85cb-7e0a31b03a56",
+            "BodyGroups": 18446744073709551615,
+            "Health": 0,
+            "IsStatic": true,
+            "Model": "models/holiday-kit/holiday-cabin-corner.vmdl",
+            "StartAsleep": false,
+            "Tint": "1,1,1,1"
+          }
+        ]
+      },
+      {
+        "__guid": "486681ff-4ff8-4fb7-8a01-731211ee7ecd",
+        "Flags": 0,
+        "Name": "holiday-cabin-corner (5)",
+        "Position": "131.25,18.75,200",
+        "Rotation": "0,0,-1,0",
+        "Scale": "1.3,1.3,1",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.Prop",
+            "__guid": "45c0b80c-64bc-4a6f-a111-7313cad4ac25",
+            "BodyGroups": 18446744073709551615,
+            "Health": 0,
+            "IsStatic": true,
+            "Model": "models/holiday-kit/holiday-cabin-corner.vmdl",
+            "StartAsleep": false,
+            "Tint": "1,1,1,1"
+          }
+        ]
+      },
+      {
+        "__guid": "b891ecd3-f1b2-42aa-96d4-e70bc6db99ca",
+        "Flags": 0,
+        "Name": "holiday-cabin-roof-snow-point",
+        "Position": "0,150,300",
+        "Scale": "1.2,1,0.5",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.Prop",
+            "__guid": "09ecd7f4-a59f-483d-8ba5-7760f2517a83",
+            "BodyGroups": 18446744073709551615,
+            "Health": 0,
+            "IsStatic": true,
+            "Model": "models/holiday-kit/holiday-cabin-roof-point.vmdl",
+            "StartAsleep": false,
+            "Tint": "1,1,1,1"
+          }
+        ]
+      },
+      {
+        "__guid": "b42a5200-4382-49c1-ada9-c89d2eddbc5b",
+        "Flags": 0,
+        "Name": "holiday-cabin-wall-roof-center",
+        "Position": "0,150,300",
+        "Scale": "1,1,0.5",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.Prop",
+            "__guid": "52164313-c094-46f3-a41b-c87c45899144",
+            "BodyGroups": 18446744073709551615,
+            "Health": 0,
+            "IsStatic": true,
+            "Model": "models/holiday-kit/holiday-cabin-wall-roof-center.vmdl",
+            "StartAsleep": false,
+            "Tint": "1,1,1,1"
+          }
+        ]
+      },
+      {
+        "__guid": "f6ccb78d-520d-4b7b-ba59-3f04829a2d75",
+        "Flags": 0,
+        "Name": "holiday-cabin-corner-bottom (2)",
+        "Position": "-100,150,0",
+        "Rotation": "0,0,1,0",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.Prop",
+            "__guid": "2f0390ed-d68c-481a-925d-36ddf2142df6",
+            "BodyGroups": 18446744073709551615,
+            "Health": 0,
+            "IsStatic": true,
+            "Model": "models/holiday-kit/holiday-cabin-corner-bottom.vmdl",
+            "StartAsleep": false,
+            "Tint": "1,1,1,1"
+          }
+        ]
+      },
+      {
+        "__guid": "7c4d6d59-7b9a-4c47-a24c-796afa4a6690",
+        "Flags": 0,
+        "Name": "holiday-cabin-corner-bottom (3)",
+        "Position": "-100,-150,0",
+        "Rotation": "0,0,0.7071068,-0.7071068",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.Prop",
+            "__guid": "b722994a-3e99-4a92-bfaf-5a357586b773",
+            "BodyGroups": 18446744073709551615,
+            "Health": 0,
+            "IsStatic": true,
+            "Model": "models/holiday-kit/holiday-cabin-corner-bottom.vmdl",
+            "StartAsleep": false,
+            "Tint": "1,1,1,1"
+          }
+        ]
+      },
+      {
+        "__guid": "0f1e60e2-3e7d-4f97-8f36-550c267aca9e",
+        "Flags": 0,
+        "Name": "holiday-cabin-wall (2)",
+        "Position": "0,-150,0",
+        "Rotation": "0,0,-0.7071068,0.7071068",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.Prop",
+            "__guid": "e86167a4-830f-45d5-83bb-5377f7f42112",
+            "BodyGroups": 18446744073709551615,
+            "Health": 0,
+            "IsStatic": true,
+            "Model": "models/holiday-kit/holiday-cabin-wall.vmdl",
+            "StartAsleep": false,
+            "Tint": "1,1,1,1"
+          }
+        ]
+      },
+      {
+        "__guid": "3c908255-8fb0-4ba4-b6ec-2d74f68d6801",
+        "Flags": 0,
+        "Name": "holiday-floor-wood (3)",
+        "Position": "-100,150,0",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.Prop",
+            "__guid": "1c63b804-63b6-4b03-b953-60b9eed0cde1",
+            "BodyGroups": 18446744073709551615,
+            "Health": 0,
+            "IsStatic": true,
+            "Model": "models/holiday-kit/holiday-floor-wood.vmdl",
+            "StartAsleep": false,
+            "Tint": "1,1,1,1"
+          }
+        ]
+      },
+      {
+        "__guid": "128c8085-691b-4ad0-9be9-6e3a84d5df41",
+        "Flags": 0,
+        "Name": "holiday-cabin-wall (3)",
+        "Position": "-100,150,0",
+        "Rotation": "0,0,0.7071069,0.7071068",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.Prop",
+            "__guid": "bf75a6db-eee3-4d4e-9453-8fbc105044d2",
+            "BodyGroups": 18446744073709551615,
+            "Health": 0,
+            "IsStatic": true,
+            "Model": "models/holiday-kit/holiday-cabin-wall.vmdl",
+            "StartAsleep": false,
+            "Tint": "1,1,1,1"
+          }
+        ]
+      },
+      {
+        "__guid": "03df1235-618c-469e-814c-48a59beeb7fc",
+        "Flags": 0,
+        "Name": "holiday-cabin-wall (4)",
+        "Position": "-100,-150,0",
+        "Rotation": "0,0,-0.7071068,0.7071068",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.Prop",
+            "__guid": "f2052c2c-ebc2-490f-8fe7-fc70fc6dde64",
+            "BodyGroups": 18446744073709551615,
+            "Health": 0,
+            "IsStatic": true,
+            "Model": "models/holiday-kit/holiday-cabin-wall.vmdl",
+            "StartAsleep": false,
+            "Tint": "1,1,1,1"
+          }
+        ]
+      },
+      {
+        "__guid": "0eb3e792-94aa-4167-a56f-38b9460b77a8",
+        "Flags": 0,
+        "Name": "holiday-cabin-wall (6)",
+        "Position": "-100,150,0",
+        "Rotation": "0,0,1,-0.00000005960464",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.Prop",
+            "__guid": "34d9ca30-4a19-4f3f-ac3f-7d99c672d3f7",
+            "BodyGroups": 18446744073709551615,
+            "Health": 0,
+            "IsStatic": true,
+            "Model": "models/holiday-kit/holiday-cabin-wall.vmdl",
+            "StartAsleep": false,
+            "Tint": "1,1,1,1"
+          }
+        ]
+      },
+      {
+        "__guid": "8081d9ec-131d-4687-9e6e-70ec03dac479",
+        "Flags": 0,
+        "Name": "holiday-cabin-wall (7)",
+        "Position": "-100,50,0",
+        "Rotation": "0,0,1,-0.00000005960464",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.Prop",
+            "__guid": "f3a82871-d997-4e80-a52f-9371b0d86805",
+            "BodyGroups": 18446744073709551615,
+            "Health": 0,
+            "IsStatic": true,
+            "Model": "models/holiday-kit/holiday-cabin-wall.vmdl",
+            "StartAsleep": false,
+            "Tint": "1,1,1,1"
+          }
+        ]
+      },
+      {
+        "__guid": "c26701d7-370a-4064-ad0c-f4982864c8e5",
+        "Flags": 0,
+        "Name": "holiday-cabin-wall (8)",
+        "Position": "-100,-50,0",
+        "Rotation": "0,0,1,-0.00000005960464",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.Prop",
+            "__guid": "05777401-cbf6-40ea-8178-8623f1d33b7a",
+            "BodyGroups": 18446744073709551615,
+            "Health": 0,
+            "IsStatic": true,
+            "Model": "models/holiday-kit/holiday-cabin-wall.vmdl",
+            "StartAsleep": false,
+            "Tint": "1,1,1,1"
+          }
+        ]
+      },
+      {
+        "__guid": "d65bf9c8-d3c4-4524-9f50-cbba502546f6",
+        "Flags": 0,
+        "Name": "holiday-floor-wood (6)",
+        "Position": "-100,-50,0",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.Prop",
+            "__guid": "ad52a282-ef75-4267-b9f6-3425de588078",
+            "BodyGroups": 18446744073709551615,
+            "Health": 0,
+            "IsStatic": true,
+            "Model": "models/holiday-kit/holiday-floor-wood.vmdl",
+            "StartAsleep": false,
+            "Tint": "1,1,1,1"
+          }
+        ]
+      },
+      {
+        "__guid": "da1f5511-b95e-40ce-ae38-7882dfc65baf",
+        "Flags": 0,
+        "Name": "holiday-floor-wood (7)",
+        "Position": "-100,50,0",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.Prop",
+            "__guid": "3a7e9b83-5a55-46e4-bf54-01faeca2aa80",
+            "BodyGroups": 18446744073709551615,
+            "Health": 0,
+            "IsStatic": true,
+            "Model": "models/holiday-kit/holiday-floor-wood.vmdl",
+            "StartAsleep": false,
+            "Tint": "1,1,1,1"
+          }
+        ]
+      },
+      {
+        "__guid": "66fdaeeb-d9da-437b-a694-42b5f7ad70a2",
+        "Flags": 0,
+        "Name": "holiday-cabin-roof-snow",
+        "Position": "0,0,100",
+        "Rotation": "0,0,-0.7071068,0.7071068",
+        "Scale": "1.7,1,1",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.Prop",
+            "__guid": "a5e623e3-5701-4e5b-bd08-59d965a8e0b6",
+            "BodyGroups": 18446744073709551615,
+            "Health": 0,
+            "IsStatic": true,
+            "Model": "models/holiday-kit/holiday-cabin-roof.vmdl",
+            "StartAsleep": false,
+            "Tint": "1,1,1,1"
+          }
+        ]
+      },
+      {
+        "__guid": "6767eb15-407b-427e-8fe8-55559c30fbe4",
+        "Flags": 0,
+        "Name": "holiday-cabin-roof-snow (1)",
+        "Position": "100,150,100",
+        "Rotation": "0,0,-0.7071068,0.7071068",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.Prop",
+            "__guid": "093888bd-c9ca-406d-9b89-6181f9d59a1a",
+            "BodyGroups": 18446744073709551615,
+            "Health": 0,
+            "IsStatic": true,
+            "Model": "models/holiday-kit/holiday-cabin-roof.vmdl",
+            "StartAsleep": false,
+            "Tint": "1,1,1,1"
+          }
+        ]
+      },
+      {
+        "__guid": "51d30a77-5b8a-44e7-bab3-56225c23bc5e",
+        "Flags": 0,
+        "Name": "holiday-cabin-roof-snow (2)",
+        "Position": "-100,0,100",
+        "Rotation": "0,0,0.7071069,0.7071068",
+        "Scale": "1.7,1.1,1",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.Prop",
+            "__guid": "3e2be2e5-8e14-486c-ae69-33a0aac433f4",
+            "BodyGroups": 18446744073709551615,
+            "Health": 0,
+            "IsStatic": true,
+            "Model": "models/holiday-kit/holiday-cabin-roof.vmdl",
+            "StartAsleep": false,
+            "Tint": "1,1,1,1"
+          }
+        ]
+      },
+      {
+        "__guid": "dbea7b70-8124-4a0f-8bf3-90687714eeae",
+        "Flags": 0,
+        "Name": "holiday-cabin-roof-top",
+        "Position": "-43.75,-25,218.75",
+        "Rotation": "0,0,0.7071068,0.7071068",
+        "Scale": "4,1,1",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.Prop",
+            "__guid": "51860a3f-f000-49a0-80a7-465540e8b3b1",
+            "BodyGroups": 18446744073709551615,
+            "Health": 0,
+            "IsStatic": true,
+            "Model": "models/holiday-kit/holiday-cabin-roof-top.vmdl",
+            "StartAsleep": false,
+            "Tint": "1,1,1,1"
+          }
+        ]
+      },
+      {
+        "__guid": "8966d96a-a08f-4cb7-85ef-fa08253a05c8",
+        "Flags": 0,
+        "Name": "holiday-cabin-corner-bottom (5)",
+        "Position": "-143.75,131.25,0",
+        "Rotation": "0,0,0.7071068,0.7071068",
+        "Scale": "1.3,1.3,1",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.Prop",
+            "__guid": "bda77cca-ce2a-45b2-bcd5-ce369b4d7ce1",
+            "BodyGroups": 18446744073709551615,
+            "Health": 0,
+            "IsStatic": true,
+            "Model": "models/holiday-kit/holiday-cabin-corner-bottom.vmdl",
+            "StartAsleep": false,
+            "Tint": "1,1,1,1"
+          }
+        ]
+      },
+      {
+        "__guid": "f2afb805-a98f-49dc-a9d4-7d32745908ac",
+        "Flags": 0,
+        "Name": "holiday-cabin-roof-snow (3)",
+        "Position": "-100,-150,100",
+        "Rotation": "0,0,0.7071069,0.7071068",
+        "Scale": "1,1.1,1",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.Prop",
+            "__guid": "897222e6-e2f7-482e-b671-da5f16c29aeb",
+            "BodyGroups": 18446744073709551615,
+            "Health": 0,
+            "IsStatic": true,
+            "Model": "models/holiday-kit/holiday-cabin-roof.vmdl",
+            "StartAsleep": false,
+            "Tint": "1,1,1,1"
+          }
+        ]
+      },
+      {
+        "__guid": "96d0f3ea-8138-4f87-8963-759fb0697dc8",
+        "Flags": 0,
+        "Name": "holiday-floor-wood (9)",
+        "Position": "-100,-150,0",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.Prop",
+            "__guid": "caa9081a-60b6-4641-8c6b-51ea47612f99",
+            "BodyGroups": 18446744073709551615,
+            "Health": 0,
+            "IsStatic": true,
+            "Model": "models/holiday-kit/holiday-floor-wood.vmdl",
+            "StartAsleep": false,
+            "Tint": "1,1,1,1"
+          }
+        ]
+      },
+      {
+        "__guid": "daae8e3a-647d-4337-ba96-2d2a84367ca8",
+        "Flags": 0,
+        "Name": "holiday-cabin-wall (11)",
+        "Position": "-100,-150,0",
+        "Rotation": "0,0,1,-0.00000005960464",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.Prop",
+            "__guid": "fc192f39-8061-4fa2-a916-3542b8bf984d",
+            "BodyGroups": 18446744073709551615,
+            "Health": 0,
+            "IsStatic": true,
+            "Model": "models/holiday-kit/holiday-cabin-wall.vmdl",
+            "StartAsleep": false,
+            "Tint": "1,1,1,1"
+          }
+        ]
+      },
+      {
+        "__guid": "c80228ea-c22d-483e-ab85-cfe750039ce2",
+        "Flags": 0,
+        "Name": "holiday-cabin-wall-roof (2)",
+        "Position": "0,-150,100",
+        "Rotation": "0,0,-0.7071068,0.7071068",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.Prop",
+            "__guid": "eed2c940-0c31-4518-aa02-9eb2d74f35af",
+            "BodyGroups": 18446744073709551615,
+            "Health": 0,
+            "IsStatic": true,
+            "Model": "models/holiday-kit/holiday-cabin-wall-roof.vmdl",
+            "StartAsleep": false,
+            "Tint": "1,1,1,1"
+          }
+        ]
+      },
+      {
+        "__guid": "ec8c251b-2fe6-49f5-92da-0af3932fc681",
+        "Flags": 0,
+        "Name": "holiday-cabin-wall-roof (3)",
+        "Position": "-100,-250,100",
+        "Rotation": "0,0,0.7071069,0.7071068",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.Prop",
+            "__guid": "6b79d571-180f-42f7-b512-912607290b2f",
+            "BodyGroups": 18446744073709551615,
+            "Health": 0,
+            "IsStatic": true,
+            "Model": "models/holiday-kit/holiday-cabin-wall-roof.vmdl",
+            "StartAsleep": false,
+            "Tint": "1,1,1,1"
+          }
+        ]
+      },
+      {
+        "__guid": "249f90db-6fa5-4576-b6f2-250d40c81e3f",
+        "Flags": 0,
+        "Name": "holiday-cabin-door-rotate",
+        "Position": "100,150,0",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.Prop",
+            "__guid": "38103fd7-0afb-4ce8-bdec-096b179aceea",
             "BodyGroups": 18446744073709551615,
             "Health": 0,
             "IsStatic": true,
@@ -25,214 +834,16 @@
         ]
       },
       {
-        "__guid": "2f10a033-651a-41b3-b5b4-a37ae66af15a",
-        "Flags": 0,
-        "Name": "holiday-cabin-window-c",
-        "Position": "100,100,0",
-        "Enabled": true,
-        "Components": [
-          {
-            "__type": "Sandbox.Prop",
-            "__guid": "20c348c0-3a60-4b96-bbd1-c572d1c76346",
-            "BodyGroups": 18446744073709551615,
-            "Health": 0,
-            "IsStatic": true,
-            "Model": "models/holiday-kit/holiday-cabin-window-c.vmdl",
-            "StartAsleep": false,
-            "Tint": "1,1,1,1"
-          }
-        ]
-      },
-      {
-        "__guid": "ff62c544-724b-4946-ad3c-167cc7cb3831",
-        "Flags": 0,
-        "Name": "holiday-cabin-wall",
-        "Rotation": "0,0,-0.7071068,0.7071068",
-        "Enabled": true,
-        "Components": [
-          {
-            "__type": "Sandbox.Prop",
-            "__guid": "02d0251e-5119-494a-90ec-4bbf8f67097f",
-            "BodyGroups": 18446744073709551615,
-            "Health": 0,
-            "IsStatic": true,
-            "Model": "models/holiday-kit/holiday-cabin-wall.vmdl",
-            "StartAsleep": false,
-            "Tint": "1,1,1,1"
-          }
-        ]
-      },
-      {
-        "__guid": "cc9d9640-d839-4f3a-b976-1c5a63221611",
-        "Flags": 0,
-        "Name": "holiday-cabin-wall (10)",
-        "Position": "0,0.000007629395,100",
-        "Rotation": "0,0,-0.7071068,0.7071068",
-        "Enabled": true,
-        "Components": [
-          {
-            "__type": "Sandbox.Prop",
-            "__guid": "ae38cdcb-00c6-471b-b9d7-029d47da489e",
-            "BodyGroups": 18446744073709551615,
-            "Health": 0,
-            "IsStatic": true,
-            "Model": "models/holiday-kit/holiday-cabin-wall.vmdl",
-            "StartAsleep": false,
-            "Tint": "1,1,1,1"
-          }
-        ]
-      },
-      {
-        "__guid": "0970246a-530b-4623-879f-3f4f7269e6e4",
-        "Flags": 0,
-        "Name": "holiday-cabin-wall (4)",
-        "Position": "-0.00001144409,100,0",
-        "Rotation": "0,0,0.7071069,0.7071068",
-        "Enabled": true,
-        "Components": [
-          {
-            "__type": "Sandbox.Prop",
-            "__guid": "81878818-cde6-4c1b-8183-24c773629e76",
-            "BodyGroups": 18446744073709551615,
-            "Health": 0,
-            "IsStatic": true,
-            "Model": "models/holiday-kit/holiday-cabin-wall.vmdl",
-            "StartAsleep": false,
-            "Tint": "1,1,1,1"
-          }
-        ]
-      },
-      {
-        "__guid": "912458ae-b66b-440d-96d0-00bd9650ab12",
-        "Flags": 0,
-        "Name": "holiday-cabin-wall (11)",
-        "Position": "-0.00001144409,100,100",
-        "Rotation": "0,0,0.7071069,0.7071068",
-        "Enabled": true,
-        "Components": [
-          {
-            "__type": "Sandbox.Prop",
-            "__guid": "a30c2fda-103d-453f-a5cb-87820bf7c6d4",
-            "BodyGroups": 18446744073709551615,
-            "Health": 0,
-            "IsStatic": true,
-            "Model": "models/holiday-kit/holiday-cabin-wall.vmdl",
-            "StartAsleep": false,
-            "Tint": "1,1,1,1"
-          }
-        ]
-      },
-      {
-        "__guid": "c876c8f4-7b35-42fd-ad49-9efc4045bf8b",
-        "Flags": 0,
-        "Name": "holiday-cabin-wall (7)",
-        "Position": "-100,99.99998,0",
-        "Rotation": "0,0,1,-0.00000005960464",
-        "Enabled": true,
-        "Components": [
-          {
-            "__type": "Sandbox.Prop",
-            "__guid": "8cb6bb59-534c-425a-a3cb-4ffe6f3a767a",
-            "BodyGroups": 18446744073709551615,
-            "Health": 0,
-            "IsStatic": true,
-            "Model": "models/holiday-kit/holiday-cabin-wall.vmdl",
-            "StartAsleep": false,
-            "Tint": "1,1,1,1"
-          }
-        ]
-      },
-      {
-        "__guid": "04883056-ee67-4663-a8f2-7eb0d5c9770b",
-        "Flags": 0,
-        "Name": "holiday-cabin-wall (1)",
-        "Position": "100,0,0",
-        "Rotation": "0,0,-0.7071068,0.7071068",
-        "Enabled": true,
-        "Components": [
-          {
-            "__type": "Sandbox.Prop",
-            "__guid": "2047f045-7ea5-4b9f-a2b3-1c85403bd64b",
-            "BodyGroups": 18446744073709551615,
-            "Health": 0,
-            "IsStatic": true,
-            "Model": "models/holiday-kit/holiday-cabin-wall.vmdl",
-            "StartAsleep": false,
-            "Tint": "1,1,1,1"
-          }
-        ]
-      },
-      {
-        "__guid": "6fc9c2e9-c0d6-4a36-9634-91b8213ad351",
-        "Flags": 0,
-        "Name": "holiday-cabin-wall (3)",
-        "Position": "-100,100,0",
-        "Rotation": "0,0,0.7071069,0.7071068",
-        "Enabled": true,
-        "Components": [
-          {
-            "__type": "Sandbox.Prop",
-            "__guid": "e7047534-6e05-4dc1-b87f-f13e4756b4b0",
-            "BodyGroups": 18446744073709551615,
-            "Health": 0,
-            "IsStatic": true,
-            "Model": "models/holiday-kit/holiday-cabin-wall.vmdl",
-            "StartAsleep": false,
-            "Tint": "1,1,1,1"
-          }
-        ]
-      },
-      {
-        "__guid": "41e48c38-4062-45db-8030-774bc2357214",
-        "Flags": 0,
-        "Name": "holiday-cabin-wall (6)",
-        "Position": "-100,-0.000007629395,0",
-        "Rotation": "0,0,1,-0.00000005960464",
-        "Enabled": true,
-        "Components": [
-          {
-            "__type": "Sandbox.Prop",
-            "__guid": "c189c933-c31a-43f1-927e-ecff0118be4e",
-            "BodyGroups": 18446744073709551615,
-            "Health": 0,
-            "IsStatic": true,
-            "Model": "models/holiday-kit/holiday-cabin-wall.vmdl",
-            "StartAsleep": false,
-            "Tint": "1,1,1,1"
-          }
-        ]
-      },
-      {
-        "__guid": "64a99c7e-075f-4230-af7f-f2afb8329ddf",
-        "Flags": 0,
-        "Name": "holiday-cabin-wall (2)",
-        "Position": "-100,0,0",
-        "Rotation": "0,0,-0.7071068,0.7071068",
-        "Enabled": true,
-        "Components": [
-          {
-            "__type": "Sandbox.Prop",
-            "__guid": "401d883e-d544-4150-8487-d30a26df39f4",
-            "BodyGroups": 18446744073709551615,
-            "Health": 0,
-            "IsStatic": true,
-            "Model": "models/holiday-kit/holiday-cabin-wall.vmdl",
-            "StartAsleep": false,
-            "Tint": "1,1,1,1"
-          }
-        ]
-      },
-      {
-        "__guid": "b059af4a-ea96-4d21-b7c1-158c1d81ebe0",
+        "__guid": "7eb0fdf7-8264-4e94-ade3-b123e75d8625",
         "Flags": 0,
         "Name": "holiday-cabin-wall (5)",
-        "Position": "99.99997,100,0",
+        "Position": "0,150,0",
         "Rotation": "0,0,0.7071069,0.7071068",
         "Enabled": true,
         "Components": [
           {
             "__type": "Sandbox.Prop",
-            "__guid": "43a77d8e-0058-49b6-a456-3bb5ff7061b7",
+            "__guid": "953f5c76-c062-4c52-993a-47aba4f77baf",
             "BodyGroups": 18446744073709551615,
             "Health": 0,
             "IsStatic": true,
@@ -243,659 +854,15 @@
         ]
       },
       {
-        "__guid": "5de35d44-bc74-402a-83d0-4b0d91a3ee4d",
-        "Flags": 0,
-        "Name": "holiday-cabin-corner-bottom",
-        "Position": "100,0,0",
-        "Enabled": true,
-        "Components": [
-          {
-            "__type": "Sandbox.Prop",
-            "__guid": "6d1439df-1dbd-4ef3-8b95-7b241b9f70f7",
-            "BodyGroups": 18446744073709551615,
-            "Health": 0,
-            "IsStatic": true,
-            "Model": "models/holiday-kit/holiday-cabin-corner-bottom.vmdl",
-            "StartAsleep": false,
-            "Tint": "1,1,1,1"
-          }
-        ]
-      },
-      {
-        "__guid": "50c0dbe0-de52-4ae8-8be5-164991a3e557",
-        "Flags": 0,
-        "Name": "holiday-cabin-corner-bottom (1)",
-        "Position": "100,99.99999,0",
-        "Rotation": "0,0,0.7071068,0.7071068",
-        "Enabled": true,
-        "Components": [
-          {
-            "__type": "Sandbox.Prop",
-            "__guid": "88229284-927a-494d-a84a-326dee14a9fc",
-            "BodyGroups": 18446744073709551615,
-            "Health": 0,
-            "IsStatic": true,
-            "Model": "models/holiday-kit/holiday-cabin-corner-bottom.vmdl",
-            "StartAsleep": false,
-            "Tint": "1,1,1,1"
-          }
-        ]
-      },
-      {
-        "__guid": "97a22dda-dd21-4eda-866a-f2edad772c44",
-        "Flags": 0,
-        "Name": "holiday-cabin-corner-bottom (2)",
-        "Position": "-100,99.99999,0",
-        "Rotation": "0,0,1,0",
-        "Enabled": true,
-        "Components": [
-          {
-            "__type": "Sandbox.Prop",
-            "__guid": "cae732d7-3cbb-4e8a-a425-09d9a5d4e35c",
-            "BodyGroups": 18446744073709551615,
-            "Health": 0,
-            "IsStatic": true,
-            "Model": "models/holiday-kit/holiday-cabin-corner-bottom.vmdl",
-            "StartAsleep": false,
-            "Tint": "1,1,1,1"
-          }
-        ]
-      },
-      {
-        "__guid": "d5ec1a1e-8ec3-4b6e-89a0-20627e27743c",
-        "Flags": 0,
-        "Name": "holiday-cabin-corner-bottom (3)",
-        "Position": "-100,0,0",
-        "Rotation": "0,0,0.7071068,-0.7071068",
-        "Enabled": true,
-        "Components": [
-          {
-            "__type": "Sandbox.Prop",
-            "__guid": "aa9c272d-da73-4a96-8c1f-9f22fb7378ca",
-            "BodyGroups": 18446744073709551615,
-            "Health": 0,
-            "IsStatic": true,
-            "Model": "models/holiday-kit/holiday-cabin-corner-bottom.vmdl",
-            "StartAsleep": false,
-            "Tint": "1,1,1,1"
-          }
-        ]
-      },
-      {
-        "__guid": "0732ef33-3972-445c-9d2a-fce96c304014",
-        "Flags": 0,
-        "Name": "holiday-cabin-corner",
-        "Position": "100,0,100",
-        "Enabled": true,
-        "Components": [
-          {
-            "__type": "Sandbox.Prop",
-            "__guid": "c506d177-f49b-45b5-b5d2-44062d3f6e72",
-            "BodyGroups": 18446744073709551615,
-            "Health": 0,
-            "IsStatic": true,
-            "Model": "models/holiday-kit/holiday-cabin-corner.vmdl",
-            "StartAsleep": false,
-            "Tint": "1,1,1,1"
-          }
-        ]
-      },
-      {
-        "__guid": "61665ba1-4431-4db7-82f3-3d7acad5e60a",
-        "Flags": 0,
-        "Name": "holiday-cabin-corner (1)",
-        "Position": "100,99.99999,100",
-        "Rotation": "0,0,0.7071068,0.7071068",
-        "Enabled": true,
-        "Components": [
-          {
-            "__type": "Sandbox.Prop",
-            "__guid": "2ea5cab9-8662-4bcc-8823-ae62f5ecb2b6",
-            "BodyGroups": 18446744073709551615,
-            "Health": 0,
-            "IsStatic": true,
-            "Model": "models/holiday-kit/holiday-cabin-corner.vmdl",
-            "StartAsleep": false,
-            "Tint": "1,1,1,1"
-          }
-        ]
-      },
-      {
-        "__guid": "f6cd015c-8c52-4dc4-ac1f-0b5526d710d7",
-        "Flags": 0,
-        "Name": "holiday-cabin-corner (2)",
-        "Position": "-100,99.99999,100",
-        "Rotation": "0,0,1,0",
-        "Enabled": true,
-        "Components": [
-          {
-            "__type": "Sandbox.Prop",
-            "__guid": "4e768ae3-5002-4534-bb0f-b4f3955c9de6",
-            "BodyGroups": 18446744073709551615,
-            "Health": 0,
-            "IsStatic": true,
-            "Model": "models/holiday-kit/holiday-cabin-corner.vmdl",
-            "StartAsleep": false,
-            "Tint": "1,1,1,1"
-          }
-        ]
-      },
-      {
-        "__guid": "71244300-4f3d-438a-a161-589512d190e0",
-        "Flags": 0,
-        "Name": "holiday-cabin-corner (3)",
-        "Position": "-100,0,100",
-        "Rotation": "0,0,0.7071068,-0.7071068",
-        "Enabled": true,
-        "Components": [
-          {
-            "__type": "Sandbox.Prop",
-            "__guid": "37a839ee-0939-420e-aa9a-fcc457ce7c6c",
-            "BodyGroups": 18446744073709551615,
-            "Health": 0,
-            "IsStatic": true,
-            "Model": "models/holiday-kit/holiday-cabin-corner.vmdl",
-            "StartAsleep": false,
-            "Tint": "1,1,1,1"
-          }
-        ]
-      },
-      {
-        "__guid": "ed857568-8214-4fdb-9ff2-6565fba06fe7",
-        "Flags": 0,
-        "Name": "holiday-cabin-wall-wreath",
-        "Position": "100,100,100",
-        "Enabled": true,
-        "Components": [
-          {
-            "__type": "Sandbox.Prop",
-            "__guid": "f7854ef2-443d-49cf-a24f-46d9246255ed",
-            "BodyGroups": 18446744073709551615,
-            "Health": 0,
-            "IsStatic": true,
-            "Model": "models/holiday-kit/holiday-cabin-wall-wreath.vmdl",
-            "StartAsleep": false,
-            "Tint": "1,1,1,1"
-          }
-        ]
-      },
-      {
-        "__guid": "c1335f52-4c04-4d56-aaad-6244d044c173",
-        "Flags": 0,
-        "Name": "holiday-cabin-wall",
-        "Position": "100,0,100",
-        "Enabled": true,
-        "Components": [
-          {
-            "__type": "Sandbox.Prop",
-            "__guid": "9076b5c7-dd18-409b-a4fe-3eb0b1262a48",
-            "BodyGroups": 18446744073709551615,
-            "Health": 0,
-            "IsStatic": true,
-            "Model": "models/holiday-kit/holiday-cabin-wall.vmdl",
-            "StartAsleep": false,
-            "Tint": "1,1,1,1"
-          }
-        ]
-      },
-      {
-        "__guid": "2ff6e52a-d8da-4fdd-aeeb-3ab1f2d56279",
-        "Flags": 0,
-        "Name": "holiday-cabin-wall (8)",
-        "Position": "-100,99.99997,100",
-        "Rotation": "0,0,1,-0.00000004371139",
-        "Enabled": true,
-        "Components": [
-          {
-            "__type": "Sandbox.Prop",
-            "__guid": "50ba3457-b391-48bf-896f-3b3a1e360388",
-            "BodyGroups": 18446744073709551615,
-            "Health": 0,
-            "IsStatic": true,
-            "Model": "models/holiday-kit/holiday-cabin-wall.vmdl",
-            "StartAsleep": false,
-            "Tint": "1,1,1,1"
-          }
-        ]
-      },
-      {
-        "__guid": "be968346-88ed-43fb-b815-3caef0c201c2",
-        "Flags": 0,
-        "Name": "holiday-cabin-wall (9)",
-        "Position": "-99.99999,-0.000007629395,100",
-        "Rotation": "0,0,1,-0.00000004371139",
-        "Enabled": true,
-        "Components": [
-          {
-            "__type": "Sandbox.Prop",
-            "__guid": "dccb7e83-a262-4206-bf99-5fb584a049d0",
-            "BodyGroups": 18446744073709551615,
-            "Health": 0,
-            "IsStatic": true,
-            "Model": "models/holiday-kit/holiday-cabin-wall.vmdl",
-            "StartAsleep": false,
-            "Tint": "1,1,1,1"
-          }
-        ]
-      },
-      {
-        "__guid": "5437f641-271b-4787-8cda-1787cd808c77",
-        "Flags": 0,
-        "Name": "holiday-cabin-window-c",
-        "Position": "100,0,100",
-        "Rotation": "0,0,-0.7071068,0.7071068",
-        "Enabled": true,
-        "Components": [
-          {
-            "__type": "Sandbox.Prop",
-            "__guid": "b2e74095-5e40-450d-a172-54b8072f6db7",
-            "BodyGroups": 18446744073709551615,
-            "Health": 0,
-            "IsStatic": true,
-            "Model": "models/holiday-kit/holiday-cabin-window-c.vmdl",
-            "StartAsleep": false,
-            "Tint": "1,1,1,1"
-          }
-        ]
-      },
-      {
-        "__guid": "c7bfca6e-e49b-4298-909e-b4bb54c05180",
-        "Flags": 0,
-        "Name": "holiday-cabin-window-c (3)",
-        "Position": "-100,100,100",
-        "Rotation": "0,0,0.7071069,0.7071068",
-        "Enabled": true,
-        "Components": [
-          {
-            "__type": "Sandbox.Prop",
-            "__guid": "f950177f-d280-4e8e-8a58-79b1af1f3652",
-            "BodyGroups": 18446744073709551615,
-            "Health": 0,
-            "IsStatic": true,
-            "Model": "models/holiday-kit/holiday-cabin-window-c.vmdl",
-            "StartAsleep": false,
-            "Tint": "1,1,1,1"
-          }
-        ]
-      },
-      {
-        "__guid": "1a507922-5837-4e43-a068-5caa36eb4d1d",
-        "Flags": 0,
-        "Name": "holiday-cabin-window-c (1)",
-        "Position": "-100,0,100",
-        "Rotation": "0,0,-0.7071068,0.7071068",
-        "Enabled": true,
-        "Components": [
-          {
-            "__type": "Sandbox.Prop",
-            "__guid": "05f92af8-9018-4e02-b66a-043ad9d00337",
-            "BodyGroups": 18446744073709551615,
-            "Health": 0,
-            "IsStatic": true,
-            "Model": "models/holiday-kit/holiday-cabin-window-c.vmdl",
-            "StartAsleep": false,
-            "Tint": "1,1,1,1"
-          }
-        ]
-      },
-      {
-        "__guid": "850e1762-fb84-4851-abcf-ca307293a973",
-        "Flags": 0,
-        "Name": "holiday-cabin-window-c (2)",
-        "Position": "99.99997,100,100",
-        "Rotation": "0,0,0.7071069,0.7071068",
-        "Enabled": true,
-        "Components": [
-          {
-            "__type": "Sandbox.Prop",
-            "__guid": "9e894486-e93e-4bf1-9a7e-8ec6865d49cd",
-            "BodyGroups": 18446744073709551615,
-            "Health": 0,
-            "IsStatic": true,
-            "Model": "models/holiday-kit/holiday-cabin-window-c.vmdl",
-            "StartAsleep": false,
-            "Tint": "1,1,1,1"
-          }
-        ]
-      },
-      {
-        "__guid": "d6b2c223-e614-45e5-897d-4c9cf304407e",
-        "Flags": 0,
-        "Name": "holiday-lantern-hanging",
-        "Position": "162.5,0,162.5",
-        "Enabled": true,
-        "__Prefab": "prefabs/hanging_lamp.prefab",
-        "__PrefabVariables": {}
-      },
-      {
-        "__guid": "cc126c93-7798-46e5-bcf3-8d37422b2587",
-        "Flags": 0,
-        "Name": "holiday-cabin-wall-roof",
-        "Position": "100,100,200",
-        "Enabled": true,
-        "Components": [
-          {
-            "__type": "Sandbox.Prop",
-            "__guid": "39a9a6c1-aeb6-473f-b9c1-bbb6983b733d",
-            "BodyGroups": 18446744073709551615,
-            "Health": 0,
-            "IsStatic": true,
-            "Model": "models/holiday-kit/holiday-cabin-wall-roof.vmdl",
-            "StartAsleep": false,
-            "Tint": "1,1,1,1"
-          }
-        ]
-      },
-      {
-        "__guid": "32941db1-6f65-40ce-b34d-8ee2bc63ad17",
-        "Flags": 0,
-        "Name": "holiday-cabin-wall-roof (3)",
-        "Position": "-99.99999,-0.000007629395,200",
-        "Rotation": "0,0,1,-0.00000004371139",
-        "Enabled": true,
-        "Components": [
-          {
-            "__type": "Sandbox.Prop",
-            "__guid": "a1a5d196-5bf7-456e-96a3-7635c5ec3bf5",
-            "BodyGroups": 18446744073709551615,
-            "Health": 0,
-            "IsStatic": true,
-            "Model": "models/holiday-kit/holiday-cabin-wall-roof.vmdl",
-            "StartAsleep": false,
-            "Tint": "1,1,1,1"
-          }
-        ]
-      },
-      {
-        "__guid": "98a62ad7-524a-4f0c-a6e9-5a5ad39a0462",
-        "Flags": 0,
-        "Name": "holiday-cabin-wall-roof (1)",
-        "Position": "200,0.00001525879,200",
-        "Rotation": "0,0,1,-0.00000004371139",
-        "Enabled": true,
-        "Components": [
-          {
-            "__type": "Sandbox.Prop",
-            "__guid": "add9b295-1451-491a-84b3-373088bf0dae",
-            "BodyGroups": 18446744073709551615,
-            "Health": 0,
-            "IsStatic": true,
-            "Model": "models/holiday-kit/holiday-cabin-wall-roof.vmdl",
-            "StartAsleep": false,
-            "Tint": "1,1,1,1"
-          }
-        ]
-      },
-      {
-        "__guid": "19232bb5-3168-4d7a-936c-4b174140b0fb",
-        "Flags": 0,
-        "Name": "holiday-cabin-wall-roof (2)",
-        "Position": "-200,99.99996,200",
-        "Rotation": "0,0,-0.00000008742278,-1",
-        "Enabled": true,
-        "Components": [
-          {
-            "__type": "Sandbox.Prop",
-            "__guid": "01e720b5-eb24-4be0-aefd-22c069cd141f",
-            "BodyGroups": 18446744073709551615,
-            "Health": 0,
-            "IsStatic": true,
-            "Model": "models/holiday-kit/holiday-cabin-wall-roof.vmdl",
-            "StartAsleep": false,
-            "Tint": "1,1,1,1"
-          }
-        ]
-      },
-      {
-        "__guid": "f553a41b-3982-4277-a3bd-7cdf0fe47195",
-        "Flags": 0,
-        "Name": "holiday-cabin-roof (2)",
-        "Position": "-100,100,200",
-        "Scale": "1.43,1,1",
-        "Enabled": true,
-        "Components": [
-          {
-            "__type": "Sandbox.Prop",
-            "__guid": "967beded-b5e9-4bfa-bc26-12960f03b9c3",
-            "BodyGroups": 18446744073709551615,
-            "Health": 0,
-            "IsStatic": true,
-            "Model": "models/holiday-kit/holiday-cabin-roof.vmdl",
-            "StartAsleep": false,
-            "Tint": "1,1,1,1"
-          }
-        ]
-      },
-      {
-        "__guid": "4a2bc488-acaf-4351-ba50-8c46ff012d77",
-        "Flags": 0,
-        "Name": "holiday-cabin-roof (3)",
-        "Position": "100,0.000007629395,200",
-        "Rotation": "0,0,1,-0.00000004371139",
-        "Scale": "1.43,1,1",
-        "Enabled": true,
-        "Components": [
-          {
-            "__type": "Sandbox.Prop",
-            "__guid": "9ac4f3b5-d8e6-445b-adcb-d6fafccb110e",
-            "BodyGroups": 18446744073709551615,
-            "Health": 0,
-            "IsStatic": true,
-            "Model": "models/holiday-kit/holiday-cabin-roof.vmdl",
-            "StartAsleep": false,
-            "Tint": "1,1,1,1"
-          }
-        ]
-      },
-      {
-        "__guid": "8d6fe38e-9f2c-4661-bacf-69a9f6892993",
-        "Flags": 0,
-        "Name": "holiday-cabin-roof (1)",
-        "Position": "100,100,200",
-        "Scale": "1.43,1,1",
-        "Enabled": true,
-        "Components": [
-          {
-            "__type": "Sandbox.Prop",
-            "__guid": "bf732fdb-8418-4604-9f46-3da7347ecb7f",
-            "BodyGroups": 18446744073709551615,
-            "Health": 0,
-            "IsStatic": true,
-            "Model": "models/holiday-kit/holiday-cabin-roof.vmdl",
-            "StartAsleep": false,
-            "Tint": "1,1,1,1"
-          }
-        ]
-      },
-      {
-        "__guid": "b3d22a80-96ad-4b05-a252-0b87fe5f1f60",
-        "Flags": 0,
-        "Name": "holiday-cabin-roof (5)",
-        "Position": "-99.99999,-0.000007629395,200",
-        "Rotation": "0,0,1,-0.00000004371139",
-        "Scale": "1.43,1,1",
-        "Enabled": true,
-        "Components": [
-          {
-            "__type": "Sandbox.Prop",
-            "__guid": "0581989b-9c40-41df-9829-2cfe1064a5c1",
-            "BodyGroups": 18446744073709551615,
-            "Health": 0,
-            "IsStatic": true,
-            "Model": "models/holiday-kit/holiday-cabin-roof.vmdl",
-            "StartAsleep": false,
-            "Tint": "1,1,1,1"
-          }
-        ]
-      },
-      {
-        "__guid": "69253254-7af1-4d9a-a477-7d47fbb3d763",
-        "Flags": 0,
-        "Name": "holiday-lights-red",
-        "Position": "168.75,50,237.5",
-        "Enabled": true,
-        "Components": [
-          {
-            "__type": "Sandbox.Prop",
-            "__guid": "2293d111-c0f2-4324-9597-bb9d2585b89b",
-            "BodyGroups": 18446744073709551615,
-            "Health": 0,
-            "IsStatic": true,
-            "Model": "models/holiday-kit/holiday-lights-red.vmdl",
-            "StartAsleep": false,
-            "Tint": "1,1,1,1"
-          }
-        ]
-      },
-      {
-        "__guid": "4160c97b-b693-44b0-b10a-eb39d8c1b8cd",
-        "Flags": 0,
-        "Name": "holiday-lights-green",
-        "Position": "93.74998,-68.75,62.50001",
-        "Rotation": "-0.09229596,0.09229596,0.7010574,0.7010574",
-        "Enabled": true,
-        "Components": [
-          {
-            "__type": "Sandbox.Prop",
-            "__guid": "d8070a5c-c0fb-45a5-bf44-19f9d2e18c43",
-            "BodyGroups": 18446744073709551615,
-            "Health": 0,
-            "IsStatic": true,
-            "Model": "models/holiday-kit/holiday-lights-green.vmdl",
-            "StartAsleep": false,
-            "Tint": "1,1,1,1"
-          }
-        ]
-      },
-      {
-        "__guid": "51786dd1-371b-4575-8e5a-f9562e837e29",
-        "Flags": 0,
-        "Name": "holiday-lights-green (4)",
-        "Position": "-99.99999,168.75,62.50001",
-        "Rotation": "-0.09229595,-0.09229597,0.7010573,-0.7010574",
-        "Enabled": true,
-        "Components": [
-          {
-            "__type": "Sandbox.Prop",
-            "__guid": "cc7e1f3b-10e0-4e48-be44-f3cbc2c62cc9",
-            "BodyGroups": 18446744073709551615,
-            "Health": 0,
-            "IsStatic": true,
-            "Model": "models/holiday-kit/holiday-lights-green.vmdl",
-            "StartAsleep": false,
-            "Tint": "1,1,1,1"
-          }
-        ]
-      },
-      {
-        "__guid": "eb4514a5-91b6-4164-ac44-7da55d42297c",
-        "Flags": 0,
-        "Name": "holiday-lights-green (1)",
-        "Position": "-0.000007629395,-68.75,62.50001",
-        "Rotation": "-0.09229596,0.09229596,0.7010574,0.7010574",
-        "Enabled": true,
-        "Components": [
-          {
-            "__type": "Sandbox.Prop",
-            "__guid": "cd061662-fc02-4fdd-bf04-da7da36e909c",
-            "BodyGroups": 18446744073709551615,
-            "Health": 0,
-            "IsStatic": true,
-            "Model": "models/holiday-kit/holiday-lights-green.vmdl",
-            "StartAsleep": false,
-            "Tint": "1,1,1,1"
-          }
-        ]
-      },
-      {
-        "__guid": "804251e4-1737-4ea1-9f2c-2d03948d32b2",
-        "Flags": 0,
-        "Name": "holiday-lights-green (5)",
-        "Position": "-6.250008,168.75,62.50001",
-        "Rotation": "-0.09229595,-0.09229597,0.7010573,-0.7010574",
-        "Enabled": true,
-        "Components": [
-          {
-            "__type": "Sandbox.Prop",
-            "__guid": "5f7cf194-dc18-4eac-883c-ec3a89b2a5e3",
-            "BodyGroups": 18446744073709551615,
-            "Health": 0,
-            "IsStatic": true,
-            "Model": "models/holiday-kit/holiday-lights-green.vmdl",
-            "StartAsleep": false,
-            "Tint": "1,1,1,1"
-          }
-        ]
-      },
-      {
-        "__guid": "0b2672f7-f546-4c2b-ba3b-7d86067cc5ce",
-        "Flags": 0,
-        "Name": "holiday-lights-green (2)",
-        "Position": "-99.99999,-68.75,62.50001",
-        "Rotation": "-0.09229596,0.09229596,0.7010574,0.7010574",
-        "Enabled": true,
-        "Components": [
-          {
-            "__type": "Sandbox.Prop",
-            "__guid": "36c32c31-7a17-4136-ae9a-46d54146eebb",
-            "BodyGroups": 18446744073709551615,
-            "Health": 0,
-            "IsStatic": true,
-            "Model": "models/holiday-kit/holiday-lights-green.vmdl",
-            "StartAsleep": false,
-            "Tint": "1,1,1,1"
-          }
-        ]
-      },
-      {
-        "__guid": "ca0a0013-5a19-429f-b558-7e33930adb8f",
-        "Flags": 0,
-        "Name": "holiday-lights-green (3)",
-        "Position": "93.74998,168.75,62.50001",
-        "Rotation": "-0.09229595,-0.09229597,0.7010573,-0.7010574",
-        "Enabled": true,
-        "Components": [
-          {
-            "__type": "Sandbox.Prop",
-            "__guid": "649c6dc7-decd-404a-aa57-f68b8ae57de2",
-            "BodyGroups": 18446744073709551615,
-            "Health": 0,
-            "IsStatic": true,
-            "Model": "models/holiday-kit/holiday-lights-green.vmdl",
-            "StartAsleep": false,
-            "Tint": "1,1,1,1"
-          }
-        ]
-      },
-      {
-        "__guid": "e1e0cfee-bfe8-4b66-baed-f34dc089e6f3",
-        "Flags": 0,
-        "Name": "holiday-floor-wood",
-        "Position": "100,100,0",
-        "Enabled": true,
-        "Components": [
-          {
-            "__type": "Sandbox.Prop",
-            "__guid": "3a64316a-94ad-4914-b20c-b13982b40b40",
-            "BodyGroups": 18446744073709551615,
-            "Health": 0,
-            "IsStatic": true,
-            "Model": "models/holiday-kit/holiday-floor-wood.vmdl",
-            "StartAsleep": false,
-            "Tint": "1,1,1,1"
-          }
-        ]
-      },
-      {
-        "__guid": "105b2dcb-1583-434a-a79b-35468f6f8791",
+        "__guid": "af13d59e-528a-49b8-a44d-fea10a993cb7",
         "Flags": 0,
         "Name": "holiday-floor-wood (1)",
-        "Position": "100,0,0",
+        "Position": "100,150,0",
         "Enabled": true,
         "Components": [
           {
             "__type": "Sandbox.Prop",
-            "__guid": "d52630e0-1a5f-48a2-bfcd-041990078312",
+            "__guid": "895e1a8f-1b72-4e6f-9011-838a238bb621",
             "BodyGroups": 18446744073709551615,
             "Health": 0,
             "IsStatic": true,
@@ -906,14 +873,15 @@
         ]
       },
       {
-        "__guid": "6c1e58dc-e840-49dd-b387-81f0222fde85",
+        "__guid": "a8e0ea91-3e5f-41d1-900b-ef219460bc3e",
         "Flags": 0,
         "Name": "holiday-floor-wood (2)",
+        "Position": "0,150,0",
         "Enabled": true,
         "Components": [
           {
             "__type": "Sandbox.Prop",
-            "__guid": "211e4f4a-e26c-4243-bb9d-d178ceec89af",
+            "__guid": "364b7737-99ba-4532-99f3-911fa6d7e075",
             "BodyGroups": 18446744073709551615,
             "Health": 0,
             "IsStatic": true,
@@ -924,34 +892,152 @@
         ]
       },
       {
-        "__guid": "fd25e0de-8aa1-484b-8316-26e40a17eae9",
+        "__guid": "5f269060-828f-45bc-95d1-59d971a53195",
         "Flags": 0,
-        "Name": "holiday-floor-wood (3)",
-        "Position": "-100,0,0",
+        "Name": "holiday-cabin-wall (12)",
+        "Position": "100,150,0",
+        "Rotation": "0,0,-0.7071068,0.7071068",
         "Enabled": true,
         "Components": [
           {
             "__type": "Sandbox.Prop",
-            "__guid": "dd2d4273-d37f-464c-9061-82f01c72ec59",
+            "__guid": "ff6b4b8d-dc59-4686-ac4b-4a3df03c79c6",
             "BodyGroups": 18446744073709551615,
             "Health": 0,
             "IsStatic": true,
-            "Model": "models/holiday-kit/holiday-floor-wood.vmdl",
+            "Model": "models/holiday-kit/holiday-cabin-wall.vmdl",
             "StartAsleep": false,
             "Tint": "1,1,1,1"
           }
         ]
       },
       {
-        "__guid": "de588511-1eb1-4639-9cdd-3fc9b1e7f7d9",
+        "__guid": "4f9f3af3-3053-4184-b58a-1372d9d67768",
+        "Flags": 0,
+        "Name": "holiday-cabin-corner-bottom (1)",
+        "Position": "100,150,0",
+        "Rotation": "0,0,0.7071068,0.7071068",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.Prop",
+            "__guid": "ae39e1a6-2d5f-4599-9893-91f763e66252",
+            "BodyGroups": 18446744073709551615,
+            "Health": 0,
+            "IsStatic": true,
+            "Model": "models/holiday-kit/holiday-cabin-corner-bottom.vmdl",
+            "StartAsleep": false,
+            "Tint": "1,1,1,1"
+          }
+        ]
+      },
+      {
+        "__guid": "ca496b69-b1c1-44bf-8f30-051453e45076",
+        "Flags": 0,
+        "Name": "holiday-cabin-wall (13)",
+        "Position": "99.99997,150,0",
+        "Rotation": "0,0,0.7071069,0.7071068",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.Prop",
+            "__guid": "549dbf55-06f5-4046-9d6b-0d72db825044",
+            "BodyGroups": 18446744073709551615,
+            "Health": 0,
+            "IsStatic": true,
+            "Model": "models/holiday-kit/holiday-cabin-wall.vmdl",
+            "StartAsleep": false,
+            "Tint": "1,1,1,1"
+          }
+        ]
+      },
+      {
+        "__guid": "7df2bd08-cd27-457a-8f34-c7c315c3af18",
+        "Flags": 0,
+        "Name": "holiday-cabin-corner-bottom",
+        "Position": "100,150,0",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.Prop",
+            "__guid": "251bf2e0-c0d4-4ad0-89cb-b63be2b43c8f",
+            "BodyGroups": 18446744073709551615,
+            "Health": 0,
+            "IsStatic": true,
+            "Model": "models/holiday-kit/holiday-cabin-corner-bottom.vmdl",
+            "StartAsleep": false,
+            "Tint": "1,1,1,1"
+          }
+        ]
+      },
+      {
+        "__guid": "c9a30209-0113-4844-af47-be9f8c9a2d04",
+        "Flags": 0,
+        "Name": "holiday-cabin-window-b",
+        "Position": "0,50.00002,0",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.Prop",
+            "__guid": "a16bbc30-d601-4426-a09d-c58cf403b951",
+            "BodyGroups": 18446744073709551615,
+            "Health": 0,
+            "IsStatic": true,
+            "Model": "models/holiday-kit/holiday-cabin-window-b.vmdl",
+            "StartAsleep": false,
+            "Tint": "1,1,1,1"
+          }
+        ]
+      },
+      {
+        "__guid": "ff601947-709f-4c4b-b8ff-fab6a9d801c6",
+        "Flags": 0,
+        "Name": "holiday-cabin-window-b (1)",
+        "Position": "0,-50,0",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.Prop",
+            "__guid": "4b7dcf94-db04-4fee-ac18-d529605c0938",
+            "BodyGroups": 18446744073709551615,
+            "Health": 0,
+            "IsStatic": true,
+            "Model": "models/holiday-kit/holiday-cabin-window-b.vmdl",
+            "StartAsleep": false,
+            "Tint": "1,1,1,1"
+          }
+        ]
+      },
+      {
+        "__guid": "c3facce3-b414-4a8e-b0ca-200295786473",
+        "Flags": 0,
+        "Name": "holiday-cabin-corner-bottom (4)",
+        "Position": "0,-150,0",
+        "Rotation": "0,0,0,-1",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.Prop",
+            "__guid": "b40d96c5-0f61-4e1a-937c-733132c9a64a",
+            "BodyGroups": 18446744073709551615,
+            "Health": 0,
+            "IsStatic": true,
+            "Model": "models/holiday-kit/holiday-cabin-corner-bottom.vmdl",
+            "StartAsleep": false,
+            "Tint": "1,1,1,1"
+          }
+        ]
+      },
+      {
+        "__guid": "d454334d-8c7a-4b0e-8161-dc8f273cecf2",
         "Flags": 0,
         "Name": "holiday-floor-wood (4)",
-        "Position": "-100,100,0",
+        "Position": "0,50,0",
         "Enabled": true,
         "Components": [
           {
             "__type": "Sandbox.Prop",
-            "__guid": "07a26e3b-8c4a-4d8f-bcc0-62283626c059",
+            "__guid": "8a31d36c-be40-49ec-970e-eb3dfa7a4fbb",
             "BodyGroups": 18446744073709551615,
             "Health": 0,
             "IsStatic": true,
@@ -962,19 +1048,98 @@
         ]
       },
       {
-        "__guid": "762f22e8-bb47-4fc5-94da-717b8e4cb2fe",
+        "__guid": "91d834ed-274f-4c86-8aae-ef0047633c52",
         "Flags": 0,
         "Name": "holiday-floor-wood (5)",
-        "Position": "0,100,0",
+        "Position": "0,-50,0",
         "Enabled": true,
         "Components": [
           {
             "__type": "Sandbox.Prop",
-            "__guid": "f7c2787e-4815-46d3-9cbb-f0f93f266018",
+            "__guid": "10b98832-ded0-4822-b013-b2e3b3c4ee15",
             "BodyGroups": 18446744073709551615,
             "Health": 0,
             "IsStatic": true,
             "Model": "models/holiday-kit/holiday-floor-wood.vmdl",
+            "StartAsleep": false,
+            "Tint": "1,1,1,1"
+          }
+        ]
+      },
+      {
+        "__guid": "e2347eee-59ab-4cba-8b87-cb5304c793d0",
+        "Flags": 0,
+        "Name": "holiday-cabin-corner-bottom (6)",
+        "Position": "-18.75,131.25,0",
+        "Rotation": "0,0,0.7071068,0.7071068",
+        "Scale": "1.3,1.3,1",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.Prop",
+            "__guid": "ae0c9c9d-46bf-40ca-99ce-01bcc81c7f65",
+            "BodyGroups": 18446744073709551615,
+            "Health": 0,
+            "IsStatic": true,
+            "Model": "models/holiday-kit/holiday-cabin-corner-bottom.vmdl",
+            "StartAsleep": false,
+            "Tint": "1,1,1,1"
+          }
+        ]
+      },
+      {
+        "__guid": "abd32760-dbab-49cd-9e70-41a10c4ebda1",
+        "Flags": 0,
+        "Name": "holiday-cabin-roof-snow-chimney",
+        "Position": "0,-150,100",
+        "Rotation": "0,0,0.7071067,-0.7071068",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.Prop",
+            "__guid": "2be40d1c-0792-43b9-978b-9200b01dbf8c",
+            "BodyGroups": 18446744073709551615,
+            "Health": 0,
+            "IsStatic": true,
+            "Model": "models/holiday-kit/holiday-cabin-roof-chimney.vmdl",
+            "StartAsleep": false,
+            "Tint": "1,1,1,1"
+          }
+        ]
+      },
+      {
+        "__guid": "3a54fd46-258f-41cc-8372-c25f36bf41ad",
+        "Flags": 0,
+        "Name": "holiday-floor-wood (8)",
+        "Position": "0,-150,0",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.Prop",
+            "__guid": "8c5d89dd-97a9-4b63-9ade-7468617347a3",
+            "BodyGroups": 18446744073709551615,
+            "Health": 0,
+            "IsStatic": true,
+            "Model": "models/holiday-kit/holiday-floor-wood.vmdl",
+            "StartAsleep": false,
+            "Tint": "1,1,1,1"
+          }
+        ]
+      },
+      {
+        "__guid": "e596b7e9-c3a4-42cc-babc-766ad4ac294d",
+        "Flags": 0,
+        "Name": "holiday-cabin-window-b (2)",
+        "Position": "0,-150,0",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.Prop",
+            "__guid": "8ca28de2-0fd7-48c5-b6f5-a8e38cc7bd9b",
+            "BodyGroups": 18446744073709551615,
+            "Health": 0,
+            "IsStatic": true,
+            "Model": "models/holiday-kit/holiday-cabin-window-b.vmdl",
             "StartAsleep": false,
             "Tint": "1,1,1,1"
           }
@@ -1016,13 +1181,17 @@
     "kenneynl.holidaycabincornerbottom#82175",
     "kenneynl.holidaycabindoorrotate#82181",
     "kenneynl.holidaycabinroof#82195",
+    "kenneynl.holidaycabinroofchimney#82185",
+    "kenneynl.holidaycabinroofcorner#82186",
+    "kenneynl.holidaycabinroofdormer#82187",
+    "kenneynl.holidaycabinroofpoint#82188",
+    "kenneynl.holidaycabinrooftop#82194",
     "kenneynl.holidaycabinwall#82200",
     "kenneynl.holidaycabinwallroof#82288",
-    "kenneynl.holidaycabinwallwreath#82199",
+    "kenneynl.holidaycabinwallroofcenter#82196",
+    "kenneynl.holidaycabinwindowb#82202",
     "kenneynl.holidaycabinwindowc#82203",
-    "kenneynl.holidayfloorwood#82210",
-    "kenneynl.holidaylightsgreen#82222",
-    "kenneynl.holidaylightsred#82224"
+    "kenneynl.holidayfloorwood#82210"
   ],
   "__version": 1
 }
