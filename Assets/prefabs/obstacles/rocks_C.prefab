@@ -24,13 +24,19 @@
         "Enabled": true,
         "Components": [
           {
-            "__type": "Sandbox.BoxCollider",
-            "__guid": "fa8cec37-7200-4380-9cca-be5685926098",
-            "Center": "0,0,70",
+            "__type": "Sandbox.HullCollider",
+            "__guid": "80679162-ef09-4a11-9dff-f176c250bf65",
+            "BoxSize": "50,50,50",
+            "Center": "0,0,60",
+            "Height": 120,
             "IsTrigger": true,
-            "Scale": "200,160,140",
+            "Points": [],
+            "Radius": 100,
+            "Radius2": 0,
+            "Slices": 12,
             "Static": true,
-            "SurfaceVelocity": "0,0,0"
+            "SurfaceVelocity": "0,0,0",
+            "Type": "Cylinder"
           }
         ],
         "Children": [

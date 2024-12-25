@@ -39,13 +39,19 @@
             "Tint": "1,1,1,1"
           },
           {
-            "__type": "Sandbox.BoxCollider",
-            "__guid": "fa8cec37-7200-4380-9cca-be5685926098",
-            "Center": "0,0,35",
+            "__type": "Sandbox.HullCollider",
+            "__guid": "80679162-ef09-4a11-9dff-f176c250bf65",
+            "BoxSize": "50,50,50",
+            "Center": "0,0,30",
+            "Height": 60,
             "IsTrigger": true,
-            "Scale": "140,100,70",
+            "Points": [],
+            "Radius": 60,
+            "Radius2": 0,
+            "Slices": 10,
             "Static": true,
-            "SurfaceVelocity": "0,0,0"
+            "SurfaceVelocity": "0,0,0",
+            "Type": "Cylinder"
           }
         ]
       }
