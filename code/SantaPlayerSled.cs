@@ -22,22 +22,19 @@ public sealed class SantaPlayerSled : Component, ITriggerListener
 
 	protected override void OnFixedUpdate()
 	{
-		var roadWidth = ChristmassyGameLogic.Instance.RoadWidth / 2f;
+		var roadWidth = ChristmassyGameLogic.Instance.RoadWidth / 1.5f;
 		var inputs = Input.AnalogMove;
 		Velocity = MathX.Lerp( Velocity, inputs.y * MaxTurnSpeed, Time.Delta * (inputs.y == 0 ? 2f : 1f) );
 		Velocity = MathX.Clamp( Velocity, -MaxTurnSpeed, MaxTurnSpeed );
 		WorldPosition = WorldPosition.WithY( MathX.Clamp( WorldPosition.y + Velocity, -roadWidth, roadWidth ) );
 
-		if ( WorldPosition.y <= -roadWidth )
-			Velocity = MathF.Max( Velocity, 0f );
-
-		if ( WorldPosition.y >= roadWidth )
-			Velocity = MathF.Min( Velocity, 0f );
+		if ( WorldPosition.y <= -roadWidth || WorldPosition.y >= roadWidth )
+			Velocity *= -0.5f;
 
 		// Animations
 		if ( !ModelRenderer.IsValid() ) return;
 
-		ModelRenderer.Set( "wish_y", inputs.y * -1000f );
+		ModelRenderer.Set( "wish_y", inputs.y * -5000f );
 	}
 	public void OnTriggerEnter( Collider other )
 	{
