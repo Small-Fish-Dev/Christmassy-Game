@@ -31,12 +31,16 @@ public sealed class ChristmassyGameLogic : Component
 
 	public GameObject MapClone;
 
+	public static ChristmassyGameLogic Instance { get; private set; }
+
 	protected override void OnStart()
 	{
 		MapClone = Map.Clone();
-		MapClone.WorldPosition += Vector3.Forward * 3000f + Vector3.Down * 1500f;
+		MapClone.WorldPosition += Vector3.Forward * 2500f + Vector3.Down * 000f;
 		MapClone.WorldRotation *= Rotation.FromPitch( -90f );
-		MapClone.WorldScale *= 1.3f;
+		MapClone.WorldScale *= 0.7f;
+
+		Instance = this;
 	}
 
 	protected override void OnUpdate()
