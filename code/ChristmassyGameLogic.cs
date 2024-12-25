@@ -11,7 +11,11 @@ public sealed class ChristmassyGameLogic : Component
 
 	[Property]
 	[Category( "Map" )]
-	public float MapRadius { get; set; } = 500f;
+	public float MapRadius { get; set; } = 2040f;
+
+	[Property]
+	[Category( "Map" )]
+	public float RoadWidth { get; set; } = 200f;
 
 	[Property]
 	[Category( "Map" )]
@@ -56,11 +60,19 @@ public sealed class ChristmassyGameLogic : Component
 
 		for ( int i = 0; i < CottagesSpawned; i++ )
 		{
+			var side = i % 2;
 			var randomCottage = SceneUtility.GetPrefabScene( Game.Random.FromList( allCottages ) )
 				.Clone();
 
-			randomCottage.WorldRotation = Rotation.FromPitch( angleSlice * i );
+			var randomPitch = Game.Random.Float( -angleSlice / 2f, angleSlice / 2f );
+			randomCottage.WorldRotation = Rotation.FromPitch( angleSlice * i + randomPitch );
+			var sideRotation = Rotation.FromYaw( -90f + 180f * side );
+			randomCottage.WorldRotation *= sideRotation;
+
 			randomCottage.WorldPosition = Map.WorldPosition + randomCottage.WorldRotation.Up * MapRadius;
+			var randomDistance = Game.Random.Float( 100f, 300f );
+			var sidePosition = (RoadWidth / 2f + randomDistance) * (side == 0 ? Vector3.Left : Vector3.Right);
+			randomCottage.WorldPosition += sidePosition;
 			randomCottage.SetParent( Map );
 
 			_cottages.Add( randomCottage );
