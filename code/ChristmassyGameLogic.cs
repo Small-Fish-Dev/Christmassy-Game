@@ -29,12 +29,22 @@ public sealed class ChristmassyGameLogic : Component
 	[Range( 0f, 360f, 1f )]
 	public float RotationSpeed { get; set; } = 15f;
 
+	public GameObject MapClone;
+
+	protected override void OnStart()
+	{
+		MapClone = Map.Clone();
+		MapClone.WorldPosition += Vector3.Forward * 3000f + Vector3.Down * 1500f;
+		MapClone.WorldRotation *= Rotation.FromPitch( -90f );
+		MapClone.WorldScale *= 1.3f;
+	}
 
 	protected override void OnUpdate()
 	{
 		if ( !Map.IsValid() ) return;
 
 		Map.WorldRotation *= Rotation.FromPitch( -RotationSpeed * Time.Delta );
+		MapClone.WorldRotation *= Rotation.FromPitch( -RotationSpeed * Time.Delta );
 	}
 
 	private List<GameObject> _cottages = new List<GameObject>();
