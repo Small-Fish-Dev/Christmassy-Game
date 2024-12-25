@@ -21,6 +21,10 @@ public sealed class ChristmassyGameLogic : Component
 	[Category( "Map" )]
 	public int CottagesSpawned { get; set; } = 20;
 
+	[Property]
+	[Category( "Map" )]
+	public int PresentsSpawned { get; set; } = 10;
+
 	/// <summary>
 	/// How many degrees it rotates per second
 	/// </summary>
@@ -58,7 +62,7 @@ public sealed class ChristmassyGameLogic : Component
 	{
 		if ( !Map.IsValid() ) return;
 
-		ClearMap();
+		ClearCottages();
 
 		var allCottages = ResourceLibrary.GetAll<PrefabFile>()
 			.Where( x => x.GetMetadata( "Tags" )?.Contains( "cottage" ) ?? false )
@@ -93,7 +97,51 @@ public sealed class ChristmassyGameLogic : Component
 		}
 	}
 
+	private List<GameObject> _presents = new List<GameObject>();
+
+	[Button( "Generate Presents Debug" )]
+	public void GeneratePresents()
+	{
+		if ( !Map.IsValid() ) return;
+
+		ClearPresents();
+
+		var allPresents = ResourceLibrary.GetAll<PrefabFile>()
+			.Where( x => x.GetMetadata( "Tags" )?.Contains( "gift" ) ?? false )
+			.ToList();
+
+		if ( !allPresents.Any() )
+		{
+			Log.Error( "No presents found" );
+			return;
+		}
+
+		var angleSlice = 360f / PresentsSpawned;
+
+		for ( int i = 0; i < PresentsSpawned; i++ )
+		{
+			var side = Game.Random.Int( -1, 1 );
+			var randomPresent = SceneUtility.GetPrefabScene( Game.Random.FromList( allPresents ) )
+				.Clone();
+
+			randomPresent.WorldRotation = Rotation.FromPitch( angleSlice * i );
+
+			randomPresent.WorldPosition = Map.WorldPosition + randomPresent.WorldRotation.Up * MapRadius;
+			var sidePosition = Vector3.Left * (RoadWidth - 80f) * side;
+			randomPresent.WorldPosition += sidePosition;
+			randomPresent.SetParent( Map );
+
+			_presents.Add( randomPresent );
+		}
+	}
+
 	public void ClearMap()
+	{
+		ClearCottages();
+		ClearPresents();
+	}
+
+	public void ClearCottages()
 	{
 		if ( _cottages != null )
 		{
@@ -101,6 +149,17 @@ public sealed class ChristmassyGameLogic : Component
 				cottage.Destroy();
 
 			_cottages.Clear();
+		}
+	}
+
+	public void ClearPresents()
+	{
+		if ( _presents != null )
+		{
+			foreach ( var present in _presents.ToList() )
+				present.Destroy();
+
+			_presents.Clear();
 		}
 	}
 
