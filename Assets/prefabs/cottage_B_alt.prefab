@@ -2,7 +2,7 @@
   "RootObject": {
     "__guid": "488a22d0-0f7a-40e6-a8af-ce657cd42259",
     "Flags": 0,
-    "Name": "cottage_b",
+    "Name": "cottage_b_alt",
     "Enabled": true,
     "Children": [
       {
@@ -180,67 +180,6 @@
             "Model": "models/holiday-kit/holiday-cabin-wall.vmdl",
             "StartAsleep": false,
             "Tint": "1,1,1,1"
-          }
-        ]
-      },
-      {
-        "__guid": "ad505836-7001-4e18-abd0-80c48d21881f",
-        "Flags": 0,
-        "Name": "holiday-cabin-roof-top",
-        "Position": "131.25,0,318.75",
-        "Scale": "1.7,1,1",
-        "Enabled": true,
-        "Components": [
-          {
-            "__type": "Sandbox.Prop",
-            "__guid": "d0dad7ed-9ad0-4099-8447-e9de8edf07cd",
-            "BodyGroups": 18446744073709551615,
-            "Health": 0,
-            "IsStatic": true,
-            "Model": "models/holiday-kit/holiday-cabin-roof-top.vmdl",
-            "StartAsleep": false,
-            "Tint": "1,1,1,1"
-          }
-        ]
-      },
-      {
-        "__guid": "7a53122c-68d6-41f6-84a4-489f8e0d13cc",
-        "Flags": 0,
-        "Name": "holiday-cabin-roof-top (1)",
-        "Position": "-37.5,0,318.75",
-        "Scale": "1.7,1,1",
-        "Enabled": true,
-        "Components": [
-          {
-            "__type": "Sandbox.Prop",
-            "__guid": "2cfb483e-0be9-4118-8de9-e9c929abc109",
-            "BodyGroups": 18446744073709551615,
-            "Health": 0,
-            "IsStatic": true,
-            "Model": "models/holiday-kit/holiday-cabin-roof-top.vmdl",
-            "StartAsleep": false,
-            "Tint": "1,1,1,1"
-          },
-          {
-            "__type": "Sandbox.Rigidbody",
-            "__guid": "cdc82678-e445-4345-a41f-093837b20586",
-            "AngularDamping": 0,
-            "Gravity": true,
-            "LinearDamping": 0,
-            "Locking": {
-              "X": false,
-              "Y": false,
-              "Z": false,
-              "Pitch": false,
-              "Yaw": false,
-              "Roll": false
-            },
-            "MassCenterOverride": "0,0,0",
-            "MassOverride": 0,
-            "MotionEnabled": true,
-            "OverrideMassCenter": false,
-            "RigidbodyFlags": 0,
-            "StartAsleep": false
           }
         ]
       },
@@ -510,7 +449,7 @@
             "BodyGroups": 18446744073709551615,
             "Health": 0,
             "IsStatic": true,
-            "Model": "models/holiday-kit/holiday-cabin-roof-point.vmdl",
+            "Model": "models/holiday-kit/holiday-cabin-roof-snow-point.vmdl",
             "StartAsleep": false,
             "Tint": "1,1,1,1"
           }
@@ -530,7 +469,7 @@
             "BodyGroups": 18446744073709551615,
             "Health": 0,
             "IsStatic": true,
-            "Model": "models/holiday-kit/holiday-cabin-roof-point.vmdl",
+            "Model": "models/holiday-kit/holiday-cabin-roof-snow-point.vmdl",
             "StartAsleep": false,
             "Tint": "1,1,1,1"
           }
@@ -550,7 +489,7 @@
             "BodyGroups": 18446744073709551615,
             "Health": 0,
             "IsStatic": true,
-            "Model": "models/holiday-kit/holiday-cabin-roof-dormer.vmdl",
+            "Model": "models/holiday-kit/holiday-cabin-roof-snow-dormer.vmdl",
             "StartAsleep": false,
             "Tint": "1,1,1,1"
           }
@@ -569,7 +508,7 @@
             "BodyGroups": 18446744073709551615,
             "Health": 0,
             "IsStatic": true,
-            "Model": "models/holiday-kit/holiday-cabin-roof.vmdl",
+            "Model": "models/holiday-kit/holiday-cabin-roof-snow.vmdl",
             "StartAsleep": false,
             "Tint": "1,1,1,1"
           }
@@ -589,7 +528,7 @@
             "BodyGroups": 18446744073709551615,
             "Health": 0,
             "IsStatic": true,
-            "Model": "models/holiday-kit/holiday-cabin-roof.vmdl",
+            "Model": "models/holiday-kit/holiday-cabin-roof-snow.vmdl",
             "StartAsleep": false,
             "Tint": "1,1,1,1"
           }
@@ -608,7 +547,7 @@
             "BodyGroups": 18446744073709551615,
             "Health": 0,
             "IsStatic": true,
-            "Model": "models/holiday-kit/holiday-cabin-roof.vmdl",
+            "Model": "models/holiday-kit/holiday-cabin-roof-snow.vmdl",
             "StartAsleep": false,
             "Tint": "1,1,1,1"
           }
@@ -628,7 +567,7 @@
             "BodyGroups": 18446744073709551615,
             "Health": 0,
             "IsStatic": true,
-            "Model": "models/holiday-kit/holiday-cabin-roof.vmdl",
+            "Model": "models/holiday-kit/holiday-cabin-roof-snow.vmdl",
             "StartAsleep": false,
             "Tint": "1,1,1,1"
           }
@@ -642,6 +581,67 @@
         "Enabled": true,
         "__Prefab": "prefabs/hanging_lamp.prefab",
         "__PrefabVariables": {}
+      },
+      {
+        "__guid": "45f24eaa-8ce6-4d2c-97d2-4f39af1c4ae7",
+        "Flags": 0,
+        "Name": "holiday-cabin-roof-top",
+        "Position": "131.25,0,331.25",
+        "Scale": "1.7,1,1",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.Prop",
+            "__guid": "22cb791c-489a-4a0d-b67a-9f8761c90642",
+            "BodyGroups": 18446744073709551615,
+            "Health": 0,
+            "IsStatic": true,
+            "Model": "models/holiday-kit/holiday-cabin-roof-top.vmdl",
+            "StartAsleep": false,
+            "Tint": "1,1,1,1"
+          }
+        ]
+      },
+      {
+        "__guid": "66cda31f-5b6b-4748-b4a5-fc1e540ce0b5",
+        "Flags": 0,
+        "Name": "holiday-cabin-roof-top (1)",
+        "Position": "-37.5,0,331.25",
+        "Scale": "1.7,1,1",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.Prop",
+            "__guid": "44265fc1-0f2f-4193-bb56-387c75c814cc",
+            "BodyGroups": 18446744073709551615,
+            "Health": 0,
+            "IsStatic": true,
+            "Model": "models/holiday-kit/holiday-cabin-roof-top.vmdl",
+            "StartAsleep": false,
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "Sandbox.Rigidbody",
+            "__guid": "a58a4d16-a6f1-4f7d-8771-60eed60708cc",
+            "AngularDamping": 0,
+            "Gravity": true,
+            "LinearDamping": 0,
+            "Locking": {
+              "X": false,
+              "Y": false,
+              "Z": false,
+              "Pitch": false,
+              "Yaw": false,
+              "Roll": false
+            },
+            "MassCenterOverride": "0,0,0",
+            "MassOverride": 0,
+            "MotionEnabled": true,
+            "OverrideMassCenter": false,
+            "RigidbodyFlags": 0,
+            "StartAsleep": false
+          }
+        ]
       }
     ],
     "__variables": [],
@@ -677,9 +677,9 @@
   "__references": [
     "kenneynl.holidaycabincornerbottom#82175",
     "kenneynl.holidaycabinoverhangdoorrotate#82183",
-    "kenneynl.holidaycabinroof#82195",
-    "kenneynl.holidaycabinroofdormer#82187",
-    "kenneynl.holidaycabinroofpoint#82188",
+    "kenneynl.holidaycabinroofsnow#82193",
+    "kenneynl.holidaycabinroofsnowdormer#82190",
+    "kenneynl.holidaycabinroofsnowpoint#82192",
     "kenneynl.holidaycabinrooftop#82194",
     "kenneynl.holidaycabinwall#82200",
     "kenneynl.holidaycabinwallroof#82288",
