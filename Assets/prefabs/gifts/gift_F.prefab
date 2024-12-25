@@ -2,7 +2,7 @@
   "RootObject": {
     "__guid": "10148a43-d8ba-4c67-9531-65bfce4ac333",
     "Flags": 0,
-    "Name": "gift_a",
+    "Name": "gift_f",
     "Enabled": true,
     "Components": [
       {
@@ -27,7 +27,7 @@
             "__guid": "ddf1fcc3-890e-4a46-bc75-6b5d82f749c4",
             "BodyGroups": 18446744073709551615,
             "CreateAttachments": false,
-            "Model": "models/holiday-kit/holiday-present-a-round.vmdl",
+            "Model": "models/holiday-kit/holiday-present-b-rectangle.vmdl",
             "RenderOptions": {
               "GameLayer": true,
               "OverlayLayer": false,
@@ -41,7 +41,7 @@
             "__type": "Sandbox.ModelCollider",
             "__guid": "0ebcffc3-6623-4db9-b3e9-fbbbc0c519ce",
             "IsTrigger": true,
-            "Model": "models/holiday-kit/holiday-present-a-round.vmdl",
+            "Model": "models/holiday-kit/holiday-present-b-rectangle.vmdl",
             "Static": true,
             "SurfaceVelocity": "0,0,0"
           }
@@ -81,7 +81,7 @@
   "DontBreakAsTemplate": false,
   "ResourceVersion": 1,
   "__references": [
-    "kenneynl.holidaypresentaround#82227"
+    "kenneynl.holidaypresentbrectangle#82229"
   ],
   "__version": 1
 }
