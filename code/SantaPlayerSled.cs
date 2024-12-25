@@ -1,13 +1,16 @@
 using Sandbox;
 using System;
+using System.Text.Json.Nodes;
 using static Sandbox.Component;
 
 public sealed class SantaPlayerSled : Component, ITriggerListener
 {
-	// TODO: SET wish_x wish_y wish_z
 
 	[Property]
 	public SkinnedModelRenderer ModelRenderer { get; set; }
+
+	[Property]
+	public ModelRenderer Sleigh { get; set; }
 
 
 	[Property]
@@ -39,29 +42,46 @@ public sealed class SantaPlayerSled : Component, ITriggerListener
 		ModelRenderer.Set( "wish_y", inputs.y * -MaxTurnSpeed * 30f );
 	}
 
-	private ModelPhysics _ragdoll;
+	private GameObject _oldSanta;
+	private GameObject _oldSleigh;
 
 	[Button]
 	public void Ragdoll()
 	{
-		if ( _ragdoll.IsValid() ) return;
+		if ( _oldSanta.IsValid() ) return;
 		if ( !ModelRenderer.IsValid() ) return;
 
-		foreach ( var child in ModelRenderer.GameObject.Children )
+		var santa = ModelRenderer.GameObject;
+		_oldSanta = santa.Clone( santa.WorldPosition, santa.WorldRotation, santa.WorldScale );
+		var ragdollRenderer = _oldSanta.GetComponent<SkinnedModelRenderer>();
+
+		foreach ( var child in _oldSanta.Children )
 			child.Flags &= ~GameObjectFlags.ProceduralBone;
 
-		_ragdoll = ModelRenderer.GameObject.AddComponent<ModelPhysics>();
-		_ragdoll.Renderer = ModelRenderer;
-		_ragdoll.Model = ModelRenderer.Model;
+		var santaPhysics = _oldSanta.AddComponent<ModelPhysics>();
+		santaPhysics.Renderer = ragdollRenderer;
+		santaPhysics.Model = ragdollRenderer.Model;
+
+		var sleigh = Sleigh.GameObject;
+		_oldSleigh = sleigh.Clone( sleigh.WorldPosition, sleigh.WorldRotation, sleigh.WorldScale );
+		var sleighRigidBody = _oldSleigh.AddComponent<Rigidbody>();
+		sleighRigidBody.Velocity += Vector3.Up * 1000f + Vector3.Backward * 500f;
+
+		santa.Enabled = false;
+		sleigh.Enabled = false;
 	}
 
 	[Button]
 	public void Unragdoll()
 	{
-		if ( !_ragdoll.IsValid() ) return;
+		if ( !_oldSanta.IsValid() ) return;
 		if ( !ModelRenderer.IsValid() ) return;
 
-		_ragdoll.Destroy();
+		_oldSanta.Destroy();
+		_oldSleigh.Destroy();
+
+		ModelRenderer.GameObject.Enabled = true;
+		Sleigh.GameObject.Enabled = true;
 	}
 
 	public void OnTriggerEnter( Collider other )
