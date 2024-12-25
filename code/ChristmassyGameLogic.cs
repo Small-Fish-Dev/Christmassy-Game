@@ -147,7 +147,7 @@ public sealed class ChristmassyGameLogic : Component
 
 		var angleSlice = 360f / RoadObjects;
 
-		for ( int i = 0; i < RoadObjects; i++ )
+		for ( int i = 1; i < RoadObjects; i++ )
 		{
 			var side = Game.Random.Int( -1, 1 );
 			var randomObject = SceneUtility.GetPrefabScene( Game.Random.FromList( allObjects ) )
