@@ -17,7 +17,7 @@
             "__guid": "8e6bbb16-8980-4962-a858-f5eafe441a95",
             "BodyGroups": 18446744073709551615,
             "Health": 0,
-            "IsStatic": false,
+            "IsStatic": true,
             "Model": "models/holiday-kit/holiday-cabin-overhang-door-rotate.vmdl",
             "StartAsleep": false,
             "Tint": "1,1,1,1"
@@ -36,7 +36,7 @@
             "__guid": "191e0966-10b0-45eb-bec6-8d21100a4c61",
             "BodyGroups": 18446744073709551615,
             "Health": 0,
-            "IsStatic": false,
+            "IsStatic": true,
             "Model": "models/holiday-kit/holiday-cabin-window-large.vmdl",
             "StartAsleep": false,
             "Tint": "1,1,1,1"
@@ -55,7 +55,7 @@
             "__guid": "6bd8047e-157f-4be2-82c8-a309be32e405",
             "BodyGroups": 18446744073709551615,
             "Health": 0,
-            "IsStatic": false,
+            "IsStatic": true,
             "Model": "models/holiday-kit/holiday-cabin-window-b.vmdl",
             "StartAsleep": false,
             "Tint": "1,1,1,1"
@@ -76,7 +76,7 @@
             "__guid": "9ef8a2d7-26a0-4c66-8627-2b0424a10f61",
             "BodyGroups": 18446744073709551615,
             "Health": 0,
-            "IsStatic": false,
+            "IsStatic": true,
             "Model": "models/holiday-kit/holiday-cabin-roof-snow.vmdl",
             "StartAsleep": false,
             "Tint": "1,1,1,1"
@@ -96,7 +96,7 @@
             "__guid": "ce07110b-c576-4419-bc81-1bcead87e3e6",
             "BodyGroups": 18446744073709551615,
             "Health": 0,
-            "IsStatic": false,
+            "IsStatic": true,
             "Model": "models/holiday-kit/holiday-cabin-roof-snow.vmdl",
             "StartAsleep": false,
             "Tint": "1,1,1,1"
@@ -117,7 +117,7 @@
             "__guid": "d3089a71-d881-49a5-9e7c-4cabad203c6e",
             "BodyGroups": 18446744073709551615,
             "Health": 0,
-            "IsStatic": false,
+            "IsStatic": true,
             "Model": "models/holiday-kit/holiday-cabin-roof-snow.vmdl",
             "StartAsleep": false,
             "Tint": "1,1,1,1"
@@ -137,7 +137,7 @@
             "__guid": "1761c007-e87b-4c2e-947a-ac955994ab79",
             "BodyGroups": 18446744073709551615,
             "Health": 0,
-            "IsStatic": false,
+            "IsStatic": true,
             "Model": "models/holiday-kit/holiday-cabin-roof-snow-chimney.vmdl",
             "StartAsleep": false,
             "Tint": "1,1,1,1"
@@ -157,7 +157,7 @@
             "__guid": "5776267d-54d0-4c0e-9a25-dd19387ebd2a",
             "BodyGroups": 18446744073709551615,
             "Health": 0,
-            "IsStatic": false,
+            "IsStatic": true,
             "Model": "models/holiday-kit/holiday-cabin-wall.vmdl",
             "StartAsleep": false,
             "Tint": "1,1,1,1"
@@ -177,7 +177,7 @@
             "__guid": "55b2ce57-8587-42ad-bb02-6c3cff4d52f2",
             "BodyGroups": 18446744073709551615,
             "Health": 0,
-            "IsStatic": false,
+            "IsStatic": true,
             "Model": "models/holiday-kit/holiday-cabin-wall.vmdl",
             "StartAsleep": false,
             "Tint": "1,1,1,1"
@@ -197,7 +197,7 @@
             "__guid": "ae40c667-06ce-4369-92ca-f356aa5f5e06",
             "BodyGroups": 18446744073709551615,
             "Health": 0,
-            "IsStatic": false,
+            "IsStatic": true,
             "Model": "models/holiday-kit/holiday-cabin-wall.vmdl",
             "StartAsleep": false,
             "Tint": "1,1,1,1"
@@ -217,7 +217,7 @@
             "__guid": "f51a84ba-ea09-4f69-bd78-eb2ad155efc5",
             "BodyGroups": 18446744073709551615,
             "Health": 0,
-            "IsStatic": false,
+            "IsStatic": true,
             "Model": "models/holiday-kit/holiday-cabin-wall.vmdl",
             "StartAsleep": false,
             "Tint": "1,1,1,1"
@@ -237,7 +237,7 @@
             "__guid": "56670dfb-708c-4994-a9fc-44d4c8984efc",
             "BodyGroups": 18446744073709551615,
             "Health": 0,
-            "IsStatic": false,
+            "IsStatic": true,
             "Model": "models/holiday-kit/holiday-cabin-wall.vmdl",
             "StartAsleep": false,
             "Tint": "1,1,1,1"
@@ -257,7 +257,7 @@
             "__guid": "71328f63-7b35-40a7-ae84-caac436046e2",
             "BodyGroups": 18446744073709551615,
             "Health": 0,
-            "IsStatic": false,
+            "IsStatic": true,
             "Model": "models/holiday-kit/holiday-cabin-wall.vmdl",
             "StartAsleep": false,
             "Tint": "1,1,1,1"
@@ -277,7 +277,7 @@
             "__guid": "8c3fa8bb-1b74-4166-aa25-2f8c29cd8a04",
             "BodyGroups": 18446744073709551615,
             "Health": 0,
-            "IsStatic": false,
+            "IsStatic": true,
             "Model": "models/holiday-kit/holiday-cabin-wall.vmdl",
             "StartAsleep": false,
             "Tint": "1,1,1,1"
@@ -297,7 +297,7 @@
             "__guid": "39224b95-61f5-4986-8f56-439ffde51a9f",
             "BodyGroups": 18446744073709551615,
             "Health": 0,
-            "IsStatic": false,
+            "IsStatic": true,
             "Model": "models/holiday-kit/holiday-cabin-wall.vmdl",
             "StartAsleep": false,
             "Tint": "1,1,1,1"
@@ -318,7 +318,7 @@
             "__guid": "17004dfd-68c1-4f90-bb91-765fae7dfd9a",
             "BodyGroups": 18446744073709551615,
             "Health": 0,
-            "IsStatic": false,
+            "IsStatic": true,
             "Model": "models/holiday-kit/holiday-cabin-roof-snow-point.vmdl",
             "StartAsleep": false,
             "Tint": "1,1,1,1"
@@ -339,7 +339,7 @@
             "__guid": "d43e26a6-9ecf-4548-8f21-a4b6b2551660",
             "BodyGroups": 18446744073709551615,
             "Health": 0,
-            "IsStatic": false,
+            "IsStatic": true,
             "Model": "models/holiday-kit/holiday-cabin-wall-roof-center.vmdl",
             "StartAsleep": false,
             "Tint": "1,1,1,1"
@@ -359,7 +359,7 @@
             "__guid": "4f5f31e5-756e-4cb2-95ed-ffbd8644e0c5",
             "BodyGroups": 18446744073709551615,
             "Health": 0,
-            "IsStatic": false,
+            "IsStatic": true,
             "Model": "models/holiday-kit/holiday-cabin-window-b.vmdl",
             "StartAsleep": false,
             "Tint": "1,1,1,1"
@@ -379,7 +379,7 @@
             "__guid": "dbe15713-97b1-41e7-af02-823dca976690",
             "BodyGroups": 18446744073709551615,
             "Health": 0,
-            "IsStatic": false,
+            "IsStatic": true,
             "Model": "models/holiday-kit/holiday-cabin-wall-roof.vmdl",
             "StartAsleep": false,
             "Tint": "1,1,1,1"
@@ -399,7 +399,7 @@
             "__guid": "b574532a-76f2-4513-8eff-5ae283239bef",
             "BodyGroups": 18446744073709551615,
             "Health": 0,
-            "IsStatic": false,
+            "IsStatic": true,
             "Model": "models/holiday-kit/holiday-cabin-wall-roof.vmdl",
             "StartAsleep": false,
             "Tint": "1,1,1,1"
@@ -419,7 +419,7 @@
             "__guid": "72da01a5-e4aa-4331-9b97-dcf04081b116",
             "BodyGroups": 18446744073709551615,
             "Health": 0,
-            "IsStatic": false,
+            "IsStatic": true,
             "Model": "models/holiday-kit/holiday-cabin-wall-roof.vmdl",
             "StartAsleep": false,
             "Tint": "1,1,1,1"
@@ -439,7 +439,7 @@
             "__guid": "5aad92b1-11d9-4a88-b83b-233346330166",
             "BodyGroups": 18446744073709551615,
             "Health": 0,
-            "IsStatic": false,
+            "IsStatic": true,
             "Model": "models/holiday-kit/holiday-cabin-wall-roof.vmdl",
             "StartAsleep": false,
             "Tint": "1,1,1,1"
@@ -459,7 +459,7 @@
             "__guid": "d93ed464-162a-4672-b9b4-2782e0a5a824",
             "BodyGroups": 18446744073709551615,
             "Health": 0,
-            "IsStatic": false,
+            "IsStatic": true,
             "Model": "models/holiday-kit/holiday-lights-colored.vmdl",
             "StartAsleep": false,
             "Tint": "1,1,1,1"
@@ -478,7 +478,7 @@
             "__guid": "4a816fc7-eacc-48c1-8c95-807feea23052",
             "BodyGroups": 18446744073709551615,
             "Health": 0,
-            "IsStatic": false,
+            "IsStatic": true,
             "Model": "models/holiday-kit/holiday-floor-wood.vmdl",
             "StartAsleep": false,
             "Tint": "1,1,1,1"
@@ -497,7 +497,7 @@
             "__guid": "52f74061-9b5c-4b0c-ad3b-e0ef42438af9",
             "BodyGroups": 18446744073709551615,
             "Health": 0,
-            "IsStatic": false,
+            "IsStatic": true,
             "Model": "models/holiday-kit/holiday-floor-wood.vmdl",
             "StartAsleep": false,
             "Tint": "1,1,1,1"
@@ -516,7 +516,7 @@
             "__guid": "8b73005d-0270-44d6-b3d0-0a7043fa6064",
             "BodyGroups": 18446744073709551615,
             "Health": 0,
-            "IsStatic": false,
+            "IsStatic": true,
             "Model": "models/holiday-kit/holiday-floor-wood.vmdl",
             "StartAsleep": false,
             "Tint": "1,1,1,1"
@@ -535,7 +535,7 @@
             "__guid": "10fd1cb4-e127-4ec5-8d63-115f22d0a5fc",
             "BodyGroups": 18446744073709551615,
             "Health": 0,
-            "IsStatic": false,
+            "IsStatic": true,
             "Model": "models/holiday-kit/holiday-floor-wood.vmdl",
             "StartAsleep": false,
             "Tint": "1,1,1,1"
@@ -554,7 +554,7 @@
             "__guid": "82b0540e-9750-4fa7-b34a-2ee259d7b8c6",
             "BodyGroups": 18446744073709551615,
             "Health": 0,
-            "IsStatic": false,
+            "IsStatic": true,
             "Model": "models/holiday-kit/holiday-floor-wood.vmdl",
             "StartAsleep": false,
             "Tint": "1,1,1,1"
@@ -573,7 +573,7 @@
             "__guid": "71ac73a2-347e-4619-ae97-7518edd6e774",
             "BodyGroups": 18446744073709551615,
             "Health": 0,
-            "IsStatic": false,
+            "IsStatic": true,
             "Model": "models/holiday-kit/holiday-floor-wood.vmdl",
             "StartAsleep": false,
             "Tint": "1,1,1,1"
@@ -592,7 +592,7 @@
             "__guid": "b5aa8e5d-be1f-43e2-b8aa-e1fb362bb1c6",
             "BodyGroups": 18446744073709551615,
             "Health": 0,
-            "IsStatic": false,
+            "IsStatic": true,
             "Model": "models/holiday-kit/holiday-floor-wood.vmdl",
             "StartAsleep": false,
             "Tint": "1,1,1,1"
@@ -612,7 +612,7 @@
             "__guid": "6af8deab-1a8e-4526-b62b-7fbe1db261c3",
             "BodyGroups": 18446744073709551615,
             "Health": 0,
-            "IsStatic": false,
+            "IsStatic": true,
             "Model": "models/holiday-kit/holiday-cabin-corner-bottom.vmdl",
             "StartAsleep": false,
             "Tint": "1,1,1,1"
@@ -632,7 +632,7 @@
             "__guid": "c9328fd8-df32-4c99-aed0-38cf4cc26ca0",
             "BodyGroups": 18446744073709551615,
             "Health": 0,
-            "IsStatic": false,
+            "IsStatic": true,
             "Model": "models/holiday-kit/holiday-cabin-corner-bottom.vmdl",
             "StartAsleep": false,
             "Tint": "1,1,1,1"
@@ -651,7 +651,7 @@
             "__guid": "36d27b61-ae99-48e9-8a94-5ea3020d75ca",
             "BodyGroups": 18446744073709551615,
             "Health": 0,
-            "IsStatic": false,
+            "IsStatic": true,
             "Model": "models/holiday-kit/holiday-cabin-corner-bottom.vmdl",
             "StartAsleep": false,
             "Tint": "1,1,1,1"
@@ -671,7 +671,7 @@
             "__guid": "6850a938-408e-4c68-af2f-fbfa19e7e5fa",
             "BodyGroups": 18446744073709551615,
             "Health": 0,
-            "IsStatic": false,
+            "IsStatic": true,
             "Model": "models/holiday-kit/holiday-cabin-corner-bottom.vmdl",
             "StartAsleep": false,
             "Tint": "1,1,1,1"
@@ -691,7 +691,7 @@
             "__guid": "6612509c-0348-4b78-a2c1-93f4c1233fbf",
             "BodyGroups": 18446744073709551615,
             "Health": 0,
-            "IsStatic": false,
+            "IsStatic": true,
             "Model": "models/holiday-kit/holiday-cabin-corner-bottom.vmdl",
             "StartAsleep": false,
             "Tint": "1,1,1,1"
@@ -711,7 +711,7 @@
             "__guid": "550c8ef1-5e34-41ab-9e06-d3bac739b8f3",
             "BodyGroups": 18446744073709551615,
             "Health": 0,
-            "IsStatic": false,
+            "IsStatic": true,
             "Model": "models/holiday-kit/holiday-cabin-corner-bottom.vmdl",
             "StartAsleep": false,
             "Tint": "1,1,1,1"
