@@ -34,6 +34,7 @@ public sealed class ChristmassyGameLogic : Component
 	public float RotationSpeed { get; set; } = 15f;
 
 	public GameObject MapClone;
+	public TimeSince StartTimer;
 
 	public static ChristmassyGameLogic Instance { get; private set; }
 
@@ -45,6 +46,7 @@ public sealed class ChristmassyGameLogic : Component
 		MapClone.WorldScale *= 0.7f;
 
 		Instance = this;
+		StartTimer = 0f;
 	}
 
 	protected override void OnUpdate()
@@ -53,6 +55,11 @@ public sealed class ChristmassyGameLogic : Component
 
 		Map.WorldRotation *= Rotation.FromPitch( -RotationSpeed * Time.Delta );
 		MapClone.WorldRotation *= Rotation.FromPitch( -RotationSpeed * Time.Delta );
+	}
+
+	protected override void OnFixedUpdate()
+	{
+		RotationSpeed += Time.Delta;
 	}
 
 	private List<GameObject> _cottages = new List<GameObject>();
