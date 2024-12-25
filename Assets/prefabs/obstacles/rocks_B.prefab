@@ -2,7 +2,7 @@
   "RootObject": {
     "__guid": "54796b85-7793-446a-a3c9-1dbabc99622a",
     "Flags": 0,
-    "Name": "rocks_a",
+    "Name": "rocks_b",
     "Enabled": true,
     "Components": [
       {
@@ -24,21 +24,6 @@
         "Enabled": true,
         "Components": [
           {
-            "__type": "Sandbox.ModelRenderer",
-            "__guid": "c51ac749-3924-42ce-bf20-51a545fdd91a",
-            "BodyGroups": 18446744073709551615,
-            "CreateAttachments": false,
-            "Model": "models/holiday-kit/holiday-rocks-small.vmdl",
-            "RenderOptions": {
-              "GameLayer": true,
-              "OverlayLayer": false,
-              "BloomLayer": false,
-              "AfterUILayer": false
-            },
-            "RenderType": "On",
-            "Tint": "1,1,1,1"
-          },
-          {
             "__type": "Sandbox.BoxCollider",
             "__guid": "fa8cec37-7200-4380-9cca-be5685926098",
             "Center": "0,0,35",
@@ -46,6 +31,32 @@
             "Scale": "140,100,70",
             "Static": true,
             "SurfaceVelocity": "0,0,0"
+          }
+        ],
+        "Children": [
+          {
+            "__guid": "884b3346-543b-4129-a852-7599c6184e29",
+            "Flags": 0,
+            "Name": "model",
+            "Scale": "0.8,0.8,0.8",
+            "Enabled": true,
+            "Components": [
+              {
+                "__type": "Sandbox.ModelRenderer",
+                "__guid": "0a24a564-d1a5-4527-94b5-20668a5224e4",
+                "BodyGroups": 18446744073709551615,
+                "CreateAttachments": false,
+                "Model": "models/holiday-kit/holiday-rocks-medium.vmdl",
+                "RenderOptions": {
+                  "GameLayer": true,
+                  "OverlayLayer": false,
+                  "BloomLayer": false,
+                  "AfterUILayer": false
+                },
+                "RenderType": "On",
+                "Tint": "1,1,1,1"
+              }
+            ]
           }
         ]
       }
@@ -83,7 +94,7 @@
   "DontBreakAsTemplate": false,
   "ResourceVersion": 1,
   "__references": [
-    "kenneynl.holidayrockssmall#82234"
+    "kenneynl.holidayrocksmedium#82232"
   ],
   "__version": 1
 }
