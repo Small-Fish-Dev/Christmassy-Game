@@ -47,7 +47,7 @@ public sealed class SantaPlayerSled : Component, ITriggerListener
 
 		if ( Input.Pressed( "jump" ) && Height <= 0 && Pivot.IsValid() )
 		{
-			Height += 400f;
+			Height += 350f;
 			_targetPitch = -30f;
 		}
 
@@ -70,7 +70,9 @@ public sealed class SantaPlayerSled : Component, ITriggerListener
 				Ragdoll();
 		}
 
-		Pivot.LocalRotation = Rotation.Lerp( Pivot.LocalRotation, Rotation.FromPitch( _targetPitch ), Time.Delta * 20f );
+		var targetRotation = Rotation.FromPitch( _targetPitch ) * Rotation.FromYaw( Velocity / 10f );
+
+		Pivot.LocalRotation = Rotation.Lerp( Pivot.LocalRotation, targetRotation, Time.Delta * 20f );
 
 		// Animations
 		if ( !ModelRenderer.IsValid() ) return;
