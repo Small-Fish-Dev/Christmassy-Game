@@ -32,7 +32,7 @@
         {
           "__type": "Sandbox.AmbientLight",
           "__guid": "cefe45e8-f904-46ec-9052-326cdf707d0b",
-          "Color": "0.26665,0.24844,0.40465,1"
+          "Color": "0.1272,0.12942,0.26047,1"
         }
       ],
       "Children": [
@@ -50,9 +50,44 @@
               "__guid": "0777f5af-7ccf-42c1-abf9-9090a7d81ba6",
               "FogMode": "Enabled",
               "FogStrength": 1,
-              "LightColor": "0.91373,0.98039,1,1",
+              "LightColor": "0.3,0.26076,0.13814,1",
               "Shadows": true,
-              "SkyColor": "0,0,0,0"
+              "SkyColor": "0.03522,0.09681,0.17209,0"
+            }
+          ]
+        },
+        {
+          "__guid": "a56f08e7-e12b-4a8c-9e26-1cc5a54f8631",
+          "Flags": 0,
+          "Name": "2D Skybox",
+          "Rotation": "0,0.1125096,0,0.9936506",
+          "Tags": "skybox",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.SkyBox2D",
+              "__guid": "a5b3c932-bf92-405e-9db7-b34e4bc9f63a",
+              "SkyIndirectLighting": true,
+              "SkyMaterial": "materials/default/winterness.vmat",
+              "Tint": "1,1,1,1"
+            }
+          ]
+        },
+        {
+          "__guid": "e74d9bcf-aa53-4c11-abeb-4350da67a013",
+          "Flags": 0,
+          "Name": "Gradient Fog",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.GradientFog",
+              "__guid": "01913d97-4352-450f-a786-a04da082512f",
+              "Color": "0.36837,0.32744,0.4093,1",
+              "EndDistance": 5000,
+              "FalloffExponent": 1,
+              "Height": 128,
+              "StartDistance": 3000,
+              "VerticalFalloffExponent": 2
             }
           ]
         }
@@ -7748,7 +7783,7 @@
       "__guid": "2282cf80-22ee-4d8b-97f6-f59dd388081c",
       "Flags": 0,
       "Name": "Camera",
-      "Position": "-751.1967,0,2511.63",
+      "Position": "-751.1967,0,2650",
       "Rotation": "0,0.264883,0,0.9642805",
       "Tags": "maincamera",
       "Enabled": true,
@@ -7768,7 +7803,30 @@
           "TargetEye": "None",
           "Viewport": "0,0,1,1",
           "ZFar": 10000,
-          "ZNear": 10
+          "ZNear": 1
+        }
+      ]
+    },
+    {
+      "__guid": "c509b40e-d72d-4291-8f97-34700f1e7426",
+      "Flags": 0,
+      "Name": "PlayerLight",
+      "Position": "-50,0,2450",
+      "Rotation": "0,0.7071067,0,0.7071068",
+      "Tags": "light_spot,light",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.SpotLight",
+          "__guid": "e17c30b5-7845-4254-95f6-51d42f740944",
+          "Attenuation": 0.28,
+          "ConeInner": 53.64,
+          "ConeOuter": 62.28,
+          "FogMode": "Enabled",
+          "FogStrength": 1,
+          "LightColor": "4.56865,4.90195,5,1",
+          "Radius": 1127.8405,
+          "Shadows": true
         }
       ]
     }
@@ -7803,6 +7861,7 @@
   "Title": "Cottage B Snowy",
   "Description": null,
   "__references": [
+    "agentab.winterness#31224",
     "ambi.white#51988",
     "andiq.snow001#12713",
     "simonkvien.snow#10957",
