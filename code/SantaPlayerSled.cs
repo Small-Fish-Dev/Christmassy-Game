@@ -12,12 +12,20 @@ public sealed class SantaPlayerSled : Component, ITriggerListener
 	[Property]
 	public ModelRenderer Sleigh { get; set; }
 
+	[Property]
+	public GameObject Pivot { get; set; }
+
+	[Property]
+	public BoxCollider Collider { get; set; }
+
 
 	[Property]
 	public float MaxTurnSpeed { get; set; } = 400f;
 
 	public float Velocity = 0f;
 	public float Height = 0f;
+
+	private float _targetPitch = 0f;
 
 	protected override void OnUpdate()
 	{
@@ -35,7 +43,31 @@ public sealed class SantaPlayerSled : Component, ITriggerListener
 		WorldPosition = WorldPosition.WithY( MathX.Clamp( WorldPosition.y + Velocity * Time.Delta, -roadWidth, roadWidth ) );
 
 		if ( WorldPosition.y <= -roadWidth || WorldPosition.y >= roadWidth )
-			Velocity *= -0.5f;
+			Velocity *= -0.25f;
+
+		if ( Input.Pressed( "jump" ) && Height <= 0 && Pivot.IsValid() )
+		{
+			Height += 400f;
+			_targetPitch = -30f;
+		}
+
+		if ( Pivot.LocalPosition.z > 0f || Height > 0f )
+		{
+			Pivot.LocalPosition += Vector3.Up * Time.Delta * Height;
+			Pivot.LocalPosition = Pivot.LocalPosition.WithZ( MathF.Max( Pivot.LocalPosition.z, 0f ) );
+
+			Collider.Center = Pivot.LocalPosition + Vector3.Up * 35f;
+			Height -= Time.Delta * 1000f;
+		}
+
+		if ( Pivot.LocalPosition.z <= 0f && Height < 0f )
+		{
+			Collider.Center = Pivot.LocalPosition + Vector3.Up * 35f;
+			Height = 0f;
+			_targetPitch = 0f;
+		}
+
+		Pivot.LocalRotation = Rotation.Lerp( Pivot.LocalRotation, Rotation.FromPitch( _targetPitch ), Time.Delta * 20f );
 
 		// Animations
 		if ( !ModelRenderer.IsValid() ) return;
