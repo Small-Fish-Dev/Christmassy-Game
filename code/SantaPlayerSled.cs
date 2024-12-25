@@ -36,7 +36,32 @@ public sealed class SantaPlayerSled : Component, ITriggerListener
 		// Animations
 		if ( !ModelRenderer.IsValid() ) return;
 
-		ModelRenderer.Set( "wish_y", inputs.y * -MaxTurnSpeed * 20f );
+		ModelRenderer.Set( "wish_y", inputs.y * -MaxTurnSpeed * 30f );
+	}
+
+	private ModelPhysics _ragdoll;
+
+	[Button]
+	public void Ragdoll()
+	{
+		if ( _ragdoll.IsValid() ) return;
+		if ( !ModelRenderer.IsValid() ) return;
+
+		foreach ( var child in ModelRenderer.GameObject.Children )
+			child.Flags &= ~GameObjectFlags.ProceduralBone;
+
+		_ragdoll = ModelRenderer.GameObject.AddComponent<ModelPhysics>();
+		_ragdoll.Renderer = ModelRenderer;
+		_ragdoll.Model = ModelRenderer.Model;
+	}
+
+	[Button]
+	public void Unragdoll()
+	{
+		if ( !_ragdoll.IsValid() ) return;
+		if ( !ModelRenderer.IsValid() ) return;
+
+		_ragdoll.Destroy();
 	}
 
 	public void OnTriggerEnter( Collider other )
