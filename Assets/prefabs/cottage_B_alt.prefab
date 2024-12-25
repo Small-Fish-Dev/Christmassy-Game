@@ -629,27 +629,6 @@
             "Model": "models/holiday-kit/holiday-cabin-roof-top.vmdl",
             "StartAsleep": false,
             "Tint": "1,1,1,1"
-          },
-          {
-            "__type": "Sandbox.Rigidbody",
-            "__guid": "a58a4d16-a6f1-4f7d-8771-60eed60708cc",
-            "AngularDamping": 0,
-            "Gravity": true,
-            "LinearDamping": 0,
-            "Locking": {
-              "X": false,
-              "Y": false,
-              "Z": false,
-              "Pitch": false,
-              "Yaw": false,
-              "Roll": false
-            },
-            "MassCenterOverride": "0,0,0",
-            "MassOverride": 0,
-            "MotionEnabled": true,
-            "OverrideMassCenter": false,
-            "RigidbodyFlags": 0,
-            "StartAsleep": false
           }
         ]
       },

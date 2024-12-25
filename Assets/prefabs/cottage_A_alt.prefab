@@ -363,27 +363,6 @@
             "Model": "models/holiday-kit/holiday-cabin-roof.vmdl",
             "StartAsleep": false,
             "Tint": "1,1,1,1"
-          },
-          {
-            "__type": "Sandbox.Rigidbody",
-            "__guid": "1e401b4d-4c6f-4b81-af17-d1962a93f04b",
-            "AngularDamping": 0,
-            "Gravity": true,
-            "LinearDamping": 0,
-            "Locking": {
-              "X": false,
-              "Y": false,
-              "Z": false,
-              "Pitch": false,
-              "Yaw": false,
-              "Roll": false
-            },
-            "MassCenterOverride": "0,0,0",
-            "MassOverride": 0,
-            "MotionEnabled": true,
-            "OverrideMassCenter": false,
-            "RigidbodyFlags": 0,
-            "StartAsleep": false
           }
         ]
       },
@@ -423,27 +402,6 @@
             "Model": "models/holiday-kit/holiday-cabin-roof.vmdl",
             "StartAsleep": false,
             "Tint": "1,1,1,1"
-          },
-          {
-            "__type": "Sandbox.Rigidbody",
-            "__guid": "73a6015c-b860-4bea-ac32-3e9089023922",
-            "AngularDamping": 0,
-            "Gravity": true,
-            "LinearDamping": 0,
-            "Locking": {
-              "X": false,
-              "Y": false,
-              "Z": false,
-              "Pitch": false,
-              "Yaw": false,
-              "Roll": false
-            },
-            "MassCenterOverride": "0,0,0",
-            "MassOverride": 0,
-            "MotionEnabled": true,
-            "OverrideMassCenter": false,
-            "RigidbodyFlags": 0,
-            "StartAsleep": false
           }
         ]
       },
@@ -502,27 +460,6 @@
             "Model": "models/holiday-kit/holiday-floor-wood.vmdl",
             "StartAsleep": false,
             "Tint": "1,1,1,1"
-          },
-          {
-            "__type": "Sandbox.Rigidbody",
-            "__guid": "1d111a39-eb59-4c07-8415-1ab952d50927",
-            "AngularDamping": 0,
-            "Gravity": true,
-            "LinearDamping": 0,
-            "Locking": {
-              "X": false,
-              "Y": false,
-              "Z": false,
-              "Pitch": false,
-              "Yaw": false,
-              "Roll": false
-            },
-            "MassCenterOverride": "0,0,0",
-            "MassOverride": 0,
-            "MotionEnabled": true,
-            "OverrideMassCenter": false,
-            "RigidbodyFlags": 0,
-            "StartAsleep": false
           }
         ]
       },
@@ -542,27 +479,6 @@
             "Model": "models/holiday-kit/holiday-floor-wood.vmdl",
             "StartAsleep": false,
             "Tint": "1,1,1,1"
-          },
-          {
-            "__type": "Sandbox.Rigidbody",
-            "__guid": "36c555a0-a3b1-439f-9fe3-7d0c090097d3",
-            "AngularDamping": 0,
-            "Gravity": true,
-            "LinearDamping": 0,
-            "Locking": {
-              "X": false,
-              "Y": false,
-              "Z": false,
-              "Pitch": false,
-              "Yaw": false,
-              "Roll": false
-            },
-            "MassCenterOverride": "0,0,0",
-            "MassOverride": 0,
-            "MotionEnabled": true,
-            "OverrideMassCenter": false,
-            "RigidbodyFlags": 0,
-            "StartAsleep": false
           }
         ]
       },
@@ -581,27 +497,6 @@
             "Model": "models/holiday-kit/holiday-floor-wood.vmdl",
             "StartAsleep": false,
             "Tint": "1,1,1,1"
-          },
-          {
-            "__type": "Sandbox.Rigidbody",
-            "__guid": "9f1c830b-48d9-4699-97c3-ee702ae75845",
-            "AngularDamping": 0,
-            "Gravity": true,
-            "LinearDamping": 0,
-            "Locking": {
-              "X": false,
-              "Y": false,
-              "Z": false,
-              "Pitch": false,
-              "Yaw": false,
-              "Roll": false
-            },
-            "MassCenterOverride": "0,0,0",
-            "MassOverride": 0,
-            "MotionEnabled": true,
-            "OverrideMassCenter": false,
-            "RigidbodyFlags": 0,
-            "StartAsleep": false
           }
         ]
       }
