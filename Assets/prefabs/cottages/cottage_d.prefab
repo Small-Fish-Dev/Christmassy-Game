@@ -319,7 +319,7 @@
         "Name": "holiday-lantern-hanging",
         "Position": "12.5,0,143.75",
         "Enabled": true,
-        "__Prefab": "prefabs/hanging_lamp.prefab",
+        "__Prefab": "prefabs/cottages/hanging_lamp.prefab",
         "__PrefabVariables": {}
       },
       {
