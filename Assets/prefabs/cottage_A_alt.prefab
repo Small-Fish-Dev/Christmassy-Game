@@ -456,6 +456,144 @@
             "Tint": "1,1,1,1"
           }
         ]
+      },
+      {
+        "__guid": "0d49d359-6220-41bd-b1bc-695d0a451698",
+        "Flags": 0,
+        "Name": "holiday-floor-wood",
+        "Position": "99.99998,-99.99998,0",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.Prop",
+            "__guid": "ac9f0724-0650-4259-92df-e54ea50dc573",
+            "BodyGroups": 18446744073709551615,
+            "Health": 0,
+            "IsStatic": true,
+            "Model": "models/holiday-kit/holiday-floor-wood.vmdl",
+            "StartAsleep": false,
+            "Tint": "1,1,1,1"
+          }
+        ]
+      },
+      {
+        "__guid": "e28cd143-9ad6-4f58-800c-ea62fe49403d",
+        "Flags": 0,
+        "Name": "holiday-floor-wood (1)",
+        "Position": "-0.000007629395,-99.99998,0",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.Prop",
+            "__guid": "28b5d574-c65f-40e6-834a-a8242f5570fc",
+            "BodyGroups": 18446744073709551615,
+            "Health": 0,
+            "IsStatic": true,
+            "Model": "models/holiday-kit/holiday-floor-wood.vmdl",
+            "StartAsleep": false,
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "Sandbox.Rigidbody",
+            "__guid": "1d111a39-eb59-4c07-8415-1ab952d50927",
+            "AngularDamping": 0,
+            "Gravity": true,
+            "LinearDamping": 0,
+            "Locking": {
+              "X": false,
+              "Y": false,
+              "Z": false,
+              "Pitch": false,
+              "Yaw": false,
+              "Roll": false
+            },
+            "MassCenterOverride": "0,0,0",
+            "MassOverride": 0,
+            "MotionEnabled": true,
+            "OverrideMassCenter": false,
+            "RigidbodyFlags": 0,
+            "StartAsleep": false
+          }
+        ]
+      },
+      {
+        "__guid": "3aca0d75-a643-4b47-951e-e1442d73a568",
+        "Flags": 0,
+        "Name": "holiday-floor-wood (2)",
+        "Position": "100,0,0",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.Prop",
+            "__guid": "a229d8f3-14ed-47e5-9be4-a8897356a419",
+            "BodyGroups": 18446744073709551615,
+            "Health": 0,
+            "IsStatic": true,
+            "Model": "models/holiday-kit/holiday-floor-wood.vmdl",
+            "StartAsleep": false,
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "Sandbox.Rigidbody",
+            "__guid": "36c555a0-a3b1-439f-9fe3-7d0c090097d3",
+            "AngularDamping": 0,
+            "Gravity": true,
+            "LinearDamping": 0,
+            "Locking": {
+              "X": false,
+              "Y": false,
+              "Z": false,
+              "Pitch": false,
+              "Yaw": false,
+              "Roll": false
+            },
+            "MassCenterOverride": "0,0,0",
+            "MassOverride": 0,
+            "MotionEnabled": true,
+            "OverrideMassCenter": false,
+            "RigidbodyFlags": 0,
+            "StartAsleep": false
+          }
+        ]
+      },
+      {
+        "__guid": "e0a69d57-a260-4958-8c93-4795ee4e6192",
+        "Flags": 0,
+        "Name": "holiday-floor-wood (3)",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.Prop",
+            "__guid": "2ca26f27-3abf-43e3-87de-4f2e0ca52a30",
+            "BodyGroups": 18446744073709551615,
+            "Health": 0,
+            "IsStatic": true,
+            "Model": "models/holiday-kit/holiday-floor-wood.vmdl",
+            "StartAsleep": false,
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "Sandbox.Rigidbody",
+            "__guid": "9f1c830b-48d9-4699-97c3-ee702ae75845",
+            "AngularDamping": 0,
+            "Gravity": true,
+            "LinearDamping": 0,
+            "Locking": {
+              "X": false,
+              "Y": false,
+              "Z": false,
+              "Pitch": false,
+              "Yaw": false,
+              "Roll": false
+            },
+            "MassCenterOverride": "0,0,0",
+            "MassOverride": 0,
+            "MotionEnabled": true,
+            "OverrideMassCenter": false,
+            "RigidbodyFlags": 0,
+            "StartAsleep": false
+          }
+        ]
       }
     ],
     "__variables": [],
@@ -496,6 +634,7 @@
     "kenneynl.holidaycabinwall#82200",
     "kenneynl.holidaycabinwallroof#82288",
     "kenneynl.holidaycabinwindowlarge#82204",
+    "kenneynl.holidayfloorwood#82210",
     "kenneynl.holidaywreath#82270"
   ],
   "__version": 1

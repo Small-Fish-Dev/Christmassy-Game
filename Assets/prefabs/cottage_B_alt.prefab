@@ -642,6 +642,81 @@
             "StartAsleep": false
           }
         ]
+      },
+      {
+        "__guid": "609c5d49-528e-4044-911d-4fc30f44b908",
+        "Flags": 0,
+        "Name": "holiday-floor-wood",
+        "Position": "99.99998,-99.99998,0",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.Prop",
+            "__guid": "9540d15e-8789-445e-aea5-70f5cab8935c",
+            "BodyGroups": 18446744073709551615,
+            "Health": 0,
+            "IsStatic": true,
+            "Model": "models/holiday-kit/holiday-floor-wood.vmdl",
+            "StartAsleep": false,
+            "Tint": "1,1,1,1"
+          }
+        ]
+      },
+      {
+        "__guid": "13680363-5132-42bc-a044-2f79fb42fec4",
+        "Flags": 0,
+        "Name": "holiday-floor-wood (3)",
+        "Position": "99.99998,0.000007629395,0",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.Prop",
+            "__guid": "eec165f6-0df4-403d-ad0f-256f7de1fa90",
+            "BodyGroups": 18446744073709551615,
+            "Health": 0,
+            "IsStatic": true,
+            "Model": "models/holiday-kit/holiday-floor-wood.vmdl",
+            "StartAsleep": false,
+            "Tint": "1,1,1,1"
+          }
+        ]
+      },
+      {
+        "__guid": "397ed33b-37e9-4dd5-8701-9f118725bac4",
+        "Flags": 0,
+        "Name": "holiday-floor-wood (1)",
+        "Position": "-0.000007629395,-99.99998,0",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.Prop",
+            "__guid": "177f3a6c-baf9-4fcd-a3d8-b2a88a1f5a15",
+            "BodyGroups": 18446744073709551615,
+            "Health": 0,
+            "IsStatic": true,
+            "Model": "models/holiday-kit/holiday-floor-wood.vmdl",
+            "StartAsleep": false,
+            "Tint": "1,1,1,1"
+          }
+        ]
+      },
+      {
+        "__guid": "38febd37-a2b9-40b2-b01e-e61fc7fdb26b",
+        "Flags": 0,
+        "Name": "holiday-floor-wood (2)",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.Prop",
+            "__guid": "15931e86-8642-42b9-a6ec-2e147094d5ad",
+            "BodyGroups": 18446744073709551615,
+            "Health": 0,
+            "IsStatic": true,
+            "Model": "models/holiday-kit/holiday-floor-wood.vmdl",
+            "StartAsleep": false,
+            "Tint": "1,1,1,1"
+          }
+        ]
       }
     ],
     "__variables": [],
@@ -685,7 +760,8 @@
     "kenneynl.holidaycabinwallroof#82288",
     "kenneynl.holidaycabinwallroofcenter#82196",
     "kenneynl.holidaycabinwindowa#82201",
-    "kenneynl.holidaycabinwindowb#82202"
+    "kenneynl.holidaycabinwindowb#82202",
+    "kenneynl.holidayfloorwood#82210"
   ],
   "__version": 1
 }

@@ -400,6 +400,26 @@
       "Enabled": true,
       "__Prefab": "prefabs/cottage_b_alt.prefab",
       "__PrefabVariables": {}
+    },
+    {
+      "__guid": "54be55df-0e05-48dd-b5ba-afce3225fb77",
+      "Flags": 0,
+      "Name": "cottage_c",
+      "Position": "-150,-800,0",
+      "Rotation": "0,0,1,-0.00000004371139",
+      "Enabled": true,
+      "__Prefab": "prefabs/cottage_c.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "bbcc536e-cdc4-4bfd-8b1e-2facee3b4e0e",
+      "Flags": 0,
+      "Name": "cottage_c_alt",
+      "Position": "-150,-1100,0",
+      "Rotation": "0,0,1,-0.00000004371139",
+      "Enabled": true,
+      "__Prefab": "prefabs/cottage_c_alt.prefab",
+      "__PrefabVariables": {}
     }
   ],
   "SceneProperties": {

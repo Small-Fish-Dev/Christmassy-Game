@@ -642,6 +642,119 @@
         "Enabled": true,
         "__Prefab": "prefabs/hanging_lamp.prefab",
         "__PrefabVariables": {}
+      },
+      {
+        "__guid": "c7d6fc06-8c86-41be-8112-44728c494189",
+        "Flags": 0,
+        "Name": "holiday-floor-wood",
+        "Position": "99.99998,-99.99998,0",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.Prop",
+            "__guid": "1341871e-d574-4e89-aa82-c837193ff454",
+            "BodyGroups": 18446744073709551615,
+            "Health": 0,
+            "IsStatic": true,
+            "Model": "models/holiday-kit/holiday-floor-wood.vmdl",
+            "StartAsleep": false,
+            "Tint": "1,1,1,1"
+          }
+        ]
+      },
+      {
+        "__guid": "09a38d2d-7af6-4000-9295-cd859388dee0",
+        "Flags": 0,
+        "Name": "holiday-floor-wood (1)",
+        "Position": "-0.000007629395,-99.99998,0",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.Prop",
+            "__guid": "751a0548-268b-4755-8f5c-91887a597cd7",
+            "BodyGroups": 18446744073709551615,
+            "Health": 0,
+            "IsStatic": true,
+            "Model": "models/holiday-kit/holiday-floor-wood.vmdl",
+            "StartAsleep": false,
+            "Tint": "1,1,1,1"
+          }
+        ]
+      },
+      {
+        "__guid": "08308618-ab3f-4ff9-98a4-eb44f62e50fa",
+        "Flags": 0,
+        "Name": "holiday-floor-wood (2)",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.Prop",
+            "__guid": "1febc0d0-2e99-4af6-9153-0f0e126c32eb",
+            "BodyGroups": 18446744073709551615,
+            "Health": 0,
+            "IsStatic": true,
+            "Model": "models/holiday-kit/holiday-floor-wood.vmdl",
+            "StartAsleep": false,
+            "Tint": "1,1,1,1"
+          }
+        ]
+      },
+      {
+        "__guid": "ce8c2cde-d655-44f4-8e5d-1867c3ce865f",
+        "Flags": 0,
+        "Name": "holiday-floor-wood (3)",
+        "Position": "0,100,0",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.Prop",
+            "__guid": "1c1c3f50-6f91-4b23-b835-4533bbe58390",
+            "BodyGroups": 18446744073709551615,
+            "Health": 0,
+            "IsStatic": true,
+            "Model": "models/holiday-kit/holiday-floor-wood.vmdl",
+            "StartAsleep": false,
+            "Tint": "1,1,1,1"
+          }
+        ]
+      },
+      {
+        "__guid": "0fbda755-7c09-46de-8742-e29366cb75d2",
+        "Flags": 0,
+        "Name": "holiday-floor-wood (4)",
+        "Position": "100,100,0",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.Prop",
+            "__guid": "eb7e690e-7a3b-4487-b8e6-159083430604",
+            "BodyGroups": 18446744073709551615,
+            "Health": 0,
+            "IsStatic": true,
+            "Model": "models/holiday-kit/holiday-floor-wood.vmdl",
+            "StartAsleep": false,
+            "Tint": "1,1,1,1"
+          }
+        ]
+      },
+      {
+        "__guid": "d4e86a66-5de7-455c-a733-5c6a9edeb071",
+        "Flags": 0,
+        "Name": "holiday-floor-wood (5)",
+        "Position": "100,0,0",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.Prop",
+            "__guid": "0b39fb2e-c0ec-49f7-8705-9599982c0639",
+            "BodyGroups": 18446744073709551615,
+            "Health": 0,
+            "IsStatic": true,
+            "Model": "models/holiday-kit/holiday-floor-wood.vmdl",
+            "StartAsleep": false,
+            "Tint": "1,1,1,1"
+          }
+        ]
       }
     ],
     "__variables": [],
@@ -685,7 +798,8 @@
     "kenneynl.holidaycabinwallroof#82288",
     "kenneynl.holidaycabinwallroofcenter#82196",
     "kenneynl.holidaycabinwindowa#82201",
-    "kenneynl.holidaycabinwindowb#82202"
+    "kenneynl.holidaycabinwindowb#82202",
+    "kenneynl.holidayfloorwood#82210"
   ],
   "__version": 1
 }
