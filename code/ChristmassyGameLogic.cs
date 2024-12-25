@@ -68,15 +68,10 @@ public sealed class ChristmassyGameLogic : Component
 		if ( _updateVelocity )
 		{
 			foreach ( var child in Map.Children )
-			{
 				if ( child.Components.TryGet<Collider>( out var collider, FindMode.EnabledInSelfAndDescendants ) )
-				{
 					collider.SurfaceVelocity = Vector3.Forward * RotationSpeed * 10000f;
-				}
 
-			}
-
-			_updateVelocity = 1f;
+			_updateVelocity = 5f;
 		}
 	}
 
