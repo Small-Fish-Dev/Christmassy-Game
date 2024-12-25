@@ -44,6 +44,8 @@ public sealed class ChristmassyGameLogic : Component
 
 	protected override void OnStart()
 	{
+		GenerateMap();
+
 		MapClone = Map.Clone();
 		MapClone.WorldPosition += Vector3.Forward * 2500f + Vector3.Down * 000f;
 		MapClone.WorldRotation *= Rotation.FromPitch( -90f );
@@ -65,13 +67,13 @@ public sealed class ChristmassyGameLogic : Component
 
 	protected override void OnFixedUpdate()
 	{
-		RotationSpeed += Time.Delta;
+		RotationSpeed += Time.Delta * 0.3f;
 
 		if ( !SlipperySlope.IsValid() ) return;
 
 		if ( _updateVelocity )
 		{
-			SlipperySlope.SurfaceVelocity = Vector3.Forward * RotationSpeed * 10000f;
+			SlipperySlope.SurfaceVelocity = Vector3.Backward * RotationSpeed * 10000f;
 
 			_updateVelocity = 1f;
 		}
@@ -79,8 +81,8 @@ public sealed class ChristmassyGameLogic : Component
 
 	private List<GameObject> _cottages = new List<GameObject>();
 
-	[Button( "Generate Map Debug" )]
-	public void GenerateMap()
+	[Button( "Generate Cottages Debug" )]
+	public void GenerateCottages()
 	{
 		if ( !Map.IsValid() ) return;
 
@@ -155,6 +157,12 @@ public sealed class ChristmassyGameLogic : Component
 
 			_presents.Add( randomPresent );
 		}
+	}
+
+	public void GenerateMap()
+	{
+		GenerateCottages();
+		GeneratePresents();
 	}
 
 	public void ClearMap()

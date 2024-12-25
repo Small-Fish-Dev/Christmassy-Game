@@ -18,6 +18,7 @@
         "__guid": "21e0be3b-682d-440b-9142-42006d912962",
         "Flags": 0,
         "Name": "holiday-present-a-round",
+        "Rotation": "0,0,1,-0.00000004371139",
         "Tags": "gift",
         "Enabled": true,
         "Components": [
