@@ -1,0 +1,89 @@
+{
+  "RootObject": {
+    "__guid": "b503f024-77ff-4a22-9816-7b7f6b993be0",
+    "Flags": 0,
+    "Name": "holiday-lantern-hanging",
+    "Position": "162.5,-0.00001674145,250",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "Sandbox.ModelRenderer",
+        "__guid": "3549e5ff-9693-492c-a74f-4e5eb3d8e229",
+        "BodyGroups": 18446744073709551615,
+        "CreateAttachments": false,
+        "Model": "models/holiday-kit/holiday-lantern-hanging.vmdl",
+        "RenderOptions": {
+          "GameLayer": true,
+          "OverlayLayer": false,
+          "BloomLayer": false,
+          "AfterUILayer": false
+        },
+        "RenderType": "Off",
+        "Tint": "1,1,1,1"
+      },
+      {
+        "__type": "Sandbox.ModelCollider",
+        "__guid": "1b544911-fde5-41bc-a94c-6bbbc0947c6f",
+        "IsTrigger": false,
+        "Model": "models/holiday-kit/holiday-lantern-hanging.vmdl",
+        "Static": false,
+        "SurfaceVelocity": "0,0,0"
+      },
+      {
+        "__type": "Sandbox.Rigidbody",
+        "__guid": "b0893bb4-050e-46a2-bcb1-01cf035a8ca1",
+        "AngularDamping": 0,
+        "Gravity": true,
+        "LinearDamping": 0,
+        "Locking": {
+          "X": false,
+          "Y": false,
+          "Z": false,
+          "Pitch": false,
+          "Yaw": false,
+          "Roll": false
+        },
+        "MassCenterOverride": "0,0,0",
+        "MassOverride": 0,
+        "MotionEnabled": true,
+        "OverrideMassCenter": false,
+        "RigidbodyFlags": 0,
+        "StartAsleep": false
+      }
+    ],
+    "Children": [
+      {
+        "__guid": "06d64f9d-6e7f-42f1-a110-4ed3d6b89774",
+        "Flags": 0,
+        "Name": "Spot Light",
+        "Position": "12.49997,-0.000000007450581,-12.50003",
+        "Rotation": "0,0.7071068,0,0.7071068",
+        "Tags": "light_spot,light",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.SpotLight",
+            "__guid": "3b2ab2b8-65d4-4018-8047-a8cdf3f255e6",
+            "Attenuation": 0.52,
+            "ConeInner": 15,
+            "ConeOuter": 63.72,
+            "FogMode": "Enabled",
+            "FogStrength": 1,
+            "LightColor": "0.89302,0.83833,0.56489,1",
+            "Radius": 584.16003,
+            "Shadows": true
+          }
+        ]
+      }
+    ]
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "DontBreakAsTemplate": false,
+  "ResourceVersion": 1,
+  "__references": [
+    "kenneynl.holidaylanternhanging#82219"
+  ],
+  "__version": 1
+}
