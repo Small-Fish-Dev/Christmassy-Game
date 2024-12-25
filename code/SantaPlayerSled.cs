@@ -11,7 +11,7 @@ public sealed class SantaPlayerSled : Component, ITriggerListener
 
 
 	[Property]
-	public float MaxTurnSpeed { get; set; } = 20f;
+	public float MaxTurnSpeed { get; set; } = 10f;
 
 	public float Velocity = 0f;
 
@@ -22,6 +22,8 @@ public sealed class SantaPlayerSled : Component, ITriggerListener
 
 	protected override void OnFixedUpdate()
 	{
+		MaxTurnSpeed += Time.Delta * 0.2f;
+
 		var roadWidth = ChristmassyGameLogic.Instance.RoadWidth / 1.5f;
 		var inputs = Input.AnalogMove;
 		Velocity = MathX.Lerp( Velocity, inputs.y * MaxTurnSpeed, Time.Delta * (inputs.y == 0 ? 2f : 1f) );
@@ -34,8 +36,9 @@ public sealed class SantaPlayerSled : Component, ITriggerListener
 		// Animations
 		if ( !ModelRenderer.IsValid() ) return;
 
-		ModelRenderer.Set( "wish_y", inputs.y * -5000f );
+		ModelRenderer.Set( "wish_y", inputs.y * -MaxTurnSpeed * 20f );
 	}
+
 	public void OnTriggerEnter( Collider other )
 	{
 		if ( other.GameObject == GameObject )
