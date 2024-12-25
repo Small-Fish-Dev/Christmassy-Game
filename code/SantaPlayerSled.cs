@@ -90,14 +90,16 @@ public sealed class SantaPlayerSled : Component, ITriggerListener
 	public void OnTriggerEnter( Collider other )
 	{
 		if ( other.Tags.Has( "gift" ) )
-			ResetGift( other.GameObject );
+			UnwrapGift( other.GameObject );
 
 		if ( other.Tags.Has( "obstacle" ) )
 			Ragdoll();
 	}
 
-	private async void ResetGift( GameObject gift )
+	private async void UnwrapGift( GameObject gift )
 	{
+		ChristmassyGameLogic.Instance.Points += 10;
+
 		var currentSpeed = ChristmassyGameLogic.Instance.RotationSpeed;
 		var resetTime = 180f / currentSpeed; // Reset when it's on the other side
 
