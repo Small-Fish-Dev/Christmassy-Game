@@ -25,6 +25,10 @@ public sealed class ChristmassyGameLogic : Component
 	[Category( "Map" )]
 	public int PresentsSpawned { get; set; } = 10;
 
+	[Property]
+	[Category( "Map" )]
+	public Collider SlipperySlope { get; set; }
+
 	/// <summary>
 	/// How many degrees it rotates per second
 	/// </summary>
@@ -63,15 +67,13 @@ public sealed class ChristmassyGameLogic : Component
 	{
 		RotationSpeed += Time.Delta;
 
-		if ( !Map.IsValid() ) return;
+		if ( !SlipperySlope.IsValid() ) return;
 
 		if ( _updateVelocity )
 		{
-			foreach ( var child in Map.Children )
-				if ( child.Components.TryGet<Collider>( out var collider, FindMode.EnabledInSelfAndDescendants ) )
-					collider.SurfaceVelocity = Vector3.Forward * RotationSpeed * 10000f;
+			SlipperySlope.SurfaceVelocity = Vector3.Forward * RotationSpeed * 10000f;
 
-			_updateVelocity = 5f;
+			_updateVelocity = 1f;
 		}
 	}
 
