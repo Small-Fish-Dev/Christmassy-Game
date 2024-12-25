@@ -80,7 +80,7 @@ public sealed class ChristmassyGameLogic : Component
 			randomCottage.WorldRotation *= sideRotation;
 
 			randomCottage.WorldPosition = Map.WorldPosition + randomCottage.WorldRotation.Up * MapRadius;
-			var randomDistance = Game.Random.Float( 100f, 300f );
+			var randomDistance = Game.Random.Float( 150f, 400f );
 			var sidePosition = (RoadWidth / 2f + randomDistance) * (side == 0 ? Vector3.Left : Vector3.Right);
 			randomCottage.WorldPosition += sidePosition;
 			randomCottage.SetParent( Map );
