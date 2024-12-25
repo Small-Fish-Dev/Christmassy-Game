@@ -27,8 +27,8 @@
             "__type": "Sandbox.HullCollider",
             "__guid": "80679162-ef09-4a11-9dff-f176c250bf65",
             "BoxSize": "50,50,50",
-            "Center": "0,0,60",
-            "Height": 120,
+            "Center": "0,0,70",
+            "Height": 140,
             "IsTrigger": true,
             "Points": [],
             "Radius": 100,
@@ -44,7 +44,7 @@
             "__guid": "884b3346-543b-4129-a852-7599c6184e29",
             "Flags": 0,
             "Name": "model",
-            "Scale": "0.8,0.8,0.8",
+            "Scale": "0.8,0.8,0.9",
             "Enabled": true,
             "Components": [
               {
