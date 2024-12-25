@@ -41,6 +41,16 @@ public sealed class SantaPlayerSled : Component, ITriggerListener
 		if ( other.GameObject == GameObject )
 			return;
 
-		other.GameObject.Destroy();
+		ResetGift( other.GameObject );
+	}
+
+	private async void ResetGift( GameObject gift )
+	{
+		var currentSpeed = ChristmassyGameLogic.Instance.RotationSpeed;
+		var resetTime = 180f / currentSpeed; // Reset when it's on the other side
+
+		gift.Enabled = false;
+		await Task.DelaySeconds( resetTime );
+		gift.Enabled = true;
 	}
 }
