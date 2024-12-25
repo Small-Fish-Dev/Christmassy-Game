@@ -68,7 +68,7 @@ public sealed class SantaPlayerSled : Component, ITriggerListener
 		_oldSleigh = sleigh.Clone( sleigh.WorldPosition, sleigh.WorldRotation, sleigh.WorldScale );
 		_oldSleigh.Tags.Remove( "player" );
 		var sleighRigidBody = _oldSleigh.AddComponent<Rigidbody>();
-		sleighRigidBody.Velocity += Vector3.Up * 1000f + Vector3.Backward * 500f;
+		sleighRigidBody.Velocity += Vector3.Up * 1000f + Vector3.Backward * 500f + Vector3.Left * Velocity;
 
 		santa.Enabled = false;
 		sleigh.Enabled = false;
