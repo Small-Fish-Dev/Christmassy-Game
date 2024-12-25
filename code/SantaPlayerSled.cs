@@ -1,7 +1,8 @@
 using Sandbox;
 using System;
+using static Sandbox.Component;
 
-public sealed class SantaPlayerSled : Component
+public sealed class SantaPlayerSled : Component, ITriggerListener
 {
 	// TODO: SET wish_x wish_y wish_z
 
@@ -37,5 +38,12 @@ public sealed class SantaPlayerSled : Component
 		if ( !ModelRenderer.IsValid() ) return;
 
 		ModelRenderer.Set( "wish_y", inputs.y * -1000f );
+	}
+	public void OnTriggerEnter( Collider other )
+	{
+		if ( other.GameObject == GameObject )
+			return;
+
+		other.GameObject.Destroy();
 	}
 }

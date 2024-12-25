@@ -1,0 +1,76 @@
+{
+  "RootObject": {
+    "__guid": "10148a43-d8ba-4c67-9531-65bfce4ac333",
+    "Flags": 0,
+    "Name": "gift_a",
+    "Enabled": true,
+    "Children": [
+      {
+        "__guid": "21e0be3b-682d-440b-9142-42006d912962",
+        "Flags": 0,
+        "Name": "holiday-present-a-round",
+        "Scale": "1.5,1.5,1.5",
+        "Tags": "gift",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "ddf1fcc3-890e-4a46-bc75-6b5d82f749c4",
+            "BodyGroups": 18446744073709551615,
+            "CreateAttachments": false,
+            "Model": "models/holiday-kit/holiday-present-a-round.vmdl",
+            "RenderOptions": {
+              "GameLayer": true,
+              "OverlayLayer": false,
+              "BloomLayer": false,
+              "AfterUILayer": false
+            },
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "Sandbox.ModelCollider",
+            "__guid": "0ebcffc3-6623-4db9-b3e9-fbbbc0c519ce",
+            "IsTrigger": true,
+            "Model": "models/holiday-kit/holiday-present-a-round.vmdl",
+            "Static": true,
+            "SurfaceVelocity": "0,0,0"
+          }
+        ]
+      }
+    ],
+    "__variables": [],
+    "__properties": {
+      "FixedUpdateFrequency": 50,
+      "MaxFixedUpdates": 5,
+      "NetworkFrequency": 30,
+      "NetworkInterpolation": true,
+      "PhysicsSubSteps": 1,
+      "ThreadedAnimation": true,
+      "TimeScale": 1,
+      "UseFixedUpdate": true,
+      "Metadata": {},
+      "NavMesh": {
+        "Enabled": false,
+        "IncludeStaticBodies": true,
+        "IncludeKeyframedBodies": true,
+        "EditorAutoUpdate": true,
+        "AgentHeight": 64,
+        "AgentRadius": 16,
+        "AgentStepSize": 18,
+        "AgentMaxSlope": 40,
+        "ExcludedBodies": "",
+        "IncludedBodies": ""
+      }
+    }
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "DontBreakAsTemplate": false,
+  "ResourceVersion": 1,
+  "__references": [
+    "kenneynl.holidaypresentaround#82227"
+  ],
+  "__version": 1
+}
