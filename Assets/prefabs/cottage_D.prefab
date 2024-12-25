@@ -4,6 +4,16 @@
     "Flags": 0,
     "Name": "cottage_d",
     "Enabled": true,
+    "Components": [
+      {
+        "__type": "Sandbox.SceneInformation",
+        "__guid": "51ab9976-6d1e-4fea-8077-a7376bb0f786",
+        "Changes": "",
+        "Description": "",
+        "SceneTags": "cottage",
+        "Title": "Cottage D Snowy"
+      }
+    ],
     "Children": [
       {
         "__guid": "e5280352-0f18-482f-b05c-758a5a61f2b7",
@@ -341,7 +351,10 @@
       "ThreadedAnimation": true,
       "TimeScale": 1,
       "UseFixedUpdate": true,
-      "Metadata": {},
+      "Metadata": {
+        "Title": "Cottage D Snowy",
+        "Tags": "cottage"
+      },
       "NavMesh": {
         "Enabled": false,
         "IncludeStaticBodies": true,

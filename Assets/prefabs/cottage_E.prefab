@@ -4,6 +4,16 @@
     "Flags": 0,
     "Name": "cottage_e",
     "Enabled": true,
+    "Components": [
+      {
+        "__type": "Sandbox.SceneInformation",
+        "__guid": "51ab9976-6d1e-4fea-8077-a7376bb0f786",
+        "Changes": "",
+        "Description": "",
+        "SceneTags": "cottage",
+        "Title": "Cottage E Snowy"
+      }
+    ],
     "Children": [
       {
         "__guid": "62ffa0dd-f849-4fb9-87be-24ad1eee72c9",
@@ -729,7 +739,10 @@
       "ThreadedAnimation": true,
       "TimeScale": 1,
       "UseFixedUpdate": true,
-      "Metadata": {},
+      "Metadata": {
+        "Title": "Cottage E Snowy",
+        "Tags": "cottage"
+      },
       "NavMesh": {
         "Enabled": false,
         "IncludeStaticBodies": true,

@@ -4,6 +4,16 @@
     "Flags": 0,
     "Name": "cottage_a_alt",
     "Enabled": true,
+    "Components": [
+      {
+        "__type": "Sandbox.SceneInformation",
+        "__guid": "51ab9976-6d1e-4fea-8077-a7376bb0f786",
+        "Changes": "",
+        "Description": "",
+        "SceneTags": "cottage",
+        "Title": "Cottage A"
+      }
+    ],
     "Children": [
       {
         "__guid": "4a6263c8-8895-4b76-863c-26926f3e6c84",
@@ -606,7 +616,10 @@
       "ThreadedAnimation": true,
       "TimeScale": 1,
       "UseFixedUpdate": true,
-      "Metadata": {},
+      "Metadata": {
+        "Title": "Cottage A",
+        "Tags": "cottage"
+      },
       "NavMesh": {
         "Enabled": false,
         "IncludeStaticBodies": true,
