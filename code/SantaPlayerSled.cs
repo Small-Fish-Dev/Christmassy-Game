@@ -66,10 +66,7 @@ public sealed class SantaPlayerSled : Component, ITriggerListener
 
 	public void OnTriggerEnter( Collider other )
 	{
-		if ( other.GameObject == GameObject ) // Us
-			return;
-		if ( other.GameObject.Parent == GameObject ) // The sleigh.. ?
-			return;
+		if ( !other.Tags.Has( "gift" ) ) return;
 
 		ResetGift( other.GameObject );
 	}
