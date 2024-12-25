@@ -57,9 +57,27 @@ public sealed class ChristmassyGameLogic : Component
 		MapClone.WorldRotation *= Rotation.FromPitch( -RotationSpeed * Time.Delta );
 	}
 
+	private TimeUntil _updateVelocity;
+
 	protected override void OnFixedUpdate()
 	{
 		RotationSpeed += Time.Delta;
+
+		if ( !Map.IsValid() ) return;
+
+		if ( _updateVelocity )
+		{
+			foreach ( var child in Map.Children )
+			{
+				if ( child.Components.TryGet<Collider>( out var collider, FindMode.EnabledInSelfAndDescendants ) )
+				{
+					collider.SurfaceVelocity = Vector3.Forward * RotationSpeed * 10000f;
+				}
+
+			}
+
+			_updateVelocity = 1f;
+		}
 	}
 
 	private List<GameObject> _cottages = new List<GameObject>();
