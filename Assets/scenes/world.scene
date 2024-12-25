@@ -10,7 +10,12 @@
       "Components": [
         {
           "__type": "ChristmassyGameLogic",
-          "__guid": "bf67a400-0da0-439d-aa18-53a741b71464"
+          "__guid": "bf67a400-0da0-439d-aa18-53a741b71464",
+          "Map": {
+            "_type": "gameobject",
+            "go": "79f7c8df-77cd-42aa-8c4c-b2785173e35d"
+          },
+          "RotationSpeed": 5
         }
       ]
     },
@@ -7536,16 +7541,6 @@
           ]
         },
         {
-          "__guid": "a2b309b6-eb65-4a84-962c-3517c4d8fa2c",
-          "Flags": 0,
-          "Name": "cottage_a",
-          "Position": "317.3196,421.8751,2013.84",
-          "Rotation": "-0.04316784,0.04316784,-0.705788,0.705788",
-          "Enabled": true,
-          "__Prefab": "prefabs/cottage_a.prefab",
-          "__PrefabVariables": {}
-        },
-        {
           "__guid": "6a6e42b2-d336-4bac-91c7-d0f7bc3e9127",
           "Flags": 0,
           "Name": "holiday-present-b-round",
@@ -7564,6 +7559,44 @@
               "Tint": "1,1,1,1"
             }
           ]
+        },
+        {
+          "__guid": "ecc5f1e8-d901-4f9a-8f96-20548ab6ca50",
+          "Flags": 0,
+          "Name": "cottage_a",
+          "Position": "149.6818,403.1268,2028.86",
+          "Rotation": "-0.02603182,0.02603151,-0.706623,0.7066317",
+          "Enabled": true,
+          "__Prefab": "prefabs/cottage_a.prefab",
+          "__PrefabVariables": {}
+        }
+      ]
+    },
+    {
+      "__guid": "2282cf80-22ee-4d8b-97f6-f59dd388081c",
+      "Flags": 0,
+      "Name": "Camera",
+      "Position": "-1336.957,-53.17068,2778.909",
+      "Rotation": "0,0.2079117,0,0.9781476",
+      "Tags": "maincamera",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.CameraComponent",
+          "__guid": "b7a2c3c5-1ad2-4c56-98ba-09758b2596a0",
+          "BackgroundColor": "0.33333,0.46275,0.52157,1",
+          "ClearFlags": "All",
+          "FieldOfView": 60,
+          "IsMainCamera": true,
+          "Orthographic": false,
+          "OrthographicHeight": 1204,
+          "Priority": 1,
+          "RenderExcludeTags": "",
+          "RenderTags": "",
+          "TargetEye": "None",
+          "Viewport": "0,0,1,1",
+          "ZFar": 10000,
+          "ZNear": 10
         }
       ]
     }
