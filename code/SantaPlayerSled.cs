@@ -24,6 +24,7 @@ public sealed class SantaPlayerSled : Component, ITriggerListener
 
 	public float Velocity = 0f;
 	public float Height = 0f;
+	public bool CanJump => Pivot.LocalPosition.z <= 0f;
 
 	private float _targetPitch = 0f;
 
@@ -42,10 +43,10 @@ public sealed class SantaPlayerSled : Component, ITriggerListener
 		Velocity = MathX.Clamp( Velocity, -MaxTurnSpeed, MaxTurnSpeed );
 		WorldPosition = WorldPosition.WithY( MathX.Clamp( WorldPosition.y + Velocity * Time.Delta, -roadWidth, roadWidth ) );
 
-		if ( Pivot.LocalPosition.z <= 0f && (WorldPosition.y <= -roadWidth || WorldPosition.y >= roadWidth) )
+		if ( CanJump && (WorldPosition.y <= -roadWidth || WorldPosition.y >= roadWidth) )
 			Velocity *= -0.25f;
 
-		if ( Input.Pressed( "jump" ) && Height <= 0 && Pivot.IsValid() )
+		if ( Input.Pressed( "jump" ) && CanJump && Pivot.IsValid() )
 		{
 			Height += 350f;
 			_targetPitch = -30f;
@@ -60,7 +61,7 @@ public sealed class SantaPlayerSled : Component, ITriggerListener
 			Height -= Time.Delta * 1000f;
 		}
 
-		if ( Pivot.LocalPosition.z <= 0f && Height < 0f )
+		if ( CanJump && Height < 0f )
 		{
 			Collider.Center = Pivot.LocalPosition + Vector3.Up * 35f;
 			Height = 0f;
