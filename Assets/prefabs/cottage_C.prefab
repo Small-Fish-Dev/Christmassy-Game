@@ -19,7 +19,7 @@
         "__guid": "6e42172c-dc1b-4b54-b6b8-13544ce545af",
         "Flags": 0,
         "Name": "holiday-cabin-wall",
-        "Position": "-6.25,150,200",
+        "Position": "-150,150,200",
         "Rotation": "0,0,0.7071068,0.7071068",
         "Scale": "1,1.2,1",
         "Enabled": true,
@@ -40,7 +40,7 @@
         "__guid": "9995cdaa-ee19-4df7-845f-e676858dcb4b",
         "Flags": 0,
         "Name": "holiday-cabin-corner (1)",
-        "Position": "6.25,131.25,200",
+        "Position": "-137.5,131.25,200",
         "Rotation": "0,0,-1,0",
         "Scale": "1.3,1.3,1",
         "Enabled": true,
@@ -61,7 +61,7 @@
         "__guid": "32edeb44-d23c-473e-8a42-2c3d4131acb8",
         "Flags": 0,
         "Name": "holiday-cabin-wall-roof-center (1)",
-        "Position": "0,150,300",
+        "Position": "-143.75,150,300",
         "Rotation": "0,0,0.9999999,0",
         "Scale": "1,1,0.5",
         "Enabled": true,
@@ -82,7 +82,7 @@
         "__guid": "de8dea43-58d6-48c8-a81f-1d30565be50c",
         "Flags": 0,
         "Name": "holiday-cabin-roof-snow-dormer",
-        "Position": "0,0,150",
+        "Position": "-143.75,0,150",
         "Enabled": true,
         "Components": [
           {
@@ -101,7 +101,7 @@
         "__guid": "67c04cae-c066-443d-9388-eb57a2dc7f3a",
         "Flags": 0,
         "Name": "holiday-cabin-wall-roof",
-        "Position": "100,150,100",
+        "Position": "-43.75002,150,100",
         "Rotation": "0,0,-0.7071068,0.7071068",
         "Enabled": true,
         "Components": [
@@ -121,7 +121,7 @@
         "__guid": "2f730204-a366-42a5-884c-4f25cb9b3cea",
         "Flags": 0,
         "Name": "holiday-cabin-window-c",
-        "Position": "0,150,200",
+        "Position": "-143.75,150,200",
         "Enabled": true,
         "Components": [
           {
@@ -140,7 +140,7 @@
         "__guid": "eeea4fa0-d75f-4576-a6a1-23e27557dc7b",
         "Flags": 0,
         "Name": "holiday-cabin-wall-roof (1)",
-        "Position": "100,250,100",
+        "Position": "-43.75002,250,100",
         "Rotation": "0,0,-0.7071068,0.7071068",
         "Enabled": true,
         "Components": [
@@ -160,7 +160,7 @@
         "__guid": "15e07a46-a483-4c35-8878-1c49a1919b9f",
         "Flags": 0,
         "Name": "holiday-cabin-window-c (1)",
-        "Position": "-6.25,150,100",
+        "Position": "-150,150,100",
         "Rotation": "0,0,0.7071068,0.7071068",
         "Scale": "1,1.2,1",
         "Enabled": true,
@@ -181,7 +181,7 @@
         "__guid": "393d43e3-0ab0-4abb-ba4e-e6f8f28b994a",
         "Flags": 0,
         "Name": "holiday-cabin-wall (9)",
-        "Position": "0,50,200",
+        "Position": "-143.75,50,200",
         "Rotation": "0,0,0.7071068,0.7071068",
         "Enabled": true,
         "Components": [
@@ -201,7 +201,7 @@
         "__guid": "382b7bec-f483-422e-a3e4-e50059cfb5dc",
         "Flags": 0,
         "Name": "holiday-cabin-roof-snow-corner",
-        "Position": "-100,143.75,100",
+        "Position": "-243.75,143.75,100",
         "Rotation": "0,0,0.7071068,0.7071068",
         "Scale": "1.2,1.1,1",
         "Enabled": true,
@@ -222,7 +222,7 @@
         "__guid": "78b9e594-2b6d-48bc-bdb8-4d1aba546fda",
         "Flags": 0,
         "Name": "holiday-cabin-wall (1)",
-        "Position": "0,150,200",
+        "Position": "-143.75,150,200",
         "Rotation": "0,0,1,-0.00000004371139",
         "Enabled": true,
         "Components": [
@@ -242,7 +242,7 @@
         "__guid": "d0fbfd19-4678-4901-be33-d798bb87dab2",
         "Flags": 0,
         "Name": "holiday-cabin-wall (10)",
-        "Position": "0,150,100",
+        "Position": "-143.75,150,100",
         "Rotation": "0,0,1,-0.00000004371139",
         "Enabled": true,
         "Components": [
@@ -262,7 +262,7 @@
         "__guid": "64731f8f-f8e3-4a5d-a37f-b412e644de9f",
         "Flags": 0,
         "Name": "holiday-cabin-corner",
-        "Position": "18.75,168.75,200",
+        "Position": "-125,168.75,200",
         "Rotation": "0,0,-0.7071068,0.7071068",
         "Scale": "1.3,1.3,1",
         "Enabled": true,
@@ -283,7 +283,7 @@
         "__guid": "e800f91e-5dde-4a38-960f-703502410423",
         "Flags": 0,
         "Name": "holiday-cabin-corner (2)",
-        "Position": "6.25,131.25,100",
+        "Position": "-137.5,131.25,100",
         "Rotation": "0,0,-1,0",
         "Scale": "1.3,1.3,1",
         "Enabled": true,
@@ -304,7 +304,7 @@
         "__guid": "74fdcfe5-745d-4b46-8c52-c36b3bbd8a34",
         "Flags": 0,
         "Name": "holiday-cabin-corner (3)",
-        "Position": "131.25,131.25,100",
+        "Position": "-12.50002,131.25,100",
         "Rotation": "0,0,-1,0",
         "Scale": "1.3,1.3,1",
         "Enabled": true,
@@ -325,7 +325,7 @@
         "__guid": "d50c47cb-1f0c-4b7c-b3a7-93df1a7bfac3",
         "Flags": 0,
         "Name": "holiday-cabin-corner (4)",
-        "Position": "131.25,131.25,200",
+        "Position": "-12.50002,131.25,200",
         "Rotation": "0,0,-1,0",
         "Scale": "1.3,1.3,1",
         "Enabled": true,
@@ -346,7 +346,7 @@
         "__guid": "486681ff-4ff8-4fb7-8a01-731211ee7ecd",
         "Flags": 0,
         "Name": "holiday-cabin-corner (5)",
-        "Position": "131.25,18.75,200",
+        "Position": "-12.50002,18.75,200",
         "Rotation": "0,0,-1,0",
         "Scale": "1.3,1.3,1",
         "Enabled": true,
@@ -367,7 +367,7 @@
         "__guid": "b891ecd3-f1b2-42aa-96d4-e70bc6db99ca",
         "Flags": 0,
         "Name": "holiday-cabin-roof-snow-point",
-        "Position": "0,150,300",
+        "Position": "-143.75,150,300",
         "Scale": "1.2,1,0.5",
         "Enabled": true,
         "Components": [
@@ -387,7 +387,7 @@
         "__guid": "b42a5200-4382-49c1-ada9-c89d2eddbc5b",
         "Flags": 0,
         "Name": "holiday-cabin-wall-roof-center",
-        "Position": "0,150,300",
+        "Position": "-143.75,150,300",
         "Scale": "1,1,0.5",
         "Enabled": true,
         "Components": [
@@ -407,7 +407,7 @@
         "__guid": "f6ccb78d-520d-4b7b-ba59-3f04829a2d75",
         "Flags": 0,
         "Name": "holiday-cabin-corner-bottom (2)",
-        "Position": "-100,150,0",
+        "Position": "-243.75,150,0.00001525879",
         "Rotation": "0,0,1,0",
         "Enabled": true,
         "Components": [
@@ -427,7 +427,7 @@
         "__guid": "7c4d6d59-7b9a-4c47-a24c-796afa4a6690",
         "Flags": 0,
         "Name": "holiday-cabin-corner-bottom (3)",
-        "Position": "-100,-150,0",
+        "Position": "-243.75,-150,0.00001525879",
         "Rotation": "0,0,0.7071068,-0.7071068",
         "Enabled": true,
         "Components": [
@@ -447,7 +447,7 @@
         "__guid": "0f1e60e2-3e7d-4f97-8f36-550c267aca9e",
         "Flags": 0,
         "Name": "holiday-cabin-wall (2)",
-        "Position": "0,-150,0",
+        "Position": "-143.75,-150,0.00001525879",
         "Rotation": "0,0,-0.7071068,0.7071068",
         "Enabled": true,
         "Components": [
@@ -467,7 +467,7 @@
         "__guid": "3c908255-8fb0-4ba4-b6ec-2d74f68d6801",
         "Flags": 0,
         "Name": "holiday-floor-wood (3)",
-        "Position": "-100,150,0",
+        "Position": "-243.75,150,0.00001525879",
         "Enabled": true,
         "Components": [
           {
@@ -486,7 +486,7 @@
         "__guid": "128c8085-691b-4ad0-9be9-6e3a84d5df41",
         "Flags": 0,
         "Name": "holiday-cabin-wall (3)",
-        "Position": "-100,150,0",
+        "Position": "-243.75,150,0.00001525879",
         "Rotation": "0,0,0.7071069,0.7071068",
         "Enabled": true,
         "Components": [
@@ -506,7 +506,7 @@
         "__guid": "03df1235-618c-469e-814c-48a59beeb7fc",
         "Flags": 0,
         "Name": "holiday-cabin-wall (4)",
-        "Position": "-100,-150,0",
+        "Position": "-243.75,-150,0.00001525879",
         "Rotation": "0,0,-0.7071068,0.7071068",
         "Enabled": true,
         "Components": [
@@ -526,7 +526,7 @@
         "__guid": "0eb3e792-94aa-4167-a56f-38b9460b77a8",
         "Flags": 0,
         "Name": "holiday-cabin-wall (6)",
-        "Position": "-100,150,0",
+        "Position": "-243.75,150,0.00001525879",
         "Rotation": "0,0,1,-0.00000005960464",
         "Enabled": true,
         "Components": [
@@ -546,7 +546,7 @@
         "__guid": "8081d9ec-131d-4687-9e6e-70ec03dac479",
         "Flags": 0,
         "Name": "holiday-cabin-wall (7)",
-        "Position": "-100,50,0",
+        "Position": "-243.75,50,0.00001525879",
         "Rotation": "0,0,1,-0.00000005960464",
         "Enabled": true,
         "Components": [
@@ -566,7 +566,7 @@
         "__guid": "c26701d7-370a-4064-ad0c-f4982864c8e5",
         "Flags": 0,
         "Name": "holiday-cabin-wall (8)",
-        "Position": "-100,-50,0",
+        "Position": "-243.75,-50,0.00001525879",
         "Rotation": "0,0,1,-0.00000005960464",
         "Enabled": true,
         "Components": [
@@ -586,7 +586,7 @@
         "__guid": "d65bf9c8-d3c4-4524-9f50-cbba502546f6",
         "Flags": 0,
         "Name": "holiday-floor-wood (6)",
-        "Position": "-100,-50,0",
+        "Position": "-243.75,-50,0.00001525879",
         "Enabled": true,
         "Components": [
           {
@@ -605,7 +605,7 @@
         "__guid": "da1f5511-b95e-40ce-ae38-7882dfc65baf",
         "Flags": 0,
         "Name": "holiday-floor-wood (7)",
-        "Position": "-100,50,0",
+        "Position": "-243.75,50,0.00001525879",
         "Enabled": true,
         "Components": [
           {
@@ -624,7 +624,7 @@
         "__guid": "66fdaeeb-d9da-437b-a694-42b5f7ad70a2",
         "Flags": 0,
         "Name": "holiday-cabin-roof-snow",
-        "Position": "0,0,100",
+        "Position": "-143.75,0,100",
         "Rotation": "0,0,-0.7071068,0.7071068",
         "Scale": "1.7,1,1",
         "Enabled": true,
@@ -645,7 +645,7 @@
         "__guid": "6767eb15-407b-427e-8fe8-55559c30fbe4",
         "Flags": 0,
         "Name": "holiday-cabin-roof-snow (1)",
-        "Position": "100,150,100",
+        "Position": "-43.75002,150,100",
         "Rotation": "0,0,-0.7071068,0.7071068",
         "Enabled": true,
         "Components": [
@@ -665,7 +665,7 @@
         "__guid": "51d30a77-5b8a-44e7-bab3-56225c23bc5e",
         "Flags": 0,
         "Name": "holiday-cabin-roof-snow (2)",
-        "Position": "-100,0,100",
+        "Position": "-243.75,0,100",
         "Rotation": "0,0,0.7071069,0.7071068",
         "Scale": "1.7,1.1,1",
         "Enabled": true,
@@ -686,7 +686,7 @@
         "__guid": "dbea7b70-8124-4a0f-8bf3-90687714eeae",
         "Flags": 0,
         "Name": "holiday-cabin-roof-top",
-        "Position": "-43.75,-25,218.75",
+        "Position": "-187.5,-25,218.75",
         "Rotation": "0,0,0.7071068,0.7071068",
         "Scale": "4,1,1",
         "Enabled": true,
@@ -707,7 +707,7 @@
         "__guid": "8966d96a-a08f-4cb7-85ef-fa08253a05c8",
         "Flags": 0,
         "Name": "holiday-cabin-corner-bottom (5)",
-        "Position": "-143.75,131.25,0",
+        "Position": "-287.5,131.25,0.00001525879",
         "Rotation": "0,0,0.7071068,0.7071068",
         "Scale": "1.3,1.3,1",
         "Enabled": true,
@@ -728,7 +728,7 @@
         "__guid": "f2afb805-a98f-49dc-a9d4-7d32745908ac",
         "Flags": 0,
         "Name": "holiday-cabin-roof-snow (3)",
-        "Position": "-100,-150,100",
+        "Position": "-243.75,-150,100",
         "Rotation": "0,0,0.7071069,0.7071068",
         "Scale": "1,1.1,1",
         "Enabled": true,
@@ -749,7 +749,7 @@
         "__guid": "96d0f3ea-8138-4f87-8963-759fb0697dc8",
         "Flags": 0,
         "Name": "holiday-floor-wood (9)",
-        "Position": "-100,-150,0",
+        "Position": "-243.75,-150,0.00001525879",
         "Enabled": true,
         "Components": [
           {
@@ -768,7 +768,7 @@
         "__guid": "daae8e3a-647d-4337-ba96-2d2a84367ca8",
         "Flags": 0,
         "Name": "holiday-cabin-wall (11)",
-        "Position": "-100,-150,0",
+        "Position": "-243.75,-150,0.00001525879",
         "Rotation": "0,0,1,-0.00000005960464",
         "Enabled": true,
         "Components": [
@@ -788,7 +788,7 @@
         "__guid": "c80228ea-c22d-483e-ab85-cfe750039ce2",
         "Flags": 0,
         "Name": "holiday-cabin-wall-roof (2)",
-        "Position": "0,-150,100",
+        "Position": "-143.75,-150,100",
         "Rotation": "0,0,-0.7071068,0.7071068",
         "Enabled": true,
         "Components": [
@@ -808,7 +808,7 @@
         "__guid": "ec8c251b-2fe6-49f5-92da-0af3932fc681",
         "Flags": 0,
         "Name": "holiday-cabin-wall-roof (3)",
-        "Position": "-100,-250,100",
+        "Position": "-243.75,-250,100",
         "Rotation": "0,0,0.7071069,0.7071068",
         "Enabled": true,
         "Components": [
@@ -828,7 +828,7 @@
         "__guid": "249f90db-6fa5-4576-b6f2-250d40c81e3f",
         "Flags": 0,
         "Name": "holiday-cabin-door-rotate",
-        "Position": "100,150,0",
+        "Position": "-43.75002,150,0.00001525879",
         "Enabled": true,
         "Components": [
           {
@@ -847,7 +847,7 @@
         "__guid": "7eb0fdf7-8264-4e94-ade3-b123e75d8625",
         "Flags": 0,
         "Name": "holiday-cabin-wall (5)",
-        "Position": "0,150,0",
+        "Position": "-143.75,150,0.00001525879",
         "Rotation": "0,0,0.7071069,0.7071068",
         "Enabled": true,
         "Components": [
@@ -867,7 +867,7 @@
         "__guid": "af13d59e-528a-49b8-a44d-fea10a993cb7",
         "Flags": 0,
         "Name": "holiday-floor-wood (1)",
-        "Position": "100,150,0",
+        "Position": "-43.75002,150,0.00001525879",
         "Enabled": true,
         "Components": [
           {
@@ -886,7 +886,7 @@
         "__guid": "a8e0ea91-3e5f-41d1-900b-ef219460bc3e",
         "Flags": 0,
         "Name": "holiday-floor-wood (2)",
-        "Position": "0,150,0",
+        "Position": "-143.75,150,0.00001525879",
         "Enabled": true,
         "Components": [
           {
@@ -905,7 +905,7 @@
         "__guid": "5f269060-828f-45bc-95d1-59d971a53195",
         "Flags": 0,
         "Name": "holiday-cabin-wall (12)",
-        "Position": "100,150,0",
+        "Position": "-43.75002,150,0.00001525879",
         "Rotation": "0,0,-0.7071068,0.7071068",
         "Enabled": true,
         "Components": [
@@ -925,7 +925,7 @@
         "__guid": "4f9f3af3-3053-4184-b58a-1372d9d67768",
         "Flags": 0,
         "Name": "holiday-cabin-corner-bottom (1)",
-        "Position": "100,150,0",
+        "Position": "-43.75002,150,0.00001525879",
         "Rotation": "0,0,0.7071068,0.7071068",
         "Enabled": true,
         "Components": [
@@ -945,7 +945,7 @@
         "__guid": "ca496b69-b1c1-44bf-8f30-051453e45076",
         "Flags": 0,
         "Name": "holiday-cabin-wall (13)",
-        "Position": "99.99997,150,0",
+        "Position": "-43.75005,150,0.00001525879",
         "Rotation": "0,0,0.7071069,0.7071068",
         "Enabled": true,
         "Components": [
@@ -965,7 +965,7 @@
         "__guid": "7df2bd08-cd27-457a-8f34-c7c315c3af18",
         "Flags": 0,
         "Name": "holiday-cabin-corner-bottom",
-        "Position": "100,150,0",
+        "Position": "-43.75002,150,0.00001525879",
         "Enabled": true,
         "Components": [
           {
@@ -984,7 +984,7 @@
         "__guid": "c9a30209-0113-4844-af47-be9f8c9a2d04",
         "Flags": 0,
         "Name": "holiday-cabin-window-b",
-        "Position": "0,50.00002,0",
+        "Position": "-143.75,50.00002,0.00001525879",
         "Enabled": true,
         "Components": [
           {
@@ -1003,7 +1003,7 @@
         "__guid": "ff601947-709f-4c4b-b8ff-fab6a9d801c6",
         "Flags": 0,
         "Name": "holiday-cabin-window-b (1)",
-        "Position": "0,-50,0",
+        "Position": "-143.75,-50,0.00001525879",
         "Enabled": true,
         "Components": [
           {
@@ -1022,7 +1022,7 @@
         "__guid": "c3facce3-b414-4a8e-b0ca-200295786473",
         "Flags": 0,
         "Name": "holiday-cabin-corner-bottom (4)",
-        "Position": "0,-150,0",
+        "Position": "-143.75,-150,0.00001525879",
         "Rotation": "0,0,0,-1",
         "Enabled": true,
         "Components": [
@@ -1042,7 +1042,7 @@
         "__guid": "d454334d-8c7a-4b0e-8161-dc8f273cecf2",
         "Flags": 0,
         "Name": "holiday-floor-wood (4)",
-        "Position": "0,50,0",
+        "Position": "-143.75,50,0.00001525879",
         "Enabled": true,
         "Components": [
           {
@@ -1061,7 +1061,7 @@
         "__guid": "91d834ed-274f-4c86-8aae-ef0047633c52",
         "Flags": 0,
         "Name": "holiday-floor-wood (5)",
-        "Position": "0,-50,0",
+        "Position": "-143.75,-50,0.00001525879",
         "Enabled": true,
         "Components": [
           {
@@ -1080,7 +1080,7 @@
         "__guid": "e2347eee-59ab-4cba-8b87-cb5304c793d0",
         "Flags": 0,
         "Name": "holiday-cabin-corner-bottom (6)",
-        "Position": "-18.75,131.25,0",
+        "Position": "-162.5,131.25,0.00001525879",
         "Rotation": "0,0,0.7071068,0.7071068",
         "Scale": "1.3,1.3,1",
         "Enabled": true,
@@ -1101,7 +1101,7 @@
         "__guid": "abd32760-dbab-49cd-9e70-41a10c4ebda1",
         "Flags": 0,
         "Name": "holiday-cabin-roof-snow-chimney",
-        "Position": "0,-150,100",
+        "Position": "-143.75,-150,100",
         "Rotation": "0,0,0.7071067,-0.7071068",
         "Enabled": true,
         "Components": [
@@ -1121,7 +1121,7 @@
         "__guid": "3a54fd46-258f-41cc-8372-c25f36bf41ad",
         "Flags": 0,
         "Name": "holiday-floor-wood (8)",
-        "Position": "0,-150,0",
+        "Position": "-143.75,-150,0.00001525879",
         "Enabled": true,
         "Components": [
           {
@@ -1140,7 +1140,7 @@
         "__guid": "e596b7e9-c3a4-42cc-babc-766ad4ac294d",
         "Flags": 0,
         "Name": "holiday-cabin-window-b (2)",
-        "Position": "0,-150,0",
+        "Position": "-143.75,-150,0.00001525879",
         "Enabled": true,
         "Components": [
           {
