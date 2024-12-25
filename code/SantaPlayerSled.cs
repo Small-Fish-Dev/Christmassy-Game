@@ -14,9 +14,10 @@ public sealed class SantaPlayerSled : Component, ITriggerListener
 
 
 	[Property]
-	public float MaxTurnSpeed { get; set; } = 10f;
+	public float MaxTurnSpeed { get; set; } = 400f;
 
 	public float Velocity = 0f;
+	public float Height = 0f;
 
 	protected override void OnUpdate()
 	{
@@ -25,13 +26,13 @@ public sealed class SantaPlayerSled : Component, ITriggerListener
 
 	protected override void OnFixedUpdate()
 	{
-		MaxTurnSpeed += Time.Delta * 0.2f;
+		MaxTurnSpeed += Time.Delta * 5;
 
 		var roadWidth = ChristmassyGameLogic.Instance.RoadWidth / 1.5f;
 		var inputs = Input.AnalogMove;
 		Velocity = MathX.Lerp( Velocity, inputs.y * MaxTurnSpeed, Time.Delta * (inputs.y == 0 ? 2f : 1f) );
 		Velocity = MathX.Clamp( Velocity, -MaxTurnSpeed, MaxTurnSpeed );
-		WorldPosition = WorldPosition.WithY( MathX.Clamp( WorldPosition.y + Velocity, -roadWidth, roadWidth ) );
+		WorldPosition = WorldPosition.WithY( MathX.Clamp( WorldPosition.y + Velocity * Time.Delta, -roadWidth, roadWidth ) );
 
 		if ( WorldPosition.y <= -roadWidth || WorldPosition.y >= roadWidth )
 			Velocity *= -0.5f;
@@ -39,7 +40,7 @@ public sealed class SantaPlayerSled : Component, ITriggerListener
 		// Animations
 		if ( !ModelRenderer.IsValid() ) return;
 
-		ModelRenderer.Set( "wish_y", inputs.y * -MaxTurnSpeed * 30f );
+		ModelRenderer.Set( "wish_y", inputs.y * -MaxTurnSpeed );
 	}
 
 	private GameObject _oldSanta;
@@ -93,8 +94,6 @@ public sealed class SantaPlayerSled : Component, ITriggerListener
 
 		if ( other.Tags.Has( "obstacle" ) )
 			Ragdoll();
-
-		Log.Info( other.Tags.ToString() );
 	}
 
 	private async void ResetGift( GameObject gift )
