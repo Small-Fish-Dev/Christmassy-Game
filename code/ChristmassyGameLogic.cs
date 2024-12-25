@@ -23,7 +23,7 @@ public sealed class ChristmassyGameLogic : Component
 
 	[Property]
 	[Category( "Map" )]
-	public int PresentsSpawned { get; set; } = 10;
+	public int RoadObjects { get; set; } = 10;
 
 	[Property]
 	[Category( "Map" )]
@@ -121,18 +121,20 @@ public sealed class ChristmassyGameLogic : Component
 		}
 	}
 
-	private List<GameObject> _presents = new List<GameObject>();
+	private List<GameObject> _roadObjects = new List<GameObject>();
 
-	[Button( "Generate Presents Debug" )]
-	public void GeneratePresents()
+	[Button( "Generate Road" )]
+	public void GenerateRoad()
 	{
 		if ( !Map.IsValid() ) return;
 
-		ClearPresents();
+		ClearRoad();
 
 		var allPresents = ResourceLibrary.GetAll<PrefabFile>()
-			.Where( x => x.GetMetadata( "Tags" )?.Contains( "gift" ) ?? false )
-			.ToList();
+			.Where( x => x.GetMetadata( "Tags" )?.Contains( "gift" ) ?? false );
+
+		var allObstacles = ResourceLibrary.GetAll<PrefabFile>()
+			.Where( x => x.GetMetadata( "Tags" )?.Contains( "obstacle" ) ?? false );
 
 		if ( !allPresents.Any() )
 		{
@@ -140,35 +142,43 @@ public sealed class ChristmassyGameLogic : Component
 			return;
 		}
 
-		var angleSlice = 360f / PresentsSpawned;
+		if ( !allObstacles.Any() )
+		{
+			Log.Error( "No obstacle found" );
+			return;
+		}
 
-		for ( int i = 0; i < PresentsSpawned; i++ )
+		var allObjects = allPresents.Concat( allObstacles ).ToList();
+
+		var angleSlice = 360f / RoadObjects;
+
+		for ( int i = 0; i < RoadObjects; i++ )
 		{
 			var side = Game.Random.Int( -1, 1 );
-			var randomPresent = SceneUtility.GetPrefabScene( Game.Random.FromList( allPresents ) )
+			var randomObject = SceneUtility.GetPrefabScene( Game.Random.FromList( allObjects ) )
 				.Clone();
 
-			randomPresent.WorldRotation = Rotation.FromPitch( angleSlice * i );
+			randomObject.WorldRotation = Rotation.FromPitch( angleSlice * i );
 
-			randomPresent.WorldPosition = Map.WorldPosition + randomPresent.WorldRotation.Up * MapRadius;
+			randomObject.WorldPosition = Map.WorldPosition + randomObject.WorldRotation.Up * MapRadius;
 			var sidePosition = Vector3.Left * (RoadWidth - 80f) * side;
-			randomPresent.WorldPosition += sidePosition;
-			randomPresent.SetParent( Map );
+			randomObject.WorldPosition += sidePosition;
+			randomObject.SetParent( Map );
 
-			_presents.Add( randomPresent );
+			_roadObjects.Add( randomObject );
 		}
 	}
 
 	public void GenerateMap()
 	{
 		GenerateCottages();
-		GeneratePresents();
+		GenerateRoad();
 	}
 
 	public void ClearMap()
 	{
 		ClearCottages();
-		ClearPresents();
+		ClearRoad();
 	}
 
 	public void ClearCottages()
@@ -182,14 +192,14 @@ public sealed class ChristmassyGameLogic : Component
 		}
 	}
 
-	public void ClearPresents()
+	public void ClearRoad()
 	{
-		if ( _presents != null )
+		if ( _roadObjects != null )
 		{
-			foreach ( var present in _presents.ToList() )
+			foreach ( var present in _roadObjects.ToList() )
 				present.Destroy();
 
-			_presents.Clear();
+			_roadObjects.Clear();
 		}
 	}
 

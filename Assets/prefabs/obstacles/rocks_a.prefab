@@ -1,0 +1,89 @@
+{
+  "RootObject": {
+    "__guid": "54796b85-7793-446a-a3c9-1dbabc99622a",
+    "Flags": 0,
+    "Name": "rocks_a",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "Sandbox.SceneInformation",
+        "__guid": "32f3a731-1d88-4bf3-95cf-6e5095fb5e69",
+        "Changes": "",
+        "Description": "",
+        "SceneTags": "obstacle"
+      }
+    ],
+    "Children": [
+      {
+        "__guid": "df13e940-1b17-4b88-bdb2-527993c64dc5",
+        "Flags": 0,
+        "Name": "rocks_a",
+        "Position": "0,0,-10",
+        "Scale": "0.6,0.6,0.6",
+        "Tags": "obstacle",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "c51ac749-3924-42ce-bf20-51a545fdd91a",
+            "BodyGroups": 18446744073709551615,
+            "CreateAttachments": false,
+            "Model": "models/holiday-kit/holiday-rocks-small.vmdl",
+            "RenderOptions": {
+              "GameLayer": true,
+              "OverlayLayer": false,
+              "BloomLayer": false,
+              "AfterUILayer": false
+            },
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "Sandbox.BoxCollider",
+            "__guid": "fa8cec37-7200-4380-9cca-be5685926098",
+            "Center": "0,0,35",
+            "IsTrigger": true,
+            "Scale": "140,160,70",
+            "Static": true,
+            "SurfaceVelocity": "0,0,0"
+          }
+        ]
+      }
+    ],
+    "__variables": [],
+    "__properties": {
+      "FixedUpdateFrequency": 50,
+      "MaxFixedUpdates": 5,
+      "NetworkFrequency": 30,
+      "NetworkInterpolation": true,
+      "PhysicsSubSteps": 1,
+      "ThreadedAnimation": true,
+      "TimeScale": 1,
+      "UseFixedUpdate": true,
+      "Metadata": {
+        "Tags": "obstacle"
+      },
+      "NavMesh": {
+        "Enabled": false,
+        "IncludeStaticBodies": true,
+        "IncludeKeyframedBodies": true,
+        "EditorAutoUpdate": true,
+        "AgentHeight": 64,
+        "AgentRadius": 16,
+        "AgentStepSize": 18,
+        "AgentMaxSlope": 40,
+        "ExcludedBodies": "",
+        "IncludedBodies": ""
+      }
+    }
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "DontBreakAsTemplate": false,
+  "ResourceVersion": 1,
+  "__references": [
+    "kenneynl.holidayrockssmall#82234"
+  ],
+  "__version": 1
+}

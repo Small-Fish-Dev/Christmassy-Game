@@ -53,6 +53,7 @@ public sealed class SantaPlayerSled : Component, ITriggerListener
 
 		var santa = ModelRenderer.GameObject;
 		_oldSanta = santa.Clone( santa.WorldPosition, santa.WorldRotation, santa.WorldScale );
+		_oldSanta.Tags.Remove( "player" );
 		var ragdollRenderer = _oldSanta.GetComponent<SkinnedModelRenderer>();
 
 		foreach ( var child in _oldSanta.Children )
@@ -64,6 +65,7 @@ public sealed class SantaPlayerSled : Component, ITriggerListener
 
 		var sleigh = Sleigh.GameObject;
 		_oldSleigh = sleigh.Clone( sleigh.WorldPosition, sleigh.WorldRotation, sleigh.WorldScale );
+		_oldSleigh.Tags.Remove( "player" );
 		var sleighRigidBody = _oldSleigh.AddComponent<Rigidbody>();
 		sleighRigidBody.Velocity += Vector3.Up * 1000f + Vector3.Backward * 500f;
 
@@ -86,9 +88,13 @@ public sealed class SantaPlayerSled : Component, ITriggerListener
 
 	public void OnTriggerEnter( Collider other )
 	{
-		if ( !other.Tags.Has( "gift" ) ) return;
+		if ( other.Tags.Has( "gift" ) )
+			ResetGift( other.GameObject );
 
-		ResetGift( other.GameObject );
+		if ( other.Tags.Has( "obstacle" ) )
+			Ragdoll();
+
+		Log.Info( other.Tags.ToString() );
 	}
 
 	private async void ResetGift( GameObject gift )
