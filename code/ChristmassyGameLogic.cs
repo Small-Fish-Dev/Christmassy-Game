@@ -39,20 +39,15 @@ public sealed class ChristmassyGameLogic : Component
 
 	public GameObject MapClone;
 	public TimeSince StartTimer;
+	public int Points = 0;
 
 	public static ChristmassyGameLogic Instance { get; private set; }
 
 	protected override void OnStart()
 	{
-		GenerateMap();
-
-		MapClone = Map.Clone();
-		MapClone.WorldPosition += Vector3.Forward * 2500f + Vector3.Down * 000f;
-		MapClone.WorldRotation *= Rotation.FromPitch( -90f );
-		MapClone.WorldScale *= 0.7f;
-
 		Instance = this;
-		StartTimer = 0f;
+
+		StartGame();
 	}
 
 	protected override void OnUpdate()
@@ -173,12 +168,18 @@ public sealed class ChristmassyGameLogic : Component
 	{
 		GenerateCottages();
 		GenerateRoad();
+
+		MapClone = Map.Clone();
+		MapClone.WorldPosition += Vector3.Forward * 2500f + Vector3.Down * 000f;
+		MapClone.WorldRotation *= Rotation.FromPitch( -90f );
+		MapClone.WorldScale *= 0.7f;
 	}
 
 	public void ClearMap()
 	{
 		ClearCottages();
 		ClearRoad();
+		MapClone?.Destroy();
 	}
 
 	public void ClearCottages()
@@ -201,6 +202,19 @@ public sealed class ChristmassyGameLogic : Component
 
 			_roadObjects.Clear();
 		}
+	}
+
+	public void StartGame()
+	{
+		ClearMap();
+
+		Points = 0;
+		StartTimer = 0f;
+
+		GenerateMap();
+
+		var player = Scene.Components.GetAll<SantaPlayerSled>().FirstOrDefault();
+		player.Unragdoll();
 	}
 
 	protected override void DrawGizmos()
