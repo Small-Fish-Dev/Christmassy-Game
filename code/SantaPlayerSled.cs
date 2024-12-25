@@ -36,13 +36,13 @@ public sealed class SantaPlayerSled : Component, ITriggerListener
 	{
 		MaxTurnSpeed += Time.Delta * 5;
 
-		var roadWidth = ChristmassyGameLogic.Instance.RoadWidth / 1.5f;
+		var roadWidth = ChristmassyGameLogic.Instance.RoadWidth / (Pivot.LocalPosition.z > 0f ? 0.5f : 1.5f);
 		var inputs = Input.AnalogMove;
 		Velocity = MathX.Lerp( Velocity, inputs.y * MaxTurnSpeed, Time.Delta * (inputs.y == 0 ? 2f : 1f) );
 		Velocity = MathX.Clamp( Velocity, -MaxTurnSpeed, MaxTurnSpeed );
 		WorldPosition = WorldPosition.WithY( MathX.Clamp( WorldPosition.y + Velocity * Time.Delta, -roadWidth, roadWidth ) );
 
-		if ( WorldPosition.y <= -roadWidth || WorldPosition.y >= roadWidth )
+		if ( Pivot.LocalPosition.z <= 0f && (WorldPosition.y <= -roadWidth || WorldPosition.y >= roadWidth) )
 			Velocity *= -0.25f;
 
 		if ( Input.Pressed( "jump" ) && Height <= 0 && Pivot.IsValid() )
@@ -65,6 +65,9 @@ public sealed class SantaPlayerSled : Component, ITriggerListener
 			Collider.Center = Pivot.LocalPosition + Vector3.Up * 35f;
 			Height = 0f;
 			_targetPitch = 0f;
+
+			if ( WorldPosition.y <= -roadWidth / 2.5f || WorldPosition.y >= roadWidth / 2.5f )
+				Ragdoll();
 		}
 
 		Pivot.LocalRotation = Rotation.Lerp( Pivot.LocalRotation, Rotation.FromPitch( _targetPitch ), Time.Delta * 20f );
