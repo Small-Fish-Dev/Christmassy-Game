@@ -1,0 +1,28 @@
+@using Sandbox;
+@using System;
+@using static Sandbox.UI;
+@inherits PanelComponent
+@namespace Sandbox
+
+<root>
+	<div class="scoreboard">
+		<div class="giftbox">
+			<div class="gift" style="transform: rotate(@GiftAngle);"></div>
+		</div>
+		<div class="textbox">
+			<div class="title">Score:</div>
+			<div class="subtext">@Score</div>
+		</div>
+	</div>
+</root>
+
+@code
+{
+	public string Score => ChristmassyGameLogic.Instance.Points.ToString();
+	public string GiftAngle => (MathF.Sin( Time.Now * ChristmassyGameLogic.Instance.RotationSpeed / 10f) * 10f - 30f ).ToString() + "deg";
+
+	/// <summary>
+	/// the hash determines if the system should be rebuilt. If it changes, it will be rebuilt
+	/// </summary>
+	protected override int BuildHash() => System.HashCode.Combine( Time.Now );
+}

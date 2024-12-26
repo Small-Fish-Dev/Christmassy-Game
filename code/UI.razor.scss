@@ -1,0 +1,63 @@
+UI {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	font-weight: bold;
+	border-radius: 20px;
+	justify-content: center;
+
+	.scoreboard {
+		position: absolute;
+		top: 3%;
+		width: 300px;
+		aspect-ratio: 2/1;
+		background-image: url("/ui/scoreboard.png");
+		background-size: 100% 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		.giftbox {
+			height: 100%;
+			aspect-ratio: 1;
+			justify-content: center;
+			align-items: center;
+
+			.gift {
+				height: 100%;
+				aspect-ratio: 1;
+				background-image: url("/ui/present.png");
+				background-size: 100% 100%;
+				transform: rotate( -30deg );
+			}
+		}
+
+		.textbox {
+			height: 80%;
+			width: 50%;
+			flex-direction: column;
+			justify-content: center;
+			align-items: flex-start;
+			padding-top: 5%;
+			padding-left: 2%;
+			padding-right: 2%;
+			padding-bottom: 15%;
+
+			.title {
+				font-size: 25px;
+				font-family: Poppins;
+				font-weight: 300;
+				color: #fff;
+			}
+
+			.subtext {
+				font-size: 40px;
+				font-family: Poppins;
+				font-weight: 500;
+				color: #fff;
+			}
+		}
+	}
+}
