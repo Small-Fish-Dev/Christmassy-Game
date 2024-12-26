@@ -2,7 +2,7 @@
   "RootObject": {
     "__guid": "54796b85-7793-446a-a3c9-1dbabc99622a",
     "Flags": 0,
-    "Name": "rocks_c",
+    "Name": "snowman",
     "Enabled": true,
     "Components": [
       {
@@ -17,9 +17,10 @@
       {
         "__guid": "df13e940-1b17-4b88-bdb2-527993c64dc5",
         "Flags": 0,
-        "Name": "rocks_a",
+        "Name": "snowman",
         "Position": "0,0,-10",
-        "Scale": "0.6,0.6,0.6",
+        "Rotation": "0,0,1,-0.00000004371139",
+        "Scale": "1.4,1.4,1.4",
         "Tags": "obstacle",
         "Enabled": true,
         "Components": [
@@ -27,13 +28,13 @@
             "__type": "Sandbox.HullCollider",
             "__guid": "80679162-ef09-4a11-9dff-f176c250bf65",
             "BoxSize": "50,50,50",
-            "Center": "0,0,75",
-            "Height": 150,
+            "Center": "0,0,50",
+            "Height": 100,
             "IsTrigger": true,
             "Points": [],
-            "Radius": 90,
+            "Radius": 25,
             "Radius2": 0,
-            "Slices": 12,
+            "Slices": 10,
             "Static": true,
             "SurfaceVelocity": "0,0,0",
             "Type": "Cylinder"
@@ -44,7 +45,6 @@
             "__guid": "884b3346-543b-4129-a852-7599c6184e29",
             "Flags": 0,
             "Name": "model",
-            "Scale": "0.7,0.7,1",
             "Enabled": true,
             "Components": [
               {
@@ -52,7 +52,7 @@
                 "__guid": "0a24a564-d1a5-4527-94b5-20668a5224e4",
                 "BodyGroups": 18446744073709551615,
                 "CreateAttachments": false,
-                "Model": "models/holiday-kit/holiday-rocks-large.vmdl",
+                "Model": "models/holiday-kit/holiday-snowman-hat.vmdl",
                 "RenderOptions": {
                   "GameLayer": true,
                   "OverlayLayer": false,
@@ -100,7 +100,7 @@
   "DontBreakAsTemplate": false,
   "ResourceVersion": 1,
   "__references": [
-    "kenneynl.holidayrockslarge#82233"
+    "kenneynl.holidaysnowmanhat#82244"
   ],
   "__version": 1
 }
