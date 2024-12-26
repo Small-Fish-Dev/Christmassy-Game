@@ -41,6 +41,10 @@ public sealed class ChristmassyGameLogic : Component
 	[Category( "Components" )]
 	public SantaUI UI { get; set; }
 
+	[Property]
+	[Category( "Components" )]
+	public SoundPointComponent WindSound { get; set; }
+
 	/// <summary>
 	/// How many degrees it rotates per second
 	/// </summary>
@@ -81,6 +85,9 @@ public sealed class ChristmassyGameLogic : Component
 		if ( !IsPlaying ) return;
 
 		RotationSpeed += Time.Delta * 0.3f;
+		WindSound.SoundOverride = true;
+		WindSound.Volume = MathX.Remap( RotationSpeed, 20f, 100f, 2f, 1f );
+		WindSound.Pitch = MathX.Remap( RotationSpeed, 20f, 100f, 0.1f, 1f );
 
 		if ( !SlipperySlope.IsValid() ) return;
 
