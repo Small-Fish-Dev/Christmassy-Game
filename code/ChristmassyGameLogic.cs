@@ -29,6 +29,10 @@ public sealed class ChristmassyGameLogic : Component
 	[Category( "Map" )]
 	public Collider SlipperySlope { get; set; }
 
+	[Property]
+	[Category( "Components" )]
+	public SantaUI UI { get; set; }
+
 	/// <summary>
 	/// How many degrees it rotates per second
 	/// </summary>
@@ -40,6 +44,7 @@ public sealed class ChristmassyGameLogic : Component
 	public GameObject MapClone;
 	public TimeSince StartTimer;
 	public int Points = 0;
+	public bool IsPlaying = true;
 
 	public static ChristmassyGameLogic Instance { get; private set; }
 
@@ -65,6 +70,8 @@ public sealed class ChristmassyGameLogic : Component
 
 	protected override void OnFixedUpdate()
 	{
+		if ( !IsPlaying ) return;
+
 		RotationSpeed += Time.Delta * 0.3f;
 
 		if ( !SlipperySlope.IsValid() ) return;
@@ -219,6 +226,13 @@ public sealed class ChristmassyGameLogic : Component
 
 		var player = Scene.Components.GetAll<SantaPlayerSled>().FirstOrDefault();
 		player.Unragdoll();
+
+		IsPlaying = true;
+	}
+
+	public void EndGame()
+	{
+		IsPlaying = false;
 	}
 
 	protected override void DrawGizmos()

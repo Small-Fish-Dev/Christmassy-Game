@@ -1,4 +1,4 @@
-santaUI {
+SantaUI {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -111,8 +111,6 @@ santaUI {
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		opacity: 1;
-		transition: all 0.2s ease-in-out;
 		pointer-events: all;
 
 		.button {
@@ -138,11 +136,6 @@ santaUI {
 			&:active {
 				transform: scale( 0.9 );
 			}
-		}
-
-		&.closed {
-			opacity: 0;
-			pointer-events: none;
 		}
 	}
 }

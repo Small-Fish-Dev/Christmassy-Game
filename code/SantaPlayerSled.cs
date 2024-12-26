@@ -110,6 +110,8 @@ public sealed class SantaPlayerSled : Component, ITriggerListener
 		santa.Enabled = false;
 		sleigh.Enabled = false;
 		Collider.Enabled = false;
+
+		ChristmassyGameLogic.Instance.EndGame();
 	}
 
 	[Button]
