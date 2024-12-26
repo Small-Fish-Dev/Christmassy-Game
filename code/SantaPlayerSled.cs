@@ -38,6 +38,14 @@ public sealed class SantaPlayerSled : Component, ITriggerListener
 	[Category( "Particles" )]
 	public GameObject SnowImpartParticle { get; set; }
 
+	[Property]
+	[Category( "Particles" )]
+	public GameObject SmallSnowImpartParticle { get; set; }
+
+	[Property]
+	[Category( "Particles" )]
+	public GameObject SmallerSnowImpartParticle { get; set; }
+
 
 	[Property]
 	public float MaxTurnSpeed { get; set; } = 400f;
@@ -103,6 +111,9 @@ public sealed class SantaPlayerSled : Component, ITriggerListener
 
 			if ( Alive )
 				SnowParticles.Enabled = true;
+
+			var impactRotation = WorldRotation * Rotation.FromPitch( -130f );
+			var impact = SmallSnowImpartParticle?.Clone( WorldPosition, impactRotation );
 		}
 
 		if ( Input.Pressed( "jump" ) && CanJump && Pivot.IsValid() )
@@ -110,6 +121,9 @@ public sealed class SantaPlayerSled : Component, ITriggerListener
 			Height += 350f;
 			_targetPitch = -30f;
 			_wishTurningVolume = 3f;
+
+			var impactRotation = WorldRotation * Rotation.FromPitch( -130f );
+			var impact = SmallerSnowImpartParticle?.Clone( WorldPosition, impactRotation );
 		}
 
 		SkiingSound.SoundOverride = true;
@@ -162,7 +176,7 @@ public sealed class SantaPlayerSled : Component, ITriggerListener
 		Collider.Enabled = false;
 
 		var impactRotation = WorldRotation * Rotation.FromPitch( -130f );
-		var impact = SnowImpartParticle.Clone( WorldPosition, impactRotation );
+		var impact = SnowImpartParticle?.Clone( WorldPosition, impactRotation );
 
 		ChristmassyGameLogic.Instance.EndGame();
 		Alive = false;
