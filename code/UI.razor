@@ -14,12 +14,22 @@
 			<div class="subtext">@Score</div>
 		</div>
 	</div>
+	<div class="howto">
+		<div class="textbox">
+			<div class="title">How to play</div>
+			<div class="subtext">A and D to move. SPACE to jump.</div>
+		</div>
+	</div>
 </root>
 
 @code
 {
 	public string Score => ChristmassyGameLogic.Instance.Points.ToString();
 	public string GiftAngle => (MathF.Sin( Time.Now * ChristmassyGameLogic.Instance.RotationSpeed / 10f) * 10f - 30f ).ToString() + "deg";
+
+	protected override void OnStart()
+	{
+	}
 
 	/// <summary>
 	/// the hash determines if the system should be rebuilt. If it changes, it will be rebuilt

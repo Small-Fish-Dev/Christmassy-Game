@@ -6,11 +6,13 @@ UI {
 	bottom: 0;
 	font-weight: bold;
 	border-radius: 20px;
-	justify-content: center;
+	justify-content: flex-start;
+	align-items: center;
+	flex-direction: column;
+	display: flex;
+	margin: 3%;
 
 	.scoreboard {
-		position: absolute;
-		top: 3%;
 		width: 300px;
 		aspect-ratio: 2/1;
 		background-image: url("/ui/scoreboard.png");
@@ -58,6 +60,48 @@ UI {
 				font-weight: 500;
 				color: #fff;
 			}
+		}
+	}
+
+	.howto {
+		width: 450px;
+		aspect-ratio: 2/1;
+		background-image: url("/ui/howto.png");
+		background-size: 100% 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		opacity: 1;
+		transition: all 1s ease-in;
+
+		.textbox {
+			height: 100%;
+			width: 100%;
+			flex-direction: column;
+			justify-content: space-evenly;
+			align-items: flex-start;
+			padding-top: 15%;
+			padding-left: 10%;
+			padding-right: 10%;
+			padding-bottom: 15%;
+
+			.title {
+				font-size: 30px;
+				font-family: Poppins;
+				font-weight: 500;
+				color: #140603;
+			}
+
+			.subtext {
+				font-size: 22px;
+				font-family: Poppins;
+				font-weight: 300;
+				color: #140603;
+			}
+		}
+
+		&.closed {
+			opacity: 0;
 		}
 	}
 }
