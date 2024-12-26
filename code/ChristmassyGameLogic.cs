@@ -23,6 +23,10 @@ public sealed class ChristmassyGameLogic : Component
 
 	[Property]
 	[Category( "Map" )]
+	public int DecorationsSpawned { get; set; } = 40;
+
+	[Property]
+	[Category( "Map" )]
 	public int LampsSpawned { get; set; } = 40;
 
 	[Property]
@@ -144,7 +148,7 @@ public sealed class ChristmassyGameLogic : Component
 			randomCottage.WorldRotation *= sideRotation;
 
 			randomCottage.WorldPosition = Map.WorldPosition + randomCottage.WorldRotation.Up * MapRadius;
-			var randomDistance = Game.Random.Float( 250f, 500f );
+			var randomDistance = Game.Random.Float( 350f, 600f );
 			var sidePosition = (RoadWidth / 2f + randomDistance) * (side == 0 ? Vector3.Left : Vector3.Right);
 			randomCottage.WorldPosition += sidePosition;
 			randomCottage.SetParent( Map );
@@ -259,7 +263,7 @@ public sealed class ChristmassyGameLogic : Component
 
 		var angleSlice = 1f;
 
-		for ( int i = 1; i < 360; i++ )
+		for ( int i = 0; i < 360; i++ )
 		{
 			var side = Game.Random.Int( 0, 1 );
 			var randomTree = SceneUtility.GetPrefabScene( Game.Random.FromList( allTrees ) )
@@ -296,21 +300,21 @@ public sealed class ChristmassyGameLogic : Component
 			return;
 		}
 
-		var angleSlice = 2f;
+		var angleSlice = 360f / DecorationsSpawned;
 
-		for ( int i = 1; i < 180; i++ )
+		for ( int i = 1; i < DecorationsSpawned; i++ )
 		{
 			var side = i % 2;
 			var randomDecoration = SceneUtility.GetPrefabScene( Game.Random.FromList( allDecorations ) )
 				.Clone();
 
-			randomDecoration.WorldRotation = Rotation.FromPitch( angleSlice * i );
-			randomDecoration.LocalRotation *= Rotation.FromYaw( Game.Random.Int( 0, 1 ) * 180f );
+			var randomPitch = Game.Random.Float( -angleSlice / 6f, angleSlice / 6f );
+			randomDecoration.WorldRotation = Rotation.FromPitch( angleSlice * i + angleSlice / 2f + randomPitch );
+			randomDecoration.LocalRotation *= Rotation.FromYaw( side * 180f );
 			randomDecoration.WorldPosition = Map.WorldPosition + randomDecoration.WorldRotation.Up * MapRadius;
-			var randomDistance = Game.Random.Float( 80f, 100f );
+			var randomDistance = Game.Random.Float( 180f, 500f );
 			var sidePosition = (RoadWidth / 2f + randomDistance) * (side == 0 ? Vector3.Left : Vector3.Right);
 			randomDecoration.WorldPosition += sidePosition;
-			randomDecoration.LocalScale *= new Vector3( Game.Random.Float( 0.8f, 1.2f ), Game.Random.Float( 0.8f, 1.2f ), Game.Random.Float( 1f, 1.2f ) );
 			randomDecoration.SetParent( Map );
 
 			_decorations.Add( randomDecoration );
