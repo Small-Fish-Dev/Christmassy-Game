@@ -121,6 +121,8 @@ SantaUI {
 			justify-content: center;
 			align-items: center;
 			cursor: pointer;
+			transition: all 0.1s ease-in;
+			opacity: 0.7;
 
 			.title {
 				font-size: 40px;
@@ -131,6 +133,7 @@ SantaUI {
 
 			&:hover {
 				transform: scale( 1.1 );
+				opacity: 1;
 			}
 
 			&:active {
