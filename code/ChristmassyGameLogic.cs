@@ -45,6 +45,11 @@ public sealed class ChristmassyGameLogic : Component
 	[Category( "Components" )]
 	public SoundPointComponent WindSound { get; set; }
 
+	[Property]
+	[Category( "Components" )]
+	public SoundPointComponent MusicSound { get; set; }
+
+
 	/// <summary>
 	/// How many degrees it rotates per second
 	/// </summary>
@@ -82,7 +87,14 @@ public sealed class ChristmassyGameLogic : Component
 
 	protected override void OnFixedUpdate()
 	{
-		if ( !IsPlaying ) return;
+		if ( !IsPlaying )
+		{
+			MusicSound.Volume = MathX.Lerp( MusicSound.Volume, 0f, Time.Delta * 3f );
+			WindSound.Volume = MathX.Remap( RotationSpeed, 20f, 100f, 2f, 1f ) * 2f;
+			return;
+		}
+
+		MusicSound.Volume = MathX.Lerp( MusicSound.Volume, 0.7f, Time.Delta * 3f );
 
 		RotationSpeed += Time.Delta * 0.3f;
 		WindSound.SoundOverride = true;
@@ -293,6 +305,7 @@ public sealed class ChristmassyGameLogic : Component
 		player.Unragdoll();
 
 		IsPlaying = true;
+		MusicSound.StartSound();
 	}
 
 	public void EndGame()
