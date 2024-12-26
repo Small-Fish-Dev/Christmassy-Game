@@ -90,7 +90,8 @@ public sealed class SantaPlayerSled : Component, ITriggerListener
 		if ( _oldSanta.IsValid() ) return;
 		if ( !ModelRenderer.IsValid() ) return;
 
-		Sound.Play( new SoundEvent( "sounds/impact.sound" ), WorldPosition );
+		var hitSound = Sound.Play( new SoundEvent( "sounds/impact.sound" ), WorldPosition )
+			.Volume = 5;
 
 
 		var santa = ModelRenderer.GameObject;
