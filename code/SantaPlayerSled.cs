@@ -36,7 +36,6 @@ public sealed class SantaPlayerSled : Component, ITriggerListener
 	protected override void OnFixedUpdate()
 	{
 		MaxTurnSpeed += Time.Delta * 5;
-
 		var roadWidth = ChristmassyGameLogic.Instance.RoadWidth / (Pivot.LocalPosition.z > 0f ? 0.5f : 1.5f);
 		var inputs = Input.AnalogMove;
 		Velocity = MathX.Lerp( Velocity, inputs.y * MaxTurnSpeed, Time.Delta * (inputs.y == 0 ? 2f : 1f) );
