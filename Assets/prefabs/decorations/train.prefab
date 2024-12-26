@@ -1,0 +1,193 @@
+{
+  "RootObject": {
+    "__guid": "40c49300-1e4b-4349-a2a2-756502d869dd",
+    "Flags": 0,
+    "Name": "train",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "Sandbox.SceneInformation",
+        "__guid": "e27d1a3c-7272-4042-897b-80f14dde0025",
+        "Changes": "",
+        "Description": "",
+        "SceneTags": "decoration"
+      }
+    ],
+    "Children": [
+      {
+        "__guid": "0e4c0b38-84cc-4de0-9daf-7cccf0a693f4",
+        "Flags": 0,
+        "Name": "train",
+        "Position": "0,53.125,13.67999",
+        "Rotation": "0,-0.02617695,0,0.9996573",
+        "Scale": "1.5,1.5,1.5",
+        "Enabled": true,
+        "Children": [
+          {
+            "__guid": "16a711b6-b652-4507-afb5-e62a666c5de7",
+            "Flags": 0,
+            "Name": "train",
+            "Position": "0,0,-7.014998",
+            "Rotation": "-0.04932528,0.04932528,-0.7053844,0.7053844",
+            "Enabled": true,
+            "Components": [
+              {
+                "__type": "Sandbox.ModelRenderer",
+                "__guid": "2a2952a2-94da-470f-be14-8d364d2210b0",
+                "BodyGroups": 18446744073709551615,
+                "CreateAttachments": false,
+                "Model": "models/holiday-kit/holiday-train-locomotive.vmdl",
+                "RenderOptions": {
+                  "GameLayer": true,
+                  "OverlayLayer": false,
+                  "BloomLayer": false,
+                  "AfterUILayer": false
+                },
+                "RenderType": "On",
+                "Tint": "1,1,1,1"
+              }
+            ]
+          },
+          {
+            "__guid": "3f92c916-31aa-4f42-90b3-edaebc11eb0e",
+            "Flags": 0,
+            "Name": "train (1)",
+            "Position": "-46.875,-3.125,-1.806665",
+            "Rotation": "-0.02124547,0.02768763,-0.6083907,0.7928702",
+            "Enabled": true,
+            "Components": [
+              {
+                "__type": "Sandbox.ModelRenderer",
+                "__guid": "80346bd1-34fb-4abd-97c4-9d4a8e1327e1",
+                "BodyGroups": 18446744073709551615,
+                "CreateAttachments": false,
+                "Model": "models/holiday-kit/holiday-train-wagon.vmdl",
+                "RenderOptions": {
+                  "GameLayer": true,
+                  "OverlayLayer": false,
+                  "BloomLayer": false,
+                  "AfterUILayer": false
+                },
+                "RenderType": "On",
+                "Tint": "1,1,1,1"
+              }
+            ]
+          },
+          {
+            "__guid": "b4a91647-3b5d-4c04-8499-8d842b6bbe37",
+            "Flags": 0,
+            "Name": "train (2)",
+            "Position": "-90.625,-23.4375,0.000002704561",
+            "Rotation": "0,0,-0.4539905,0.8910065",
+            "Enabled": true,
+            "Components": [
+              {
+                "__type": "Sandbox.ModelRenderer",
+                "__guid": "7c1aac2d-ef32-4c5b-b991-e8d425f8d799",
+                "BodyGroups": 18446744073709551615,
+                "CreateAttachments": false,
+                "Model": "models/holiday-kit/holiday-train-wagon-logs.vmdl",
+                "RenderOptions": {
+                  "GameLayer": true,
+                  "OverlayLayer": false,
+                  "BloomLayer": false,
+                  "AfterUILayer": false
+                },
+                "RenderType": "On",
+                "Tint": "1,1,1,1"
+              }
+            ]
+          },
+          {
+            "__guid": "60aa0f27-5c1f-411f-aa95-ba8b01c42d45",
+            "Flags": 0,
+            "Name": "train (4)",
+            "Position": "-125,-75,-1.806665",
+            "Rotation": "0,0,0.01745242,0.9998477",
+            "Enabled": true,
+            "Components": [
+              {
+                "__type": "Sandbox.ModelRenderer",
+                "__guid": "33d05d5d-8d6e-4e13-a4a6-43f7ddc8a1f5",
+                "BodyGroups": 18446744073709551615,
+                "CreateAttachments": false,
+                "Model": "models/holiday-kit/holiday-train-wagon-short.vmdl",
+                "RenderOptions": {
+                  "GameLayer": true,
+                  "OverlayLayer": false,
+                  "BloomLayer": false,
+                  "AfterUILayer": false
+                },
+                "RenderType": "On",
+                "Tint": "1,1,1,1"
+              }
+            ]
+          },
+          {
+            "__guid": "7320d4a5-2d3f-48ee-806c-1fe72dee1b21",
+            "Flags": 0,
+            "Name": "train (3)",
+            "Position": "-117.1875,-50,-0.7649981",
+            "Rotation": "0.01685773,0.004517015,-0.2587796,0.9657787",
+            "Enabled": true,
+            "Components": [
+              {
+                "__type": "Sandbox.ModelRenderer",
+                "__guid": "c3d4a903-77a5-48a2-b8de-6af8850b2a60",
+                "BodyGroups": 18446744073709551615,
+                "CreateAttachments": false,
+                "Model": "models/holiday-kit/holiday-train-wagon-short.vmdl",
+                "RenderOptions": {
+                  "GameLayer": true,
+                  "OverlayLayer": false,
+                  "BloomLayer": false,
+                  "AfterUILayer": false
+                },
+                "RenderType": "On",
+                "Tint": "1,1,1,1"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "__variables": [],
+    "__properties": {
+      "FixedUpdateFrequency": 50,
+      "MaxFixedUpdates": 5,
+      "NetworkFrequency": 30,
+      "NetworkInterpolation": true,
+      "PhysicsSubSteps": 1,
+      "ThreadedAnimation": true,
+      "TimeScale": 1,
+      "UseFixedUpdate": true,
+      "Metadata": {
+        "Tags": "decoration"
+      },
+      "NavMesh": {
+        "Enabled": false,
+        "IncludeStaticBodies": true,
+        "IncludeKeyframedBodies": true,
+        "EditorAutoUpdate": true,
+        "AgentHeight": 64,
+        "AgentRadius": 16,
+        "AgentStepSize": 18,
+        "AgentMaxSlope": 40,
+        "ExcludedBodies": "",
+        "IncludedBodies": ""
+      }
+    }
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "DontBreakAsTemplate": false,
+  "ResourceVersion": 1,
+  "__references": [
+    "kenneynl.holidaytrainlocomotive#82251",
+    "kenneynl.holidaytrainwagon#82256",
+    "kenneynl.holidaytrainwagonlogs#82254",
+    "kenneynl.holidaytrainwagonshort#82255"
+  ],
+  "__version": 1
+}
