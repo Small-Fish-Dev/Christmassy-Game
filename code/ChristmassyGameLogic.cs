@@ -90,7 +90,7 @@ public sealed class ChristmassyGameLogic : Component
 		if ( !IsPlaying )
 		{
 			MusicSound.Volume = MathX.Lerp( MusicSound.Volume, 0f, Time.Delta * 3f );
-			WindSound.Volume = MathX.Remap( RotationSpeed, 20f, 100f, 2f, 1f ) * 2f;
+			WindSound.Volume = 2f;
 			return;
 		}
 
