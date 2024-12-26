@@ -26,7 +26,7 @@ public sealed class RoadObject : Component
 		Clone = CreatedObject.Clone();
 		Clone.SetParent( ChristmassyGameLogic.Instance.MapClone );
 		Clone.LocalTransform = LocalTransform;
-
+		Clone.GetComponent<Collider>()?.Destroy();
 	}
 
 	TimeUntil _nextCheck;
