@@ -26,6 +26,10 @@ public sealed class SantaPlayerSled : Component, ITriggerListener
 	[Category( "Components" )]
 	public SoundPointComponent SkiingSound { get; set; }
 
+	[Property]
+	[Category( "Components" )]
+	public SoundPointComponent GiftSound { get; set; }
+
 
 	[Property]
 	public float MaxTurnSpeed { get; set; } = 400f;
@@ -171,7 +175,6 @@ public sealed class SantaPlayerSled : Component, ITriggerListener
 		if ( other.Tags.Has( "gift" ) )
 		{
 			UnwrapGift( other.GameObject );
-			Sound.Play( new SoundEvent( "sounds/gift.sound" ), WorldPosition );
 		}
 
 		if ( other.Tags.Has( "obstacle" ) )
@@ -180,10 +183,10 @@ public sealed class SantaPlayerSled : Component, ITriggerListener
 
 	private async void UnwrapGift( GameObject gift )
 	{
+		// Sound.Play( new SoundEvent( "sounds/gift.sound" ), WorldPosition ).Volume = 10f; // THIS DOES NOT WORK
+		GiftSound.StartSound();
+
 		ChristmassyGameLogic.Instance.Points += 10;
-		var handle = Sound.Play( new SoundEvent( "sounds/gift.sound" ), WorldPosition );
-		handle.Volume = 10;
-		Log.Info( handle.Volume );
 
 		var currentSpeed = ChristmassyGameLogic.Instance.RotationSpeed;
 		var resetTime = 180f / currentSpeed; // Reset when it's on the other side
