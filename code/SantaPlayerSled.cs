@@ -46,6 +46,10 @@ public sealed class SantaPlayerSled : Component, ITriggerListener
 	[Category( "Particles" )]
 	public GameObject SmallerSnowImpartParticle { get; set; }
 
+	[Property]
+	[Category( "Particles" )]
+	public GameObject GiftCollectParticle { get; set; }
+
 
 	[Property]
 	public float MaxTurnSpeed { get; set; } = 400f;
@@ -217,6 +221,7 @@ public sealed class SantaPlayerSled : Component, ITriggerListener
 	private async void UnwrapGift( GameObject gift )
 	{
 		// Sound.Play( new SoundEvent( "sounds/gift.sound" ), WorldPosition ).Volume = 10f; // THIS DOES NOT WORK
+		GiftCollectParticle?.Clone( gift.WorldPosition );
 		GiftSound.StartSound();
 
 		ChristmassyGameLogic.Instance.Points += 10;
