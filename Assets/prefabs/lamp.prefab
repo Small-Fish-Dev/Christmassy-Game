@@ -1,47 +1,63 @@
 {
   "RootObject": {
-    "__guid": "b503f024-77ff-4a22-9816-7b7f6b993be0",
+    "__guid": "9bbd603b-3d54-4881-999f-e5434b5ec4bc",
     "Flags": 0,
-    "Name": "hanging_lamp",
+    "Name": "lamp",
     "Enabled": true,
-    "Components": [
-      {
-        "__type": "Sandbox.ModelRenderer",
-        "__guid": "3549e5ff-9693-492c-a74f-4e5eb3d8e229",
-        "BodyGroups": 18446744073709551615,
-        "CreateAttachments": false,
-        "Model": "models/holiday-kit/holiday-lantern-hanging.vmdl",
-        "RenderOptions": {
-          "GameLayer": true,
-          "OverlayLayer": false,
-          "BloomLayer": false,
-          "AfterUILayer": false
-        },
-        "RenderType": "Off",
-        "Tint": "1,1,1,1"
-      }
-    ],
     "Children": [
       {
-        "__guid": "06d64f9d-6e7f-42f1-a110-4ed3d6b89774",
+        "__guid": "b9147e5c-e509-4420-a315-31451555e486",
         "Flags": 0,
         "Name": "Spot Light",
-        "Position": "12.49997,-0.000000007450581,-12.50003",
+        "Position": "0,0,156.25",
         "Rotation": "0,0.7071068,0,0.7071068",
         "Tags": "light_spot,light",
         "Enabled": true,
         "Components": [
           {
             "__type": "Sandbox.SpotLight",
-            "__guid": "3b2ab2b8-65d4-4018-8047-a8cdf3f255e6",
+            "__guid": "422ce5a0-ead4-4d2e-9f0a-c4f442dafe51",
             "Attenuation": 0.52,
             "ConeInner": 15,
             "ConeOuter": 63.72,
             "FogMode": "Enabled",
             "FogStrength": 1,
             "LightColor": "0.89302,0.83833,0.56489,1",
-            "Radius": 584.16003,
+            "Radius": 412.31995,
             "Shadows": false
+          }
+        ]
+      },
+      {
+        "__guid": "14ff9df0-be00-42ca-a3bc-d93224e1509b",
+        "Flags": 0,
+        "Name": "holiday-lantern",
+        "Scale": "1.5,1.5,1.5",
+        "Tags": "obstacle",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "3c7eb5c9-8967-4af4-90ca-6200dae1d59f",
+            "BodyGroups": 18446744073709551615,
+            "CreateAttachments": false,
+            "Model": "models/holiday-kit/holiday-lantern.vmdl",
+            "RenderOptions": {
+              "GameLayer": true,
+              "OverlayLayer": false,
+              "BloomLayer": false,
+              "AfterUILayer": false
+            },
+            "RenderType": "Off",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "Sandbox.ModelCollider",
+            "__guid": "a338ba43-794a-4bb5-939a-4092e2ff83b4",
+            "IsTrigger": false,
+            "Model": "models/holiday-kit/holiday-lantern.vmdl",
+            "Static": true,
+            "SurfaceVelocity": "0,0,0"
           }
         ]
       }
@@ -77,7 +93,7 @@
   "DontBreakAsTemplate": false,
   "ResourceVersion": 1,
   "__references": [
-    "kenneynl.holidaylanternhanging#82219"
+    "kenneynl.holidaylantern#82220"
   ],
   "__version": 1
 }
