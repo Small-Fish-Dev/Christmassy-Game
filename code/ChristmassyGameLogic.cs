@@ -23,11 +23,19 @@ public sealed class ChristmassyGameLogic : Component
 
 	[Property]
 	[Category( "Map" )]
+	public int LampsSpawned { get; set; } = 40;
+
+	[Property]
+	[Category( "Map" )]
 	public int RoadObjects { get; set; } = 10;
 
 	[Property]
 	[Category( "Map" )]
 	public Collider SlipperySlope { get; set; }
+
+	[Property]
+	[Category( "Map" )]
+	public GameObject Lamp { get; set; }
 
 	[Property]
 	[Category( "Components" )]
@@ -111,18 +119,55 @@ public sealed class ChristmassyGameLogic : Component
 			var randomCottage = SceneUtility.GetPrefabScene( Game.Random.FromList( allCottages ) )
 				.Clone();
 
-			var randomPitch = Game.Random.Float( -angleSlice / 2f, angleSlice / 2f );
+			var randomPitch = Game.Random.Float( -angleSlice / 4f, angleSlice / 4f );
 			randomCottage.WorldRotation = Rotation.FromPitch( angleSlice * i + randomPitch );
 			var sideRotation = Rotation.FromYaw( -90f + 180f * side );
 			randomCottage.WorldRotation *= sideRotation;
 
 			randomCottage.WorldPosition = Map.WorldPosition + randomCottage.WorldRotation.Up * MapRadius;
-			var randomDistance = Game.Random.Float( 150f, 400f );
+			var randomDistance = Game.Random.Float( 200f, 400f );
 			var sidePosition = (RoadWidth / 2f + randomDistance) * (side == 0 ? Vector3.Left : Vector3.Right);
 			randomCottage.WorldPosition += sidePosition;
 			randomCottage.SetParent( Map );
 
 			_cottages.Add( randomCottage );
+		}
+	}
+
+	private List<GameObject> _lamps = new List<GameObject>();
+
+	[Button( "Generate Lamps Debug" )]
+	public void GenerateLamps()
+	{
+		if ( !Map.IsValid() ) return;
+
+		ClearLamps();
+
+		if ( !Lamp.IsValid() )
+		{
+			Log.Error( "No lamp found" );
+			return;
+		}
+
+		var angleSlice = 360f / LampsSpawned;
+
+		for ( int i = 0; i < LampsSpawned; i++ )
+		{
+			var side = i % 2;
+			var newLamp = Lamp.Clone();
+
+			var randomPitch = Game.Random.Float( -angleSlice / 6f, angleSlice / 6f );
+			newLamp.WorldRotation = Rotation.FromPitch( angleSlice * i + angleSlice / 2f + randomPitch );
+			var sideRotation = Rotation.FromYaw( -90f + 180f * side );
+			newLamp.WorldRotation *= sideRotation;
+
+			newLamp.WorldPosition = Map.WorldPosition + newLamp.WorldRotation.Up * MapRadius;
+			var randomDistance = Game.Random.Float( 100f, 150f );
+			var sidePosition = (RoadWidth / 2f + randomDistance) * (side == 0 ? Vector3.Left : Vector3.Right);
+			newLamp.WorldPosition += sidePosition;
+			newLamp.SetParent( Map );
+
+			_lamps.Add( newLamp );
 		}
 	}
 
@@ -178,6 +223,7 @@ public sealed class ChristmassyGameLogic : Component
 	{
 		GenerateCottages();
 		GenerateRoad();
+		GenerateLamps();
 
 		MapClone = Map.Clone();
 		MapClone.WorldPosition += Vector3.Forward * 2500f + Vector3.Down * 000f;
@@ -189,6 +235,7 @@ public sealed class ChristmassyGameLogic : Component
 	{
 		ClearCottages();
 		ClearRoad();
+		ClearLamps();
 		MapClone?.Destroy();
 	}
 
@@ -211,6 +258,17 @@ public sealed class ChristmassyGameLogic : Component
 				present.Destroy();
 
 			_roadObjects.Clear();
+		}
+	}
+
+	public void ClearLamps()
+	{
+		if ( _lamps != null )
+		{
+			foreach ( var lamp in _lamps.ToList() )
+				lamp.Destroy();
+
+			_lamps.Clear();
 		}
 	}
 
