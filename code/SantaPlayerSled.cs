@@ -27,10 +27,11 @@ public sealed class SantaPlayerSled : Component, ITriggerListener
 	public bool CanJump => Pivot.LocalPosition.z <= 0f;
 
 	private float _targetPitch = 0f;
+	private float _originalTurnSpeed;
 
-	protected override void OnUpdate()
+	protected override void OnStart()
 	{
-
+		_originalTurnSpeed = MaxTurnSpeed;
 	}
 
 	protected override void OnFixedUpdate()
@@ -126,6 +127,9 @@ public sealed class SantaPlayerSled : Component, ITriggerListener
 		ModelRenderer.GameObject.Enabled = true;
 		Sleigh.GameObject.Enabled = true;
 		Collider.Enabled = true;
+		MaxTurnSpeed = _originalTurnSpeed;
+		Height = 0f;
+		Velocity = 0f;
 	}
 
 	public void OnTriggerEnter( Collider other )
