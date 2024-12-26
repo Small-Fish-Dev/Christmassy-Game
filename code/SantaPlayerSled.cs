@@ -117,7 +117,7 @@ public sealed class SantaPlayerSled : Component, ITriggerListener
 		if ( _oldSanta.IsValid() ) return;
 		if ( !ModelRenderer.IsValid() ) return;
 
-		var hitSound = Sound.Play( new SoundEvent( "sounds/impact.sound" ), WorldPosition )
+		Sound.Play( new SoundEvent( "sounds/impact.sound" ), WorldPosition )
 			.Volume = 5;
 
 		var santa = ModelRenderer.GameObject;
@@ -169,7 +169,10 @@ public sealed class SantaPlayerSled : Component, ITriggerListener
 	public void OnTriggerEnter( Collider other )
 	{
 		if ( other.Tags.Has( "gift" ) )
+		{
 			UnwrapGift( other.GameObject );
+			Sound.Play( new SoundEvent( "sounds/gift.sound" ), WorldPosition );
+		}
 
 		if ( other.Tags.Has( "obstacle" ) )
 			Ragdoll();
@@ -178,6 +181,9 @@ public sealed class SantaPlayerSled : Component, ITriggerListener
 	private async void UnwrapGift( GameObject gift )
 	{
 		ChristmassyGameLogic.Instance.Points += 10;
+		var handle = Sound.Play( new SoundEvent( "sounds/gift.sound" ), WorldPosition );
+		handle.Volume = 10;
+		Log.Info( handle.Volume );
 
 		var currentSpeed = ChristmassyGameLogic.Instance.RotationSpeed;
 		var resetTime = 180f / currentSpeed; // Reset when it's on the other side
