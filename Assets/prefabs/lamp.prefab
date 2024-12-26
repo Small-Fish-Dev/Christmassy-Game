@@ -6,6 +6,29 @@
     "Enabled": true,
     "Children": [
       {
+        "__guid": "5090ed06-b459-47a3-a31e-bd108e57ea7b",
+        "Flags": 0,
+        "Name": "Spot Light (1)",
+        "Position": "0,0,50",
+        "Rotation": "0,-0.7071068,0,0.7071068",
+        "Tags": "light_spot,light",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.SpotLight",
+            "__guid": "9eb0c29f-67f8-4422-b9c6-3b39faccd4c4",
+            "Attenuation": 1,
+            "ConeInner": 15,
+            "ConeOuter": 11.88,
+            "FogMode": "Enabled",
+            "FogStrength": 1,
+            "LightColor": "252.2497,224.8727,87.99352,0.23",
+            "Radius": 116.64006,
+            "Shadows": false
+          }
+        ]
+      },
+      {
         "__guid": "b9147e5c-e509-4420-a315-31451555e486",
         "Flags": 0,
         "Name": "Spot Light",

@@ -44,6 +44,29 @@
             "Shadows": false
           }
         ]
+      },
+      {
+        "__guid": "dc10bd8d-cda6-464b-b286-8254dd2c90a9",
+        "Flags": 0,
+        "Name": "Spot Light (1)",
+        "Position": "15.625,-0.00001052007,-87.5",
+        "Rotation": "0,-0.7071068,0,0.7071068",
+        "Tags": "light_spot,light",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.SpotLight",
+            "__guid": "3f536d9a-cf75-4797-8e87-122ce194653d",
+            "Attenuation": 1,
+            "ConeInner": 15,
+            "ConeOuter": 9.72,
+            "FogMode": "Enabled",
+            "FogStrength": 1,
+            "LightColor": "252.2497,224.8727,87.99352,0.23",
+            "Radius": 76.64006,
+            "Shadows": false
+          }
+        ]
       }
     ],
     "__variables": [],
