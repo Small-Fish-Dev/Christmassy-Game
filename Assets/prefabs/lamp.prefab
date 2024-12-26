@@ -17,13 +17,13 @@
           {
             "__type": "Sandbox.SpotLight",
             "__guid": "422ce5a0-ead4-4d2e-9f0a-c4f442dafe51",
-            "Attenuation": 0.52,
+            "Attenuation": 1,
             "ConeInner": 15,
-            "ConeOuter": 63.72,
+            "ConeOuter": 67.32,
             "FogMode": "Enabled",
             "FogStrength": 1,
-            "LightColor": "0.89302,0.83833,0.56489,1",
-            "Radius": 412.31995,
+            "LightColor": "0.80465,0.71732,0.28069,0.49",
+            "Radius": 700,
             "Shadows": false
           }
         ]
