@@ -144,7 +144,7 @@ public sealed class ChristmassyGameLogic : Component
 			randomCottage.WorldRotation *= sideRotation;
 
 			randomCottage.WorldPosition = Map.WorldPosition + randomCottage.WorldRotation.Up * MapRadius;
-			var randomDistance = Game.Random.Float( 200f, 400f );
+			var randomDistance = Game.Random.Float( 250f, 500f );
 			var sidePosition = (RoadWidth / 2f + randomDistance) * (side == 0 ? Vector3.Left : Vector3.Right);
 			randomCottage.WorldPosition += sidePosition;
 			randomCottage.SetParent( Map );
@@ -181,7 +181,7 @@ public sealed class ChristmassyGameLogic : Component
 			newLamp.WorldRotation *= sideRotation;
 
 			newLamp.WorldPosition = Map.WorldPosition + newLamp.WorldRotation.Up * MapRadius;
-			var randomDistance = Game.Random.Float( 100f, 150f );
+			var randomDistance = Game.Random.Float( 150f, 200f );
 			var sidePosition = (RoadWidth / 2f + randomDistance) * (side == 0 ? Vector3.Left : Vector3.Right);
 			newLamp.WorldPosition += sidePosition;
 			newLamp.SetParent( Map );
@@ -277,11 +277,92 @@ public sealed class ChristmassyGameLogic : Component
 		}
 	}
 
+	private List<GameObject> _decorations = new List<GameObject>();
+
+	[Button( "Generate Decorations" )]
+	public void GenerateDecorations()
+	{
+		if ( !Map.IsValid() ) return;
+
+		ClearDecorations();
+
+		var allDecorations = ResourceLibrary.GetAll<PrefabFile>()
+			.Where( x => x.GetMetadata( "Tags" )?.Contains( "decoration" ) ?? false )
+			.ToList();
+
+		if ( !allDecorations.Any() )
+		{
+			Log.Error( "No decorations found" );
+			return;
+		}
+
+		var angleSlice = 2f;
+
+		for ( int i = 1; i < 180; i++ )
+		{
+			var side = i % 2;
+			var randomDecoration = SceneUtility.GetPrefabScene( Game.Random.FromList( allDecorations ) )
+				.Clone();
+
+			randomDecoration.WorldRotation = Rotation.FromPitch( angleSlice * i );
+			randomDecoration.LocalRotation *= Rotation.FromYaw( Game.Random.Int( 0, 1 ) * 180f );
+			randomDecoration.WorldPosition = Map.WorldPosition + randomDecoration.WorldRotation.Up * MapRadius;
+			var randomDistance = Game.Random.Float( 80f, 100f );
+			var sidePosition = (RoadWidth / 2f + randomDistance) * (side == 0 ? Vector3.Left : Vector3.Right);
+			randomDecoration.WorldPosition += sidePosition;
+			randomDecoration.LocalScale *= new Vector3( Game.Random.Float( 0.8f, 1.2f ), Game.Random.Float( 0.8f, 1.2f ), Game.Random.Float( 1f, 1.2f ) );
+			randomDecoration.SetParent( Map );
+
+			_decorations.Add( randomDecoration );
+		}
+	}
+
+	private List<GameObject> _snow = new List<GameObject>();
+
+	[Button( "Generate Snow" )]
+	public void GenerateSnow()
+	{
+		if ( !Map.IsValid() ) return;
+
+		ClearSnow();
+
+		var allSnow = ResourceLibrary.GetAll<PrefabFile>()
+			.Where( x => x.GetMetadata( "Tags" )?.Contains( "snow" ) ?? false )
+			.ToList();
+
+		if ( !allSnow.Any() )
+		{
+			Log.Error( "No snow found" );
+			return;
+		}
+
+		var angleSlice = 2f;
+
+		for ( int i = 0; i < 180; i++ )
+		{
+			var side = i % 2;
+			var randomSnow = SceneUtility.GetPrefabScene( Game.Random.FromList( allSnow ) )
+				.Clone();
+
+			randomSnow.WorldRotation = Rotation.FromPitch( angleSlice * i );
+			randomSnow.LocalRotation *= Rotation.FromYaw( Game.Random.Int( 0, 1 ) * 180f );
+			randomSnow.WorldPosition = Map.WorldPosition + randomSnow.WorldRotation.Up * MapRadius;
+			var randomDistance = Game.Random.Float( 90f, 100f );
+			var sidePosition = (RoadWidth / 2f + randomDistance) * (side == 0 ? Vector3.Left : Vector3.Right);
+			randomSnow.WorldPosition += sidePosition;
+			randomSnow.LocalScale *= new Vector3( Game.Random.Float( 0.8f, 1.2f ), Game.Random.Float( 0.8f, 1.2f ), Game.Random.Float( 1f, 1.2f ) );
+			randomSnow.SetParent( Map );
+
+			_snow.Add( randomSnow );
+		}
+	}
+
 	public void GenerateMap()
 	{
 		GenerateCottages();
 		GenerateRoad();
 		GenerateLamps();
+		GenerateDecorations();
 
 		MapClone = Map.Clone();
 		MapClone.WorldPosition += Vector3.Forward * 2500f + Vector3.Down * 000f;
@@ -294,7 +375,30 @@ public sealed class ChristmassyGameLogic : Component
 		ClearCottages();
 		ClearRoad();
 		ClearLamps();
+		ClearDecorations();
 		MapClone?.Destroy();
+	}
+
+	public void ClearDecorations()
+	{
+		if ( _decorations != null )
+		{
+			foreach ( var decoration in _decorations.ToList() )
+				decoration.Destroy();
+
+			_decorations.Clear();
+		}
+	}
+
+	public void ClearSnow()
+	{
+		if ( _snow != null )
+		{
+			foreach ( var snow in _snow.ToList() )
+				snow.Destroy();
+
+			_snow.Clear();
+		}
 	}
 
 	public void ClearCottages()

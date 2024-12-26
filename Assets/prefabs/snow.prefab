@@ -1,0 +1,79 @@
+{
+  "RootObject": {
+    "__guid": "8491a8b8-eda3-4021-8cf0-487f65507aa8",
+    "Flags": 0,
+    "Name": "snow",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "Sandbox.SceneInformation",
+        "__guid": "7dd19c4e-4e73-439c-9368-3041c3c0d5df",
+        "Changes": "",
+        "Description": "",
+        "SceneTags": "snow"
+      }
+    ],
+    "Children": [
+      {
+        "__guid": "5fe02e6f-45da-4d62-91d6-8c2fa4ea23f0",
+        "Flags": 0,
+        "Name": "holiday-snow-pile",
+        "Position": "0,0,-8",
+        "Scale": "2,1,1.4",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "edbd5497-ff4a-4836-8d3a-a7f7c2c6977e",
+            "BodyGroups": 18446744073709551615,
+            "CreateAttachments": false,
+            "Model": "models/holiday-kit/holiday-snow-pile.vmdl",
+            "RenderOptions": {
+              "GameLayer": true,
+              "OverlayLayer": false,
+              "BloomLayer": false,
+              "AfterUILayer": false
+            },
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          }
+        ]
+      }
+    ],
+    "__variables": [],
+    "__properties": {
+      "FixedUpdateFrequency": 50,
+      "MaxFixedUpdates": 5,
+      "NetworkFrequency": 30,
+      "NetworkInterpolation": true,
+      "PhysicsSubSteps": 1,
+      "ThreadedAnimation": true,
+      "TimeScale": 1,
+      "UseFixedUpdate": true,
+      "Metadata": {
+        "Tags": "snow"
+      },
+      "NavMesh": {
+        "Enabled": false,
+        "IncludeStaticBodies": true,
+        "IncludeKeyframedBodies": true,
+        "EditorAutoUpdate": true,
+        "AgentHeight": 64,
+        "AgentRadius": 16,
+        "AgentStepSize": 18,
+        "AgentMaxSlope": 40,
+        "ExcludedBodies": "",
+        "IncludedBodies": ""
+      }
+    }
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "DontBreakAsTemplate": false,
+  "ResourceVersion": 1,
+  "__references": [
+    "kenneynl.holidaysnowpile#82240"
+  ],
+  "__version": 1
+}
