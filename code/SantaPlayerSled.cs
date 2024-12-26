@@ -109,6 +109,7 @@ public sealed class SantaPlayerSled : Component, ITriggerListener
 
 		santa.Enabled = false;
 		sleigh.Enabled = false;
+		Collider.Enabled = false;
 	}
 
 	[Button]
@@ -122,6 +123,7 @@ public sealed class SantaPlayerSled : Component, ITriggerListener
 
 		ModelRenderer.GameObject.Enabled = true;
 		Sleigh.GameObject.Enabled = true;
+		Collider.Enabled = true;
 	}
 
 	public void OnTriggerEnter( Collider other )

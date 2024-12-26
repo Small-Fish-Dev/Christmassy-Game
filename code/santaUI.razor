@@ -20,6 +20,14 @@
             <div class="subtext">A and D to move. SPACE to jump.</div>
         </div>
     </div>
+    <div class="gameover">
+        <div class="button" onclick=@(() => ChristmassyGameLogic.Instance.StartGame())>
+            <div class="title">RETRY</div>
+        </div>
+        <div class="button" onclick=@(() => Game.Close())>
+            <div class="title">QUIT</div>
+        </div>
+    </div>
 </root>
 
 @code

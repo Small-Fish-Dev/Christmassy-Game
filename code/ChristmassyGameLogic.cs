@@ -43,9 +43,12 @@ public sealed class ChristmassyGameLogic : Component
 
 	public static ChristmassyGameLogic Instance { get; private set; }
 
+	private float _originalSpeed;
+
 	protected override void OnStart()
 	{
 		Instance = this;
+		_originalSpeed = RotationSpeed;
 
 		StartGame();
 	}
@@ -210,6 +213,7 @@ public sealed class ChristmassyGameLogic : Component
 
 		Points = 0;
 		StartTimer = 0f;
+		RotationSpeed = _originalSpeed;
 
 		GenerateMap();
 
