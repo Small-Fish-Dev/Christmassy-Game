@@ -156,6 +156,7 @@ public sealed class SantaPlayerSled : Component, ITriggerListener
 		_oldSleigh.Destroy();
 
 		ModelRenderer.GameObject.Enabled = true;
+		WorldPosition = WorldPosition.WithY( 0f );
 		Sleigh.GameObject.Enabled = true;
 		Collider.Enabled = true;
 		MaxTurnSpeed = _originalTurnSpeed;
