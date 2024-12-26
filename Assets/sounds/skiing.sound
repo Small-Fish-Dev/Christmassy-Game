@@ -1,6 +1,6 @@
 {
   "UI": false,
-  "Volume": "1",
+  "Volume": "0.1",
   "Pitch": "1",
   "Decibels": 70,
   "SelectionMode": "Random",
@@ -8,8 +8,8 @@
     "sounds/skiing.vsnd"
   ],
   "Occlusion": false,
-  "AirAbsorption": true,
-  "Transmission": true,
+  "AirAbsorption": false,
+  "Transmission": false,
   "OcclusionRadius": 64,
   "DistanceAttenuation": false,
   "Distance": 15000,

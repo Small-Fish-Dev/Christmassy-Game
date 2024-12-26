@@ -7,16 +7,24 @@ public sealed class SantaPlayerSled : Component, ITriggerListener
 {
 
 	[Property]
+	[Category( "Components" )]
 	public SkinnedModelRenderer ModelRenderer { get; set; }
 
 	[Property]
+	[Category( "Components" )]
 	public ModelRenderer Sleigh { get; set; }
 
 	[Property]
+	[Category( "Components" )]
 	public GameObject Pivot { get; set; }
 
 	[Property]
+	[Category( "Components" )]
 	public BoxCollider Collider { get; set; }
+
+	[Property]
+	[Category( "Components" )]
+	public SoundPointComponent SkiingSound { get; set; }
 
 
 	[Property]
@@ -28,6 +36,7 @@ public sealed class SantaPlayerSled : Component, ITriggerListener
 
 	private float _targetPitch = 0f;
 	private float _originalTurnSpeed;
+	private float _wishTurningVolume = 1f;
 
 	protected override void OnStart()
 	{
@@ -43,14 +52,10 @@ public sealed class SantaPlayerSled : Component, ITriggerListener
 		Velocity = MathX.Clamp( Velocity, -MaxTurnSpeed, MaxTurnSpeed );
 		WorldPosition = WorldPosition.WithY( MathX.Clamp( WorldPosition.y + Velocity * Time.Delta, -roadWidth, roadWidth ) );
 
+		_wishTurningVolume = MathX.Remap( MathF.Abs( Velocity ), 0f, 800f, 0.2f, 3f );
+
 		if ( CanJump && (WorldPosition.y <= -roadWidth || WorldPosition.y >= roadWidth) )
 			Velocity *= -0.25f;
-
-		if ( Input.Pressed( "jump" ) && CanJump && Pivot.IsValid() )
-		{
-			Height += 350f;
-			_targetPitch = -30f;
-		}
 
 		if ( Pivot.LocalPosition.z > 0f || Height > 0f )
 		{
@@ -59,6 +64,8 @@ public sealed class SantaPlayerSled : Component, ITriggerListener
 
 			Collider.Center = Pivot.LocalPosition + Vector3.Up * 35f;
 			Height -= Time.Delta * 1000f;
+
+			_wishTurningVolume = 0f;
 		}
 
 		if ( CanJump && Height < 0f )
@@ -69,10 +76,23 @@ public sealed class SantaPlayerSled : Component, ITriggerListener
 
 			if ( WorldPosition.y <= -roadWidth / 2.5f || WorldPosition.y >= roadWidth / 2.5f )
 				Ragdoll();
+
+			if ( _wishTurningVolume == 0f )
+				_wishTurningVolume = 5f;
 		}
 
-		var targetRotation = Rotation.FromPitch( _targetPitch ) * Rotation.FromYaw( Velocity / 10f );
+		if ( Input.Pressed( "jump" ) && CanJump && Pivot.IsValid() )
+		{
+			Height += 350f;
+			_targetPitch = -30f;
+			_wishTurningVolume = 3f;
+		}
 
+		SkiingSound.SoundOverride = true;
+		SkiingSound.Volume = MathX.Lerp( SkiingSound.Volume, _wishTurningVolume, Time.Delta * 10f );
+		SkiingSound.Pitch = MathX.Remap( SkiingSound.Volume, 0f, 3f, 0.7f, 1.3f );
+
+		var targetRotation = Rotation.FromPitch( _targetPitch ) * Rotation.FromYaw( Velocity / 10f );
 		Pivot.LocalRotation = Rotation.Lerp( Pivot.LocalRotation, targetRotation, Time.Delta * 20f );
 
 		// Animations
