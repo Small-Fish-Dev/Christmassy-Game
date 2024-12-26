@@ -18,7 +18,7 @@
         "__guid": "df13e940-1b17-4b88-bdb2-527993c64dc5",
         "Flags": 0,
         "Name": "snowman",
-        "Position": "0,0,-10",
+        "Position": "0,0,-15",
         "Rotation": "0,0,1,-0.00000004371139",
         "Scale": "1.4,1.4,1.4",
         "Tags": "obstacle",
