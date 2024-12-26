@@ -1,0 +1,77 @@
+{
+  "RootObject": {
+    "__guid": "40c49300-1e4b-4349-a2a2-756502d869dd",
+    "Flags": 0,
+    "Name": "snowman",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "Sandbox.SceneInformation",
+        "__guid": "e27d1a3c-7272-4042-897b-80f14dde0025",
+        "Changes": "",
+        "Description": "",
+        "SceneTags": "decoration"
+      }
+    ],
+    "Children": [
+      {
+        "__guid": "16a711b6-b652-4507-afb5-e62a666c5de7",
+        "Flags": 0,
+        "Name": "snowman",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "2a2952a2-94da-470f-be14-8d364d2210b0",
+            "BodyGroups": 18446744073709551615,
+            "CreateAttachments": false,
+            "Model": "models/holiday-kit/holiday-snowman.vmdl",
+            "RenderOptions": {
+              "GameLayer": true,
+              "OverlayLayer": false,
+              "BloomLayer": false,
+              "AfterUILayer": false
+            },
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          }
+        ]
+      }
+    ],
+    "__variables": [],
+    "__properties": {
+      "FixedUpdateFrequency": 50,
+      "MaxFixedUpdates": 5,
+      "NetworkFrequency": 30,
+      "NetworkInterpolation": true,
+      "PhysicsSubSteps": 1,
+      "ThreadedAnimation": true,
+      "TimeScale": 1,
+      "UseFixedUpdate": true,
+      "Metadata": {
+        "Tags": "decoration"
+      },
+      "NavMesh": {
+        "Enabled": false,
+        "IncludeStaticBodies": true,
+        "IncludeKeyframedBodies": true,
+        "EditorAutoUpdate": true,
+        "AgentHeight": 64,
+        "AgentRadius": 16,
+        "AgentStepSize": 18,
+        "AgentMaxSlope": 40,
+        "ExcludedBodies": "",
+        "IncludedBodies": ""
+      }
+    }
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "DontBreakAsTemplate": false,
+  "ResourceVersion": 1,
+  "__references": [
+    "kenneynl.holidaysnowman#82245"
+  ],
+  "__version": 1
+}
