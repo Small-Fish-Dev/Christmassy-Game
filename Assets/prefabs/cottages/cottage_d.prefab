@@ -3,6 +3,7 @@
     "__guid": "43234848-c0d0-469f-88ef-37759549174e",
     "Flags": 0,
     "Name": "cottage_d",
+    "Tags": "obstacle",
     "Enabled": true,
     "Components": [
       {
@@ -12,6 +13,15 @@
         "Description": "",
         "SceneTags": "cottage",
         "Title": "Cottage D Snowy"
+      },
+      {
+        "__type": "Sandbox.BoxCollider",
+        "__guid": "0b382253-79f7-4d7f-ae6e-cf97e8948883",
+        "Center": "-100,1,100",
+        "IsTrigger": false,
+        "Scale": "200,200,200",
+        "Static": false,
+        "SurfaceVelocity": "0,0,0"
       }
     ],
     "Children": [
@@ -23,13 +33,18 @@
         "Enabled": true,
         "Components": [
           {
-            "__type": "Sandbox.Prop",
-            "__guid": "df6c12e5-1601-4a4b-ac62-9fd6fb6135e8",
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "e3a10b3c-df8e-45f1-b320-0941f10d39aa",
             "BodyGroups": 18446744073709551615,
-            "Health": 0,
-            "IsStatic": true,
+            "CreateAttachments": false,
             "Model": "models/holiday-kit/holiday-cabin-door-rotate.vmdl",
-            "StartAsleep": false,
+            "RenderOptions": {
+              "GameLayer": true,
+              "OverlayLayer": false,
+              "BloomLayer": false,
+              "AfterUILayer": false
+            },
+            "RenderType": "On",
             "Tint": "1,1,1,1"
           }
         ]
@@ -43,13 +58,18 @@
         "Enabled": true,
         "Components": [
           {
-            "__type": "Sandbox.Prop",
-            "__guid": "446af601-cf11-487d-be85-d4af379afb83",
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "89b94264-4cde-40f0-bb8d-c8ab608e2e85",
             "BodyGroups": 18446744073709551615,
-            "Health": 0,
-            "IsStatic": true,
+            "CreateAttachments": false,
             "Model": "models/holiday-kit/holiday-cabin-wall-roof.vmdl",
-            "StartAsleep": false,
+            "RenderOptions": {
+              "GameLayer": true,
+              "OverlayLayer": false,
+              "BloomLayer": false,
+              "AfterUILayer": false
+            },
+            "RenderType": "On",
             "Tint": "1,1,1,1"
           }
         ]
@@ -64,13 +84,18 @@
         "Enabled": true,
         "Components": [
           {
-            "__type": "Sandbox.Prop",
-            "__guid": "6b527e84-1c73-44d2-8d5c-a1320a1c9b36",
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "66605994-9bda-45f5-bbbf-8e3beb8fb365",
             "BodyGroups": 18446744073709551615,
-            "Health": 0,
-            "IsStatic": true,
+            "CreateAttachments": false,
             "Model": "models/holiday-kit/holiday-cabin-wall-roof.vmdl",
-            "StartAsleep": false,
+            "RenderOptions": {
+              "GameLayer": true,
+              "OverlayLayer": false,
+              "BloomLayer": false,
+              "AfterUILayer": false
+            },
+            "RenderType": "On",
             "Tint": "1,1,1,1"
           }
         ]
@@ -85,13 +110,18 @@
         "Enabled": true,
         "Components": [
           {
-            "__type": "Sandbox.Prop",
-            "__guid": "012b9a95-f470-411d-9739-1f604c3f16d7",
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "92e881e1-56f0-4d0d-83f9-902f08bbfbee",
             "BodyGroups": 18446744073709551615,
-            "Health": 0,
-            "IsStatic": true,
+            "CreateAttachments": false,
             "Model": "models/holiday-kit/holiday-cabin-wall-roof.vmdl",
-            "StartAsleep": false,
+            "RenderOptions": {
+              "GameLayer": true,
+              "OverlayLayer": false,
+              "BloomLayer": false,
+              "AfterUILayer": false
+            },
+            "RenderType": "On",
             "Tint": "1,1,1,1"
           }
         ]
@@ -106,13 +136,18 @@
         "Enabled": true,
         "Components": [
           {
-            "__type": "Sandbox.Prop",
-            "__guid": "70a7c09f-837b-473b-aca4-ccb1fe2f8374",
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "1e441deb-d103-4d53-869e-defc651f5187",
             "BodyGroups": 18446744073709551615,
-            "Health": 0,
-            "IsStatic": true,
+            "CreateAttachments": false,
             "Model": "models/holiday-kit/holiday-cabin-wall-roof.vmdl",
-            "StartAsleep": false,
+            "RenderOptions": {
+              "GameLayer": true,
+              "OverlayLayer": false,
+              "BloomLayer": false,
+              "AfterUILayer": false
+            },
+            "RenderType": "On",
             "Tint": "1,1,1,1"
           }
         ]
@@ -125,13 +160,18 @@
         "Enabled": true,
         "Components": [
           {
-            "__type": "Sandbox.Prop",
-            "__guid": "e34059c5-324f-4bb6-b299-c2b6357b0fd4",
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "e552e277-7470-4a25-8751-d6a307913307",
             "BodyGroups": 18446744073709551615,
-            "Health": 0,
-            "IsStatic": true,
+            "CreateAttachments": false,
             "Model": "models/holiday-kit/holiday-cabin-wall-roof-center.vmdl",
-            "StartAsleep": false,
+            "RenderOptions": {
+              "GameLayer": true,
+              "OverlayLayer": false,
+              "BloomLayer": false,
+              "AfterUILayer": false
+            },
+            "RenderType": "On",
             "Tint": "1,1,1,1"
           }
         ]
@@ -145,13 +185,18 @@
         "Enabled": true,
         "Components": [
           {
-            "__type": "Sandbox.Prop",
-            "__guid": "5aa9e82b-8195-474a-884f-1438ec13a63f",
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "4575f1de-19db-4c17-abb7-175decf14e5c",
             "BodyGroups": 18446744073709551615,
-            "Health": 0,
-            "IsStatic": true,
+            "CreateAttachments": false,
             "Model": "models/holiday-kit/holiday-cabin-wall-roof-center.vmdl",
-            "StartAsleep": false,
+            "RenderOptions": {
+              "GameLayer": true,
+              "OverlayLayer": false,
+              "BloomLayer": false,
+              "AfterUILayer": false
+            },
+            "RenderType": "On",
             "Tint": "1,1,1,1"
           }
         ]
@@ -165,13 +210,18 @@
         "Enabled": true,
         "Components": [
           {
-            "__type": "Sandbox.Prop",
-            "__guid": "907e466e-4896-42a9-878c-6c8adc1f85f1",
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "ec9f41eb-2e12-49cc-aee7-f8ede6c6adcc",
             "BodyGroups": 18446744073709551615,
-            "Health": 0,
-            "IsStatic": true,
+            "CreateAttachments": false,
             "Model": "models/holiday-kit/holiday-cabin-roof-snow.vmdl",
-            "StartAsleep": false,
+            "RenderOptions": {
+              "GameLayer": true,
+              "OverlayLayer": false,
+              "BloomLayer": false,
+              "AfterUILayer": false
+            },
+            "RenderType": "On",
             "Tint": "1,1,1,1"
           }
         ]
@@ -186,13 +236,18 @@
         "Enabled": true,
         "Components": [
           {
-            "__type": "Sandbox.Prop",
-            "__guid": "ccd75be5-fe63-4c84-bd1e-21d4181b290a",
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "59b90864-d594-4ab6-b7d1-525cdb8f9a60",
             "BodyGroups": 18446744073709551615,
-            "Health": 0,
-            "IsStatic": true,
+            "CreateAttachments": false,
             "Model": "models/holiday-kit/holiday-cabin-roof-snow.vmdl",
-            "StartAsleep": false,
+            "RenderOptions": {
+              "GameLayer": true,
+              "OverlayLayer": false,
+              "BloomLayer": false,
+              "AfterUILayer": false
+            },
+            "RenderType": "On",
             "Tint": "1,1,1,1"
           }
         ]
@@ -206,13 +261,18 @@
         "Enabled": true,
         "Components": [
           {
-            "__type": "Sandbox.Prop",
-            "__guid": "9ea1af23-5551-4479-a05a-29a0317b7497",
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "030c1db1-1bf4-49b1-8b73-571e5b3d5511",
             "BodyGroups": 18446744073709551615,
-            "Health": 0,
-            "IsStatic": true,
+            "CreateAttachments": false,
             "Model": "models/holiday-kit/holiday-cabin-roof-snow-point.vmdl",
-            "StartAsleep": false,
+            "RenderOptions": {
+              "GameLayer": true,
+              "OverlayLayer": false,
+              "BloomLayer": false,
+              "AfterUILayer": false
+            },
+            "RenderType": "On",
             "Tint": "1,1,1,1"
           }
         ]
@@ -226,13 +286,18 @@
         "Enabled": true,
         "Components": [
           {
-            "__type": "Sandbox.Prop",
-            "__guid": "29396fe0-e351-40c1-ade3-ccd6d41fa7d7",
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "e2c0bf87-4dad-4839-820c-b7850adfab3d",
             "BodyGroups": 18446744073709551615,
-            "Health": 0,
-            "IsStatic": true,
+            "CreateAttachments": false,
             "Model": "models/holiday-kit/holiday-cabin-window-a.vmdl",
-            "StartAsleep": false,
+            "RenderOptions": {
+              "GameLayer": true,
+              "OverlayLayer": false,
+              "BloomLayer": false,
+              "AfterUILayer": false
+            },
+            "RenderType": "On",
             "Tint": "1,1,1,1"
           }
         ]
@@ -245,13 +310,18 @@
         "Enabled": true,
         "Components": [
           {
-            "__type": "Sandbox.Prop",
-            "__guid": "230e5699-597d-46c7-85dc-fa2677899b36",
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "61db16eb-3eeb-4fa8-b38e-cd41b5dd00b7",
             "BodyGroups": 18446744073709551615,
-            "Health": 0,
-            "IsStatic": true,
+            "CreateAttachments": false,
             "Model": "models/holiday-kit/holiday-floor-wood.vmdl",
-            "StartAsleep": false,
+            "RenderOptions": {
+              "GameLayer": true,
+              "OverlayLayer": false,
+              "BloomLayer": false,
+              "AfterUILayer": false
+            },
+            "RenderType": "On",
             "Tint": "1,1,1,1"
           }
         ]
@@ -264,13 +334,18 @@
         "Enabled": true,
         "Components": [
           {
-            "__type": "Sandbox.Prop",
-            "__guid": "977f3f31-5d31-48df-a756-fee8dcbb2a06",
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "20676e62-7ac5-4556-96df-5efbfa8fd715",
             "BodyGroups": 18446744073709551615,
-            "Health": 0,
-            "IsStatic": true,
+            "CreateAttachments": false,
             "Model": "models/holiday-kit/holiday-floor-wood.vmdl",
-            "StartAsleep": false,
+            "RenderOptions": {
+              "GameLayer": true,
+              "OverlayLayer": false,
+              "BloomLayer": false,
+              "AfterUILayer": false
+            },
+            "RenderType": "On",
             "Tint": "1,1,1,1"
           }
         ]
@@ -283,13 +358,18 @@
         "Enabled": true,
         "Components": [
           {
-            "__type": "Sandbox.Prop",
-            "__guid": "d96d9309-4546-48a0-973e-4966b99c6935",
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "cb9220cc-e13d-462c-bbd1-6d28e7dad013",
             "BodyGroups": 18446744073709551615,
-            "Health": 0,
-            "IsStatic": true,
+            "CreateAttachments": false,
             "Model": "models/holiday-kit/holiday-floor-wood.vmdl",
-            "StartAsleep": false,
+            "RenderOptions": {
+              "GameLayer": true,
+              "OverlayLayer": false,
+              "BloomLayer": false,
+              "AfterUILayer": false
+            },
+            "RenderType": "On",
             "Tint": "1,1,1,1"
           }
         ]
@@ -302,13 +382,18 @@
         "Enabled": true,
         "Components": [
           {
-            "__type": "Sandbox.Prop",
-            "__guid": "dcb840ef-511c-4d7b-81cd-35c6e6520089",
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "da1fbd9c-3075-4374-bb2c-2281f13b843d",
             "BodyGroups": 18446744073709551615,
-            "Health": 0,
-            "IsStatic": true,
+            "CreateAttachments": false,
             "Model": "models/holiday-kit/holiday-floor-wood.vmdl",
-            "StartAsleep": false,
+            "RenderOptions": {
+              "GameLayer": true,
+              "OverlayLayer": false,
+              "BloomLayer": false,
+              "AfterUILayer": false
+            },
+            "RenderType": "On",
             "Tint": "1,1,1,1"
           }
         ]
@@ -330,13 +415,18 @@
         "Enabled": true,
         "Components": [
           {
-            "__type": "Sandbox.Prop",
-            "__guid": "2d8a2de2-fcfd-424e-a75f-1bfd27246d5d",
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "fcf28b44-8d81-4fda-a140-cdc5c54f280b",
             "BodyGroups": 18446744073709551615,
-            "Health": 0,
-            "IsStatic": true,
+            "CreateAttachments": false,
             "Model": "models/holiday-kit/holiday-bench-short.vmdl",
-            "StartAsleep": false,
+            "RenderOptions": {
+              "GameLayer": true,
+              "OverlayLayer": false,
+              "BloomLayer": false,
+              "AfterUILayer": false
+            },
+            "RenderType": "On",
             "Tint": "1,1,1,1"
           }
         ]
