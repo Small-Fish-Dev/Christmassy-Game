@@ -226,11 +226,17 @@ public sealed class SantaPlayerSled : Component, ITriggerListener
 
 		ChristmassyGameLogic.Instance.Points += 10;
 
-		var currentSpeed = ChristmassyGameLogic.Instance.RotationSpeed;
-		var resetTime = 180f / currentSpeed; // Reset when it's on the other side
+		TimeUntil animationEnd = 0.3f;
+		var renderer = gift.GetComponent<ModelRenderer>();
+
+		while ( !animationEnd )
+		{
+			gift.WorldPosition += Vector3.Up * Time.Delta * 400f;
+			renderer.Tint = Color.White.WithAlpha( 1f - animationEnd.Fraction );
+
+			await Task.FrameEnd();
+		}
 
 		gift.Enabled = false;
-		await Task.DelaySeconds( resetTime );
-		gift.Enabled = true;
 	}
 }
