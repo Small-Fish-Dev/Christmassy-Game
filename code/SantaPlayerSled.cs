@@ -30,6 +30,10 @@ public sealed class SantaPlayerSled : Component, ITriggerListener
 	[Category( "Components" )]
 	public SoundPointComponent GiftSound { get; set; }
 
+	[Property]
+	[Category( "Components" )]
+	public ParticleConeEmitter SnowParticles { get; set; }
+
 
 	[Property]
 	public float MaxTurnSpeed { get; set; } = 400f;
@@ -63,6 +67,7 @@ public sealed class SantaPlayerSled : Component, ITriggerListener
 		Velocity = MathX.Clamp( Velocity, -MaxTurnSpeed, MaxTurnSpeed );
 		WorldPosition = WorldPosition.WithY( MathX.Clamp( WorldPosition.y + Velocity * Time.Delta, -roadWidth, roadWidth ) );
 
+		SnowParticles.Rate = MathX.Remap( MathF.Abs( Velocity ), 0f, 1000f, 400f, 2000f );
 		_wishTurningVolume = MathX.Remap( MathF.Abs( Velocity ), 0f, 800f, 0.2f, 3f );
 
 		if ( CanJump && (WorldPosition.y <= -roadWidth || WorldPosition.y >= roadWidth) )
@@ -77,6 +82,7 @@ public sealed class SantaPlayerSled : Component, ITriggerListener
 			Height -= Time.Delta * 1000f;
 
 			_wishTurningVolume = 0f;
+			SnowParticles.Enabled = false;
 		}
 
 		if ( CanJump && Height < 0f )
@@ -90,6 +96,8 @@ public sealed class SantaPlayerSled : Component, ITriggerListener
 
 			if ( _wishTurningVolume == 0f )
 				_wishTurningVolume = 5f;
+
+			SnowParticles.Enabled = true;
 		}
 
 		if ( Input.Pressed( "jump" ) && CanJump && Pivot.IsValid() )
@@ -136,6 +144,7 @@ public sealed class SantaPlayerSled : Component, ITriggerListener
 		santaPhysics.Renderer = ragdollRenderer;
 		santaPhysics.Model = ragdollRenderer.Model;
 
+		SnowParticles.Enabled = false;
 		var sleigh = Sleigh.GameObject;
 		_oldSleigh = sleigh.Clone( sleigh.WorldPosition, sleigh.WorldRotation, sleigh.WorldScale );
 		_oldSleigh.Tags.Remove( "player" );
@@ -166,6 +175,7 @@ public sealed class SantaPlayerSled : Component, ITriggerListener
 		MaxTurnSpeed = _originalTurnSpeed;
 		Height = 0f;
 		Velocity = 0f;
+		SnowParticles.Enabled = true;
 
 		Alive = true;
 	}
