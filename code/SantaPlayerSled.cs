@@ -30,6 +30,7 @@ public sealed class SantaPlayerSled : Component, ITriggerListener
 	[Property]
 	public float MaxTurnSpeed { get; set; } = 400f;
 
+	public bool Alive = true;
 	public float Velocity = 0f;
 	public float Height = 0f;
 	public bool CanJump => Pivot.LocalPosition.z <= 0f;
@@ -45,6 +46,12 @@ public sealed class SantaPlayerSled : Component, ITriggerListener
 
 	protected override void OnFixedUpdate()
 	{
+		if ( !Alive )
+		{
+			SkiingSound.Volume = 0f;
+			return;
+		}
+
 		MaxTurnSpeed += Time.Delta * 5;
 		var roadWidth = ChristmassyGameLogic.Instance.RoadWidth / (Pivot.LocalPosition.z > 0f ? 0.5f : 1.5f);
 		var inputs = Input.AnalogMove;
@@ -113,7 +120,6 @@ public sealed class SantaPlayerSled : Component, ITriggerListener
 		var hitSound = Sound.Play( new SoundEvent( "sounds/impact.sound" ), WorldPosition )
 			.Volume = 5;
 
-
 		var santa = ModelRenderer.GameObject;
 		_oldSanta = santa.Clone( santa.WorldPosition, santa.WorldRotation, santa.WorldScale );
 		_oldSanta.Tags.Remove( "player" );
@@ -137,6 +143,7 @@ public sealed class SantaPlayerSled : Component, ITriggerListener
 		Collider.Enabled = false;
 
 		ChristmassyGameLogic.Instance.EndGame();
+		Alive = false;
 	}
 
 	[Button]
@@ -154,6 +161,8 @@ public sealed class SantaPlayerSled : Component, ITriggerListener
 		MaxTurnSpeed = _originalTurnSpeed;
 		Height = 0f;
 		Velocity = 0f;
+
+		Alive = true;
 	}
 
 	public void OnTriggerEnter( Collider other )
