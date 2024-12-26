@@ -7,11 +7,11 @@
   "Sounds": [
     "sounds/skiing.vsnd"
   ],
-  "Occlusion": false,
+  "Occlusion": true,
   "AirAbsorption": true,
   "Transmission": true,
   "OcclusionRadius": 64,
-  "DistanceAttenuation": false,
+  "DistanceAttenuation": true,
   "Distance": 15000,
   "Falloff": [
     {
