@@ -246,7 +246,7 @@ public sealed class ChristmassyGameLogic : Component
 
 		MapClone = Map.Clone();
 		MapClone.WorldPosition += Vector3.Forward * 2500f + Vector3.Down * 000f;
-		MapClone.WorldRotation *= Rotation.FromPitch( -90f );
+		MapClone.WorldRotation *= Rotation.FromPitch( -83f );
 		MapClone.WorldScale *= 0.7f;
 	}
 
