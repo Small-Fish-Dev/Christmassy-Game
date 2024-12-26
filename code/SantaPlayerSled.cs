@@ -226,6 +226,13 @@ public sealed class SantaPlayerSled : Component, ITriggerListener
 
 		ChristmassyGameLogic.Instance.Points += 10;
 
+		if ( ChristmassyGameLogic.Instance.Points >= 100 )
+			Sandbox.Services.Achievements.Unlock( "100points" );
+		if ( ChristmassyGameLogic.Instance.Points >= 500 )
+			Sandbox.Services.Achievements.Unlock( "500points" );
+		if ( ChristmassyGameLogic.Instance.Points >= 1500 )
+			Sandbox.Services.Achievements.Unlock( "1500points" );
+
 		TimeUntil animationEnd = 0.3f;
 		var renderer = gift.GetComponent<ModelRenderer>();
 

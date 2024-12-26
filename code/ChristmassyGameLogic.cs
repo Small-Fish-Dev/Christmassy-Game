@@ -472,6 +472,7 @@ public sealed class ChristmassyGameLogic : Component
 	public void EndGame()
 	{
 		IsPlaying = false;
+		Sandbox.Services.Stats.SetValue( "points", Points );
 	}
 
 	protected override void DrawGizmos()
