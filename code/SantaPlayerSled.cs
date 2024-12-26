@@ -34,6 +34,10 @@ public sealed class SantaPlayerSled : Component, ITriggerListener
 	[Category( "Components" )]
 	public ParticleConeEmitter SnowParticles { get; set; }
 
+	[Property]
+	[Category( "Particles" )]
+	public GameObject SnowImpartParticle { get; set; }
+
 
 	[Property]
 	public float MaxTurnSpeed { get; set; } = 400f;
@@ -97,7 +101,8 @@ public sealed class SantaPlayerSled : Component, ITriggerListener
 			if ( _wishTurningVolume == 0f )
 				_wishTurningVolume = 5f;
 
-			SnowParticles.Enabled = true;
+			if ( Alive )
+				SnowParticles.Enabled = true;
 		}
 
 		if ( Input.Pressed( "jump" ) && CanJump && Pivot.IsValid() )
@@ -148,12 +153,16 @@ public sealed class SantaPlayerSled : Component, ITriggerListener
 		var sleigh = Sleigh.GameObject;
 		_oldSleigh = sleigh.Clone( sleigh.WorldPosition, sleigh.WorldRotation, sleigh.WorldScale );
 		_oldSleigh.Tags.Remove( "player" );
+		_oldSleigh.GetComponentInChildren<ParticleConeEmitter>()?.Destroy();
 		var sleighRigidBody = _oldSleigh.AddComponent<Rigidbody>();
 		sleighRigidBody.Velocity += Vector3.Up * 1000f + Vector3.Backward * 500f + Vector3.Left * Velocity;
 
 		santa.Enabled = false;
 		sleigh.Enabled = false;
 		Collider.Enabled = false;
+
+		var impactRotation = WorldRotation * Rotation.FromPitch( -130f );
+		var impact = SnowImpartParticle.Clone( WorldPosition, impactRotation );
 
 		ChristmassyGameLogic.Instance.EndGame();
 		Alive = false;

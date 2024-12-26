@@ -476,7 +476,7 @@
               "mode": "Mirrored"
             }
           ],
-          "Constants": "10,50,0,0"
+          "Constants": "10,100,0,0"
         },
         "SequenceId": {
           "Type": "Constant",
@@ -675,12 +675,12 @@
       {
         "__type": "Sandbox.ParticleConeEmitter",
         "__guid": "31684bdf-4074-410d-886d-1ff6c5baa959",
-        "Burst": 200,
+        "Burst": 500,
         "ConeAngle": 45,
         "ConeFar": 50,
         "ConeNear": 1,
         "Delay": 0,
-        "DestroyOnEnd": false,
+        "DestroyOnEnd": true,
         "Duration": 1,
         "InVolume": false,
         "Loop": false,
