@@ -238,6 +238,45 @@ public sealed class ChristmassyGameLogic : Component
 		}
 	}
 
+	private List<GameObject> _trees = new List<GameObject>();
+
+	[Button( "Generate Trees" )]
+	public void GenerateTrees()
+	{
+		if ( !Map.IsValid() ) return;
+
+		ClearTrees();
+
+		var allTrees = ResourceLibrary.GetAll<PrefabFile>()
+			.Where( x => x.GetMetadata( "Tags" )?.Contains( "tree" ) ?? false )
+			.ToList();
+
+		if ( !allTrees.Any() )
+		{
+			Log.Error( "No trees found" );
+			return;
+		}
+
+		var angleSlice = 1f;
+
+		for ( int i = 1; i < 360; i++ )
+		{
+			var side = Game.Random.Int( 0, 1 );
+			var randomTree = SceneUtility.GetPrefabScene( Game.Random.FromList( allTrees ) )
+				.Clone();
+
+			randomTree.WorldRotation = Rotation.FromPitch( angleSlice * i );
+
+			randomTree.WorldPosition = Map.WorldPosition + randomTree.WorldRotation.Up * MapRadius;
+			var randomDistance = Game.Random.Float( 800f, 2400f );
+			var sidePosition = (RoadWidth / 2f + randomDistance) * (side == 0 ? Vector3.Left : Vector3.Right);
+			randomTree.WorldPosition += sidePosition;
+			randomTree.SetParent( Map );
+
+			_trees.Add( randomTree );
+		}
+	}
+
 	public void GenerateMap()
 	{
 		GenerateCottages();
@@ -266,6 +305,16 @@ public sealed class ChristmassyGameLogic : Component
 				cottage.Destroy();
 
 			_cottages.Clear();
+		}
+	}
+	public void ClearTrees()
+	{
+		if ( _trees != null )
+		{
+			foreach ( var tree in _trees.ToList() )
+				tree.Destroy();
+
+			_trees.Clear();
 		}
 	}
 
