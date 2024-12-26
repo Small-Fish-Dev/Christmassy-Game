@@ -368,6 +368,7 @@ public sealed class ChristmassyGameLogic : Component
 		GenerateLamps();
 		GenerateDecorations();
 
+		Map.WorldRotation = Rotation.Identity;
 		MapClone = Map.Clone();
 		MapClone.WorldPosition += Vector3.Forward * 2500f;
 		MapClone.WorldRotation *= Rotation.FromPitch( -83f );
