@@ -90,6 +90,9 @@ public sealed class SantaPlayerSled : Component, ITriggerListener
 		if ( _oldSanta.IsValid() ) return;
 		if ( !ModelRenderer.IsValid() ) return;
 
+		Sound.Play( new SoundEvent( "sounds/impact.sound" ), WorldPosition );
+
+
 		var santa = ModelRenderer.GameObject;
 		_oldSanta = santa.Clone( santa.WorldPosition, santa.WorldRotation, santa.WorldScale );
 		_oldSanta.Tags.Remove( "player" );
