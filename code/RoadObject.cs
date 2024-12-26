@@ -5,6 +5,7 @@ using System.Text.Json.Serialization;
 public sealed class RoadObject : Component
 {
 	public GameObject CreatedObject;
+	public GameObject Clone;
 	public bool IsVisible = true;
 
 	protected override void OnStart()
@@ -15,12 +16,17 @@ public sealed class RoadObject : Component
 	public void CreateObject()
 	{
 		CreatedObject?.Destroy();
+		Clone?.Destroy();
 
 		var randomObject = Game.Random.FromList( ChristmassyGameLogic.Instance.AllRoadObjects );
-		CreatedObject = SceneUtility.GetPrefabScene( randomObject )
-				.Clone();
+		CreatedObject = SceneUtility.GetPrefabScene( randomObject ).Clone();
 		CreatedObject.SetParent( GameObject );
 		CreatedObject.WorldTransform = WorldTransform;
+
+		Clone = CreatedObject.Clone();
+		Clone.SetParent( ChristmassyGameLogic.Instance.MapClone );
+		Clone.LocalTransform = LocalTransform;
+
 	}
 
 	TimeUntil _nextCheck;
@@ -29,7 +35,7 @@ public sealed class RoadObject : Component
 	{
 		if ( _nextCheck )
 		{
-			if ( Vector3.Dot( WorldRotation.Up, Vector3.Down ) > 0f ) // We're upside down!
+			if ( Vector3.Dot( WorldRotation.Up, Vector3.Backward ) >= 0.5f )
 			{
 				if ( IsVisible )
 				{
@@ -38,7 +44,7 @@ public sealed class RoadObject : Component
 				}
 			}
 
-			if ( Vector3.Dot( WorldRotation.Up, Vector3.Down ) <= 0f )
+			if ( Vector3.Dot( WorldRotation.Up, Vector3.Down ) <= 1f )
 			{
 				if ( !IsVisible )
 				{
@@ -47,12 +53,13 @@ public sealed class RoadObject : Component
 				}
 			}
 
-			_nextCheck = 1f + Game.Random.Float( 0.5f );
+			_nextCheck = 0.5f + Game.Random.Float( 0.5f );
 		}
 	}
 
 	protected override void OnDestroy()
 	{
 		CreatedObject?.Destroy();
+		Clone?.Destroy();
 	}
 }
