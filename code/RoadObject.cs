@@ -5,14 +5,19 @@ using System.Text.Json.Serialization;
 public sealed class RoadObject : Component
 {
 	public GameObject CreatedObject;
-	[JsonInclude] public Random RandomSeed;
 	public bool IsVisible = true;
 
-	public void CreateObject( PrefabFile sceneFile )
+	protected override void OnStart()
+	{
+		CreateObject();
+	}
+
+	public void CreateObject()
 	{
 		CreatedObject?.Destroy();
 
-		CreatedObject = SceneUtility.GetPrefabScene( sceneFile )
+		var randomObject = Game.Random.FromList( ChristmassyGameLogic.Instance.AllRoadObjects );
+		CreatedObject = SceneUtility.GetPrefabScene( randomObject )
 				.Clone();
 		CreatedObject.SetParent( GameObject );
 		CreatedObject.WorldTransform = WorldTransform;
@@ -22,8 +27,6 @@ public sealed class RoadObject : Component
 
 	protected override void OnFixedUpdate()
 	{
-		if ( RandomSeed == null ) return;
-
 		if ( _nextCheck )
 		{
 			if ( Vector3.Dot( WorldRotation.Up, Vector3.Down ) > 0f ) // We're upside down!
@@ -40,11 +43,11 @@ public sealed class RoadObject : Component
 				if ( !IsVisible )
 				{
 					IsVisible = true;
-					CreateObject( RandomSeed.FromList( ChristmassyGameLogic.Instance.AllRoadObjects ) );
+					CreateObject();
 				}
 			}
 
-			_nextCheck = 0.5f + RandomSeed.Float( 0.5f );
+			_nextCheck = 1f + Game.Random.Float( 0.5f );
 		}
 	}
 

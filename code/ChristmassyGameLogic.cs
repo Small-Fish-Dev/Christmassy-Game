@@ -232,14 +232,11 @@ public sealed class ChristmassyGameLogic : Component
 			var side = Game.Random.Int( -1, 1 );
 			var randomObject = new GameObject();
 			var roadObject = randomObject.AddComponent<RoadObject>();
-			roadObject.RandomSeed = new Random( Game.Random.Int( int.MinValue, int.MaxValue ) );
-			roadObject.CreateObject( roadObject.RandomSeed.FromList( AllRoadObjects ) );
 
 			randomObject.WorldRotation = Rotation.FromPitch( angleSlice * i );
 			randomObject.WorldPosition = Map.WorldPosition + randomObject.WorldRotation.Up * MapRadius;
 			var sidePosition = Vector3.Left * (RoadWidth - 80f) * side;
 			randomObject.WorldPosition += sidePosition;
-			randomObject.SetParent( Map );
 
 			_roadObjects.Add( randomObject );
 		}
@@ -375,6 +372,9 @@ public sealed class ChristmassyGameLogic : Component
 		MapClone.WorldPosition += Vector3.Forward * 2500f + Vector3.Down * 000f;
 		MapClone.WorldRotation *= Rotation.FromPitch( -83f );
 		MapClone.WorldScale *= 0.7f;
+
+		foreach ( var roadObject in _roadObjects )
+			roadObject.SetParent( Map );
 	}
 
 	public void ClearMap()
