@@ -68,6 +68,7 @@ public sealed class ChristmassyGameLogic : Component
 	public bool IsPlaying = true;
 
 	public static ChristmassyGameLogic Instance { get; private set; }
+	public List<PrefabFile> AllRoadObjects = new();
 
 	private float _originalSpeed;
 
@@ -75,6 +76,26 @@ public sealed class ChristmassyGameLogic : Component
 	{
 		Instance = this;
 		_originalSpeed = RotationSpeed;
+
+		var allPresents = ResourceLibrary.GetAll<PrefabFile>()
+			.Where( x => x.GetMetadata( "Tags" )?.Contains( "gift" ) ?? false );
+
+		var allObstacles = ResourceLibrary.GetAll<PrefabFile>()
+			.Where( x => x.GetMetadata( "Tags" )?.Contains( "obstacle" ) ?? false );
+
+		if ( !allPresents.Any() )
+		{
+			Log.Error( "No presents found" );
+			return;
+		}
+
+		if ( !allObstacles.Any() )
+		{
+			Log.Error( "No obstacle found" );
+			return;
+		}
+
+		AllRoadObjects = allPresents.Concat( allObstacles ).ToList();
 
 		StartGame();
 	}
@@ -203,36 +224,16 @@ public sealed class ChristmassyGameLogic : Component
 
 		ClearRoad();
 
-		var allPresents = ResourceLibrary.GetAll<PrefabFile>()
-			.Where( x => x.GetMetadata( "Tags" )?.Contains( "gift" ) ?? false );
-
-		var allObstacles = ResourceLibrary.GetAll<PrefabFile>()
-			.Where( x => x.GetMetadata( "Tags" )?.Contains( "obstacle" ) ?? false );
-
-		if ( !allPresents.Any() )
-		{
-			Log.Error( "No presents found" );
-			return;
-		}
-
-		if ( !allObstacles.Any() )
-		{
-			Log.Error( "No obstacle found" );
-			return;
-		}
-
-		var allObjects = allPresents.Concat( allObstacles ).ToList();
-
 		var angleSlice = 360f / RoadObjects;
 
 		for ( int i = 1; i < RoadObjects; i++ )
 		{
 			var side = Game.Random.Int( -1, 1 );
-			var randomObject = SceneUtility.GetPrefabScene( Game.Random.FromList( allObjects ) )
-				.Clone();
+			var randomObject = new GameObject();
+			var roadObject = randomObject.AddComponent<RoadObject>();
+			roadObject.CreateObject( Game.Random.FromList( AllRoadObjects ) );
 
 			randomObject.WorldRotation = Rotation.FromPitch( angleSlice * i );
-
 			randomObject.WorldPosition = Map.WorldPosition + randomObject.WorldRotation.Up * MapRadius;
 			var sidePosition = Vector3.Left * (RoadWidth - 80f) * side;
 			randomObject.WorldPosition += sidePosition;
