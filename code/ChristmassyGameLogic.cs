@@ -1,4 +1,5 @@
 using Sandbox;
+using System;
 
 public sealed class ChristmassyGameLogic : Component
 {
@@ -231,7 +232,8 @@ public sealed class ChristmassyGameLogic : Component
 			var side = Game.Random.Int( -1, 1 );
 			var randomObject = new GameObject();
 			var roadObject = randomObject.AddComponent<RoadObject>();
-			roadObject.CreateObject( Game.Random.FromList( AllRoadObjects ) );
+			roadObject.RandomSeed = new Random( Game.Random.Int( int.MinValue, int.MaxValue ) );
+			roadObject.CreateObject( roadObject.RandomSeed.FromList( AllRoadObjects ) );
 
 			randomObject.WorldRotation = Rotation.FromPitch( angleSlice * i );
 			randomObject.WorldPosition = Map.WorldPosition + randomObject.WorldRotation.Up * MapRadius;
