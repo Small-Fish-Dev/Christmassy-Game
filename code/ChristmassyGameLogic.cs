@@ -122,7 +122,7 @@ public sealed class ChristmassyGameLogic : Component
 
 		MusicSound.Volume = MathX.Lerp( MusicSound.Volume, 0.7f, Time.Delta * 3f );
 
-		RotationSpeed += Time.Delta * 0.3f;
+		RotationSpeed += Time.Delta * 0.2f;
 		WindSound.SoundOverride = true;
 		WindSound.Volume = MathX.Remap( RotationSpeed, 20f, 100f, 2f, 1f );
 		WindSound.Pitch = MathX.Remap( RotationSpeed, 20f, 100f, 0.1f, 1f );
