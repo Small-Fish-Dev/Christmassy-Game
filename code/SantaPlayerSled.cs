@@ -28,10 +28,6 @@ public sealed class SantaPlayerSled : Component, ITriggerListener
 
 	[Property]
 	[Category( "Components" )]
-	public SoundPointComponent GiftSound { get; set; }
-
-	[Property]
-	[Category( "Components" )]
 	public ParticleConeEmitter SnowParticles { get; set; }
 
 	[Property]
@@ -152,8 +148,7 @@ public sealed class SantaPlayerSled : Component, ITriggerListener
 		if ( _oldSanta.IsValid() ) return;
 		if ( !ModelRenderer.IsValid() ) return;
 
-		Sound.Play( new SoundEvent( "sounds/impact.sound" ), WorldPosition )
-			.Volume = 5;
+		Sound.Play( "impact", WorldPosition );
 
 		var santa = ModelRenderer.GameObject;
 		_oldSanta = santa.Clone( santa.WorldPosition, santa.WorldRotation, santa.WorldScale );
@@ -222,7 +217,7 @@ public sealed class SantaPlayerSled : Component, ITriggerListener
 	{
 		// Sound.Play( new SoundEvent( "sounds/gift.sound" ), WorldPosition ).Volume = 10f; // THIS DOES NOT WORK
 		GiftCollectParticle?.Clone( gift.WorldPosition );
-		GiftSound.StartSound();
+		Sound.Play( "gift", WorldPosition );
 
 		ChristmassyGameLogic.Instance.Points += 10;
 		Sandbox.Services.Stats.SetValue( "points", ChristmassyGameLogic.Instance.Points );
