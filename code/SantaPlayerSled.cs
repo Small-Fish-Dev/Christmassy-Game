@@ -83,7 +83,13 @@ public sealed class SantaPlayerSled : Component, ITriggerListener
 		_wishTurningVolume = MathX.Remap( MathF.Abs( Velocity ), 0f, 800f, 0.2f, 3f );
 
 		if ( CanJump && (WorldPosition.y <= -roadWidth || WorldPosition.y >= roadWidth) )
+		{
 			Velocity *= -0.25f;
+
+			if ( Math.Abs( Velocity ) >= 10f )
+				Sound.Play( "impact", WorldPosition )
+					.Volume *= Math.Abs( Velocity ) / 500f;
+		}
 
 		if ( Pivot.LocalPosition.z > 0f || Height > 0f )
 		{
