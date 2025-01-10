@@ -32,12 +32,23 @@
 
 @code
 {
+    private float _elapsedTime = 0f;
     public string Score => ChristmassyGameLogic.Instance.Points.ToString();
-    public string GiftAngle => (MathF.Sin( Time.Now * ChristmassyGameLogic.Instance.RotationSpeed / 10f) * 10f - 30f ).ToString() + "deg";
+    public string GiftAngle => (MathF.Sin( _elapsedTime / 10f) * 10f - 30f ).ToString() + "deg";
 
     protected override void OnStart()
     {
         DeleteHowto();
+    }
+
+    protected override void OnUpdate()
+    {
+        _elapsedTime += Time.Delta * ChristmassyGameLogic.Instance.RotationSpeed;
+        if (_elapsedTime > 2 * MathF.PI * 10f)
+        {
+            _elapsedTime -= 2 * MathF.PI * 10f;
+        }
+        base.OnUpdate();
     }
 
     private async void DeleteHowto()
